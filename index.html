@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="default">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
@@ -19,13 +19,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Muse","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Suche...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="笔记">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale">
-<meta property="article:author" content="John Doe">
+<meta property="og:description" content="笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="XuAnrui">
 <meta name="twitter:card" content="summary">
 
 
@@ -33,7 +35,7 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"default","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>Hexo</title>
@@ -54,7 +56,10 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Navigationsleiste an/ausschalten" role="button">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -75,6 +80,14 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
 
 
 
@@ -93,10 +106,10 @@
     <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          Inhaltsverzeichnis
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Übersicht
+          站点概览
         </li>
       </ul>
 
@@ -109,16 +122,26 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-overview">
             <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
+  <p class="site-author-name" itemprop="name">XuAnrui</p>
+  <div class="site-description" itemprop="description">笔记</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
-          <span class="site-state-item-name">Artikel</span>
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -128,6 +151,10 @@
           </div>
         </div>
       </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -136,10 +163,6 @@
     </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -156,12 +179,12 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/08/14/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -169,7 +192,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/14/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+          <a href="/git-1.html" class="post-title-link" itemprop="url">1 .git文件夹 与 git 对象</a>
         </h2>
 
         <div class="post-meta-container">
@@ -178,9 +201,702 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Veröffentlicht am</span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="Erstellt: 2021-08-14 22:50:25" itemprop="dateCreated datePublished" datetime="2021-08-14T22:50:25+08:00">2021-08-14</time>
+      <time title="创建时间：2021-08-14 23:13:57 / 修改时间：19:06:59" itemprop="dateCreated datePublished" datetime="2021-08-14T23:13:57+08:00">2021-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>执行<code>git init</code>初始化仓库，进入<code>.git</code>文件夹后</p>
+<p><code>hooks</code>：钩子<br><code>info</code>：包含一个全局性排除文件。即哪些文件是Git不用管理的，就放在该文件夹下<br><code>objects</code>：目录存储所有数据内容。即数据库<br><code>res</code>：目录存储指向数据（分支）的提交对象</p>
+<p><code>config</code>：文件包含项目所持有的配置选项 若在配置用户信息时没有加<code>--global</code>与<code>--system</code>，该文件里会有配置的用户信息<br><code>description</code>：用来显示对仓库的描述信息<br><code>HEAD</code>：文件指示目前被检出的分支</p>
+<p><code>logs</code>：保存日志<br><code>index</code>：文件保存暂存区</p>
+<h4>git 对象</h4>
+
+<p>Git 的核心部分时一个简单的键值对数据库。我们可以向该数据库插入任意类型的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
+<h5>向数据库写入内容 并返回对应键值</h5>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;test content&#x27;</span> | git hash-object -w --stdin</span><br><span class="line"><span class="comment"># -w 该项指示 hash-object 命令存储数据对象;若不指定此选项，则该命令仅返回对应的键值</span></span><br><span class="line"><span class="comment"># --stdin (standard input) 该选项指示该命令从标准输入流中读取内容（即得到 &#x27;test content&#x27;）；</span></span><br><span class="line"><span class="comment">#  若不指定该选项，则须在命令尾部给出待存储文件的路径</span></span><br></pre></td></tr></table></figure>
+
+<p>上述命令会返回对应的键值：<code>d670460b4b4aece5915caf5c68d12f560a9fe3e4</code>，并将其存储入到了<code>.git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4</code></p>
+<p>执行<code>cat ./.git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4</code>命令后会给出乱码，因为是压缩存储的。</p>
+<h5>查看内容</h5>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># $ git cat-file -p 键值 (不是bash下的相对路径)</span></span><br><span class="line">$ git cat-file -p d670460b4b4aece5915caf5c68d12f560a9fe3e4</span><br><span class="line"><span class="comment"># -p 该选项可指示该命令自动判断内容的类型，并未我们显示格式友好的内容</span></span><br></pre></td></tr></table></figure>
+
+<h5>查看类型</h5>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># $ git cat-file -t 键值 (不是bash下的相对路径) 会返回 blob</span></span><br><span class="line">$ git cat-file -t d670460b4b4aece5915caf5c68d12f560a9fe3e4</span><br></pre></td></tr></table></figure>
+
+<p>git对象为  blob</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-2%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-%E4%B8%8E-Git-%E5%91%BD%E4%BB%A4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git-2%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-%E4%B8%8E-Git-%E5%91%BD%E4%BB%A4.html" class="post-title-link" itemprop="url">2 配置用户信息 与 Git 命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-14 23:13:57 / 修改时间：18:49:33" itemprop="dateCreated datePublished" datetime="2021-08-14T23:13:57+08:00">2021-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4>配置用户信息</h4>
+
+<p>配置后每次Git提交都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被纳入历史记录中。Git首次安装必须设置一下用户签名，否则无法提交代码。<br>这里设置用户签名和登录 GitHub（或其他代码托管中心）的账号没有任何关系。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先输入命令查看是否配置了信息</span></span><br><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 出现user.name 与 user.email 说明已配置过。</span></span><br><span class="line"><span class="comment"># 重复配置会修改上一次所配置的内容</span></span><br><span class="line">user.name=name</span><br><span class="line">user.email=123456@qq.com</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 系统中对所有用户都普遍适用的配置</span></span><br><span class="line">$ git config --system user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config --system user.email 123456@qq.com</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用户目录下的配置文件只适用于该用户</span></span><br><span class="line">$ git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config --global user.email 123456@qq.com</span><br><span class="line"><span class="comment"># 生成的配置文件在 C:\Users\当前使用的用户\.gitconfig 里</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消配置</span></span><br><span class="line">$ git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">$ git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前项目的 Git 目录中的配置文件</span></span><br><span class="line">$ git config user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config user.email 123456@qq.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消配置</span></span><br><span class="line">$ git config --<span class="built_in">unset</span> user.name</span><br><span class="line">$ git config --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+
+<p><code>系统</code>可以有多个<code>用户</code>，一个<code>用户</code>可以有多个<code>项目</code>，如果都配置了，则才用<code>项目</code>的</p>
+<h4>Git底层概念</h4>
+
+<p>它使用的是<code>linux</code>命令，而<code>cmd</code>是<code>dos</code>（也称<code>windows</code>）命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ clear  <span class="comment"># 清屏</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;hello&#x27;</span> <span class="comment"># 往控制台里输出信息</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;hello&#x27;</span> &gt;text.txt <span class="comment"># 创建文件，并把hello存入到该文件</span></span><br><span class="line">$ ll <span class="comment"># 将当前文件目录下的子文件和子目录(不包含隐藏的)平铺在控制台（会显示创建者、时间）</span></span><br><span class="line">$ ll -a  <span class="comment"># 将当前文件目录下的子文件和子目录(包含隐藏的)平铺在控制台（会显示创建者、时间）</span></span><br><span class="line">$ find 目录名 <span class="comment"># 将对应目录的子孙文件和子孙目录平铺在控制台</span></span><br><span class="line">$ find 目录名 -<span class="built_in">type</span> f <span class="comment"># 将对应目录下的的文件平铺在控制台</span></span><br><span class="line">$ rm 文件名 <span class="comment"># 删除文件</span></span><br><span class="line">$ mv 文件名 重命名后的文件名 <span class="comment"># 重命名</span></span><br><span class="line">$ cat 文件的url <span class="comment"># 查看对应文件的内容 文件的url 即bash命令下的相对路径</span></span><br><span class="line">$ vim 文件的url <span class="comment">#（在英文模式下，即右下角会有个中或英）</span></span><br><span class="line">	按 i 进入编辑</span><br><span class="line">	按 esc 建后，输入 : 进入命令的执行</span><br><span class="line">					wq 保存退出</span><br><span class="line">					q! 强制退出</span><br><span class="line">					<span class="built_in">set</span> nu 设置行号</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-3%E6%A0%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%90%E4%BA%A4%E5%AF%B9%E8%B1%A1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git-3%E6%A0%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%90%E4%BA%A4%E5%AF%B9%E8%B1%A1.html" class="post-title-link" itemprop="url">3 树对象 与 提交对象</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-14 23:13:57 / 修改时间：18:58:59" itemprop="dateCreated datePublished" datetime="2021-08-14T23:13:57+08:00">2021-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4>构造树对象</h4>
+
+<p>我们可以通过<code>update-index</code>、<code>write-tree</code>、<code>read-tree</code>等命令来构建树对象并塞入到暂存区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看暂存区</span></span><br><span class="line">$ git ls-files -s</span><br><span class="line"><span class="comment"># 查看objects(即数据库)里的对象</span></span><br><span class="line">$ find ./.git/objects/ -<span class="built_in">type</span> f</span><br><span class="line"><span class="comment"># 查看指定的对象内容</span></span><br><span class="line">$ git cat-file -p 哈希值</span><br><span class="line"><span class="comment"># 查看指定的对象类型</span></span><br><span class="line">$ git cat-file -t 哈希值</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git update-index --add --cacheinfo 文件模式 键 文件名</span><br><span class="line"><span class="comment"># -add 文件不在暂存区，首此需要 -add 来将其添加到暂存区</span></span><br><span class="line"><span class="comment"># -cacheinfo 若将要添加的文件位于 Git 数据库中，而不是位于当前 .git所处目录 需要 --cacheinfo</span></span><br><span class="line"><span class="comment"># 文件模式  100644 普通文件  100755 可执行文件  120000 符号连接</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.1.生成一个有 test v1 内容 的名为 test的文本 并将其存储 生成 git 对象</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;test v1&#x27;</span> &gt; test.txt | git hash-object -w test.txt  </span><br><span class="line"><span class="comment"># 1.2.用其返回的键将刚存储的 git 对象添加到暂存区，并命名为 test.txt</span></span><br><span class="line">$ git update-index --add --cacheinfo 100644 915c628f360b2d8c3edbe1ac65cf575b69029b61 test.txt</span><br><span class="line"><span class="comment"># 1.3.将现在暂存区里的内容当做项目的一个版本，生成树对象</span></span><br><span class="line">$ git write-tree  <span class="comment"># 这时数据库里有一个 git 对象和一个 树对象  此时的树对象即为一个项目的版本</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意 $ git add ./ 将工作区的文件全部生成 git 对象（不管是否已经生成过了，只要内容变了，就是新的），再放到缓存区 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.1.生成一个有 new v1 内容 的名为 new的文本 并将其存储 生成 git 对象</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;new v1&#x27;</span> &gt; new.txt | git hash-object -w new.txt  </span><br><span class="line"><span class="comment"># 2.2.用其返回的键将刚存储的 git 对象添加到暂存区，并命名为 new.txt</span></span><br><span class="line">$ git update-index --add --cacheinfo 100644 eae614245cc5faa121ed130b4eba7f9afbcc7cd9 new.txt</span><br><span class="line"><span class="comment"># 2.3 修改工作区的test.txt文件</span></span><br><span class="line">$ vim test.txt</span><br><span class="line">  按 i 键 并写入新的一行 <span class="built_in">test</span> v2 按 : 键 输入命令 wq 保存退出</span><br><span class="line"><span class="comment"># 2.4 将修改的test.txt文件存储 生成 git 对象</span></span><br><span class="line">$ git hash-object -w test.txt  </span><br><span class="line"><span class="comment"># 2.5 用其返回的键将刚存储的 git 对象添加到暂存区，覆盖掉原有的test.txt</span></span><br><span class="line">$ git update-index --cacheinfo 100644 91d9ba5a1a5456b454e77321eabb130051929546 test.txt</span><br><span class="line"><span class="comment"># 2.6.将现在暂存区里的内容当做项目的一个版本，生成树对象</span></span><br><span class="line">$ git write-tree <span class="comment"># 这时数据库里有三个 git 对象和两个 树对象</span></span><br></pre></td></tr></table></figure>
+
+<h4>提交对象</h4>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定一个树对象，创建提交对象</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;first commit&#x27;</span> | git commit-tree 72203871fa4668ad777833634034dcd3426879db</span><br></pre></td></tr></table></figure>
+
+<p>执行<code>$ git cat-file -p 74245b5b24ca3a29bb6a534d62c38600f6664056</code>，查看返回的哈希值的内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tree 72203871fa4668ad777833634034dcd3426879db</span><br><span class="line">author <span class="string">&#x27;name&#x27;</span> &lt;email&gt; 1628515408 +0800</span><br><span class="line">committer <span class="string">&#x27;name&#x27;</span> &lt;email&gt; 1628515408 +0800</span><br><span class="line"></span><br><span class="line">first commit</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不是第一次创建提交对象，则要指定父提交对象</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;second commit&#x27;</span> | git commit-tree 树的哈希值（新项目版本） -p 父提交对象的哈希值</span><br></pre></td></tr></table></figure>
+
+<p>一个树对象(tree)本质上就是一个项目的版本，而提交对象(commit)指示对树对象进行了封装，提交对象是链式的（虽然提交对象之间是链式的，但只有知道某个提交对象的哈希值，就可直接用哈希值回退到该的提交对象），且存储了注释与作者等</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-4%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git-4%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4.html" class="post-title-link" itemprop="url">4 高级命令</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-14 23:13:57 / 修改时间：19:46:09" itemprop="dateCreated datePublished" datetime="2021-08-14T23:13:57+08:00">2021-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3>高级命令</h3>
+
+<h4>git操作基本流程</h4>
+
+<p>一、创建工作目录，对工作目录进行修改<br>二、<code>git commit -a -m &quot;注释内容&quot;</code><br>    1.<code>git add ./</code><br>        1）<code>git hash-objext -w 文件名</code>修改了多少个工作目录中的文件 此命令就要被执行多少次<br>        2）<code>git update-index --add --cacheinfo 文件模式 键 文件名</code><br>    2.<code>git commit -m &quot;注释内容&quot;</code><br>        1）<code>git write-tree</code><br>        2）<code>echo &#39;注释内容&#39; | git commit-tree 树的哈希值 -p 父提交对象的哈希值</code><br>使用<code>git commit -a -m &quot;注释内容&quot;</code>来代替<code>git add ./</code>与<code>git commit -m &quot;注释内容&quot;</code>，可以跳过使用暂存区域的方式，git 会自动把所有<u>已经跟踪</u>过(曾经<code>add</code>过，不论是否修改过，是否删除)的文件暂存起来一并提交，从而跳过了<code>git add</code>这一步</p>
+<p>可以理解为<code>add</code>操作用工作区的内容覆盖了一遍暂存区</p>
+<p>这两步是连续的，不应该被中断 如果要写的注释有多行，可不加<code>-m</code>，这样就会进入编辑模式</p>
+<p>克隆仓库时，在克隆完成后会生成一个项目文件夹，里面是有<code>.git</code>文件夹的</p>
+<p>已跟踪的文件是指本来就被纳入版本控制管理的文件，在上次快照中有它们的记录，工作一段时间后，他们的状态可能是已提交、已修改或者已暂存。<br>其它文件都属于为跟踪文件。它们既没有上次的更新时的快照，也不在暂存区。</p>
+<p>已<code>add</code>的文件，即处于已跟踪的状态。</p>
+<h4>检查当前文件状态</h4>
+
+<p>命令：<code>git status</code><br>作用：确定文件当前处于什么状态</p>
+<p><code>untracked</code>：未跟踪<br><code>modified</code>：已跟踪但是已修改   <code>unmodified</code>：已跟踪且未修改   <code>staged</code>：已跟踪且已暂存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git status 以后出现下面情况 则工作区的文件已提交</span></span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<p>一个文件可能会出现多个状态，例如对已经暂存过（<code>add</code>）但未提交（<code>commit</code>）的文件做修改，就会出现<code>modified</code>（绿色）和<code>not staged</code>(红色)两种状态</p>
+<h5>查看已暂存和未暂存的更新</h5>
+
+<p>实际上<code>git init</code>的显示比较简单，<br>可以用<code>git diff</code>命名查看当前哪些已修改的文件还未暂存<br>也可以用<code>git diff --cached</code>或者<code>git diff --staged</code>命名查看当前哪些更新已经暂存等待提交</p>
+<h5>文件改名</h5>
+
+<p><code>git mv file.from file.to</code>   <code>file.from</code>原文件名    <code>file.to</code>要使用的新的文件名</p>
+<p>运行该命令相当于运行了下面三条命令：<br>1.<code>mv file.from file.to</code>  <br>2.<code>git rm file.from</code><br>3.<code>git add file.to</code></p>
+<h5>查看历史记录</h5>
+
+<p><code>git log</code> 详细输出历史记录</p>
+<p><code>git log --pretty=oneline</code></p>
+<p><code>git log --oneline</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-5%E5%88%86%E6%94%AF.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git-5%E5%88%86%E6%94%AF.html" class="post-title-link" itemprop="url">5 分支</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-14 23:13:57 / 修改时间：18:58:43" itemprop="dateCreated datePublished" datetime="2021-08-14T23:13:57+08:00">2021-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4>分支</h4>
+
+<p>分支就是一个没有后缀名的文件，里面存放着一个提交对象所对应的哈希</p>
+<p><code>git branch</code>：显示分支列表<br><code>git branch 新分支名</code>：创建新分支，与当前分支指向一致<br><code>git checkout 分支名</code>：切换到指定分支<br><code>git checkout -b 分支名</code>：创建并切换到指定分支<br><code>git log --oneline --decorate --graph --all</code>：显示完整的项目分叉历史<br><code>git branch -d 分支名</code>：删除指定的已合并的分支，删除前先切换到其它分支<br><code>git branch -D 分支名</code>：删除指定的未合并的分支，删除前先切换到其它分支<br><code>git branch -v</code>：查看每个分支最后一次的提交对象<br><code>git branch 新分支名 commitHash</code>：创建新分支，并指向对应的提交对象<br><code>git branch --no-merged</code>：创建新分支，并指向对应的提交对象<br><code>git branch --merged</code>：查看哪些分支已经合并到当前分支<br><code>git merge 分支名</code>：合并指定分支（一般先切回<code>master</code>主分支，让其来合并）</p>
+<p>已合并分支：指其它分支指向当前分支的指向的历史版本<br>未合并分支：指其它分支未指向当前分支的指向的历史版本</p>
+<p>注意：<br>1.哈希值写前七位即可<br>2.分支切换会改变工作目录中的文件，工作目录与暂存区会恢复到该分支最后一次提交时的样子。如果 Git 不能干净利落地完成这个任务（即存在已跟踪但未提交的文件），它将禁止切换分支<br>3.分支切换前一定要保证工作目录是干净的，即已暂存且提交，不然那些未跟踪的文件可能会污染其它分支<br>4.当我们需要解决bug和实现新功能时，我们先确保当前目录干净，创建新分支来工作，这时如果需要我们解决紧急bug时，先停下当前分支下的工作，暂存并提交(写个注释以后方便看)，再次创建新分支指向紧急bug的分支（一般都是围绕主分支来创建新分支）来debug。当解决完debug时让<code>master</code>来合并该分支，此时为快进合并。再次切换到之前暂停工作的分支（注意，此时<code>master</code>为该分支的上游），完成后让<code>master</code>来合并该分支,但可能会有冲突（原因是处于下游的分支被合并时，可能文件的内容有冲突），这时需商量结合并重新修改，<code>add</code>并提交即可<br>5.<code>master</code>团队稳定的分支，<code>develop</code>自己的分支，拿到团队的仓库后新建自己的主分支，<code>topic</code>特性分支，不断新建功能时在自己的主分支上新建分支</p>
+<p>快进合并：在合并两个分支时，由于当前<code>master</code>主分支所指向的提交是当前提交的直接上游，所以 Git 只是简单的将指针向前移动，即如果顺着<code>master</code>主分支走下去能够到达另一个分支，那么<code>master</code>即指向被合并分支的提交。此情况没有需要解决的分歧。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-6%E5%AD%98%E5%82%A8.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git-6%E5%AD%98%E5%82%A8.html" class="post-title-link" itemprop="url">6 存储</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-14 23:13:57 / 修改时间：18:58:35" itemprop="dateCreated datePublished" datetime="2021-08-14T23:13:57+08:00">2021-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><code>git stash</code>：该命令会将未完成的修改保存到一个栈上<br><code>git stash list</code>：查看存储<br><code>git stash apply</code>：应用栈顶的存储（但不会删除）<br><code>git stash apply stash@&#123;索引值&#125;</code> ：应用指定的存储（但不会删除）<br><code>git stash pop stash@&#123;索引值&#125;</code> ：应用指定的存储并删除<br><code>git stash drop stash@&#123;索引值&#125;：</code>删除存储</p>
+<p>实际上每次存储，git都会做一次提交，在<code>git log --oneline --decorate --graph --all</code>显示完整的项目分叉历史下仍能看见，但在<code>git log --oneline</code>是看不见的</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-7%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git-7%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.html" class="post-title-link" itemprop="url">7 远程仓库</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-14 23:13:57 / 修改时间：18:58:22" itemprop="dateCreated datePublished" datetime="2021-08-14T23:13:57+08:00">2021-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4>远程仓库操作</h4>
+
+<p><code>git remote -v</code>：查看当前所有远程地址别名<br><code>git remote add 别名 HTTPS远程地址</code>：设置远程仓库别名<br><code>git push 别名或远程地址 要推送的本地分支 </code> ：推送分支到远程仓库<br><code>git clone 别名或远程地址 </code>：克隆仓库（克隆前该文件夹为空，不要<code>git init</code>，该克隆命令会在拉取代码后初始化仓库，创建默认别名<code>origin</code>）<br><code>git pull 别名或远程地址 要拉取的分支</code>：拉取更新本地库的分支</p>
+<h5>流程</h5>
+
+<p>1.在<code>github</code>上初始化一个空的仓库<br>2.创建本地仓库<br>    1）<code>git remote 别名 远程地址</code>创建别名<br>    2）<code>git init</code>初始化本地仓库，并把已写好的项目放到工作区（如果没有，可省略）<br>    3）<code>git add ./</code>与<code>git commit -m &quot;注释信息&quot;</code><br>3.将本地仓库推送到远程仓库<br>    1)先清理windows凭据<br>    2)<code>git push 别名或远程地址 要推送的本地分支</code><br>4.邀请成员<br>5.成员克隆</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-8SSH%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/git-8SSH%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95.html" class="post-title-link" itemprop="url">8 SSH免密登录</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-14 23:13:57 / 修改时间：18:59:06" itemprop="dateCreated datePublished" datetime="2021-08-14T23:13:57+08:00">2021-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>1.检查<code>C:\Users\用户名</code>的文件夹里有没有<code>.ssh</code>文件夹，有跳过此步</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成公钥和密钥 -t 加密协议 rsa 一种非对称加密协议</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;github账户邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.进入<code>.ssh</code>文件夹，把公钥里的内容复制到<code>github</code>里的<code>settings</code>-&gt;<code>SSH and GPG keys</code>-&gt;<code>New SSH key</code>的<code>key</code>里，<code>title</code>是放别名的</p>
+<p>以后用SSH替换HTTPS即可</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/hello-world.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/hello-world.html" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-14 22:50:25" itemprop="dateCreated datePublished" datetime="2021-08-14T22:50:25+08:00">2021-08-14</time>
     </span>
 
   
@@ -238,9 +954,9 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">XuAnrui</span>
 </div>
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>
@@ -248,7 +964,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 
