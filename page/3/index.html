@@ -17,9 +17,8 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="笔记">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
@@ -49,7 +48,7 @@
   </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="headband"></div>
 
   <main class="main">
@@ -74,6 +73,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -86,11 +86,37 @@
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -179,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/nodejs-1-2%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B9%8B%E5%86%99%E5%85%A5.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/ES6-9-4%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E6%96%B9%E6%B3%95.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +218,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nodejs-1-2%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E4%B9%8B%E5%86%99%E5%85%A5.html" class="post-title-link" itemprop="url">1-2 文件操作之读取</a>
+          <a href="/ES6-9-4%E9%87%8D%E5%86%99%E7%88%B6%E7%B1%BB%E6%96%B9%E6%B3%95.html" class="post-title-link" itemprop="url">9-4 重写父类方法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -204,7 +230,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:53:14" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:19:14" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -212,7 +238,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/nodejs/" itemprop="url" rel="index"><span itemprop="name">nodejs</span></a>
+          <a href="/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a>
         </span>
     </span>
 
@@ -226,751 +252,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * fs.writeFile 写文件  </span></span><br><span class="line"><span class="comment"> *  第一个参数：文件路径</span></span><br><span class="line"><span class="comment"> *      如果已存在则覆盖，如果没有则创建一个</span></span><br><span class="line"><span class="comment"> *  第二个参数：文件内容</span></span><br><span class="line"><span class="comment"> *  第三个参数：回调函数</span></span><br><span class="line"><span class="comment"> *      其接收一个参数 error</span></span><br><span class="line"><span class="comment"> *                      文件写入成功 error 为null</span></span><br><span class="line"><span class="comment"> *                      文件写入失败</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">fs.writeFile(<span class="string">&#x27;./新的文件.md&#x27;</span>, <span class="string">&quot;这是写入的内容1&quot;</span>, <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;写入失败了&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;写入成功了&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Javascript-1-2%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Javascript-1-2%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0.html" class="post-title-link" itemprop="url">1-2 构造函数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:27:57" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//构造函数就是一个普通的函数，其创建方式和普通函数没有区别</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//不同的是构造函数习惯上首字母大写</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//构造函数和普通函数的区别就是调用方式的不同</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//不同函数就是直接调用，而构造函数需要使用new关键字来调用</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> dog1 = Dog();</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> dog2 = <span class="keyword">new</span> Dog();</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(dog1);<span class="comment">//undefined</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(dog2);<span class="comment">//Dog</span></span></span><br><span class="line">        /** </span><br><span class="line">         * 构造函数的执行流程</span><br><span class="line"><span class="javascript">         *  <span class="number">1.</span>用<span class="keyword">new</span> 立刻创建一个对象</span></span><br><span class="line"><span class="javascript">         *  <span class="number">2.</span>将新建的对象设置为函数中的<span class="built_in">this</span>,在构造函数可以使用<span class="built_in">this</span>来引用新建的对象</span></span><br><span class="line">         *  3.逐行执行函数中的代码</span><br><span class="line">         *  4.将新建的对象作为返回值返回</span><br><span class="line">        */</span><br><span class="line"></span><br><span class="line">        /** </span><br><span class="line"><span class="javascript">         *  在新建的对象添加属性应用<span class="built_in">this</span>，否则是会变成全局的变量</span></span><br><span class="line">        */</span><br><span class="line"><span class="javascript">        name = <span class="string">&quot;全局&quot;</span>;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="built_in">window</span>.name);<span class="comment">//全局</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Location</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            name = <span class="string">&quot;局部&quot;</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> loc = <span class="keyword">new</span> Location();</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(loc.name);<span class="comment">//undefined</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="built_in">window</span>.name);<span class="comment">//局部</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, gender</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.name = name;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.age = age;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.gender = gender;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="built_in">this</span>.name);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> per = <span class="keyword">new</span> Person(<span class="string">&quot;孙悟空&quot;</span>, <span class="number">18</span>, <span class="string">&quot;男&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="comment">//对象创建一定要加new</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(per);</span></span><br><span class="line"></span><br><span class="line">        /** </span><br><span class="line"><span class="javascript">         *  使用<span class="keyword">instanceof</span>可以检查一个对象是否是某个类的实例，且这个类须已定义</span></span><br><span class="line"><span class="javascript">         * 如果是，返回<span class="literal">true</span>；否则返回<span class="literal">false</span></span></span><br><span class="line">        */</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(per <span class="keyword">instanceof</span> Person);<span class="comment">//true</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(per <span class="keyword">instanceof</span> Dog);<span class="comment">//false</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(per <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">//true</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//使用的对象都是Object的后代，都会是true</span></span></span><br><span class="line"></span><br><span class="line">        /** </span><br><span class="line">         * 目前在Person构造函数中，为每一个对象都添加了一个sayName方法，功能都是相同的</span><br><span class="line">         *  其应该在实例是都是相同的，而不是独立各自唯一的</span><br><span class="line">         *      因为该方法是在构造函数内部定义的</span><br><span class="line">         *          这样会造成每执行一次构造函数就会创建一个新的sayName方法，各自独立</span><br><span class="line">         *              如果实例n个，则会创建n个这个方法，但是它们都是一模一样的，这是完全没必要的</span><br><span class="line">        */</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> per1 = <span class="keyword">new</span> Person(<span class="string">&quot;孙悟空&quot;</span>, <span class="number">18</span>, <span class="string">&quot;男&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> per2 = <span class="keyword">new</span> Person(<span class="string">&quot;猪八戒&quot;</span>, <span class="number">28</span>, <span class="string">&quot;男&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(per1.sayName == per2.sayName);<span class="comment">//false</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="comment">//将sayName方法在全局作用域中定义</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//  但这个又有一个问题，其污染了全局作用域的命名空间，其它的就不能用此名</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//      这样做，其它人在开发时可能不知道你用了此名，再用会覆盖掉你的</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Person_1</span>(<span class="params">name, age, gender</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.name = name;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.age = age;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.gender = gender;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.sayName = sayName;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">sayName</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            alert(<span class="built_in">this</span>.name);</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> per_1 = <span class="keyword">new</span> Person_1(<span class="string">&quot;孙悟空&quot;</span>, <span class="number">18</span>, <span class="string">&quot;男&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> per_2 = <span class="keyword">new</span> Person_1(<span class="string">&quot;猪八戒&quot;</span>, <span class="number">28</span>, <span class="string">&quot;男&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(per_1.sayName == per_2.sayName);<span class="comment">//true</span></span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Javascript-1-3%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Javascript-1-3%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1.html" class="post-title-link" itemprop="url">1-3 原型对象</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:28:12" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">        /** </span><br><span class="line">         * 原型 prototype</span><br><span class="line">         * </span><br><span class="line">         *  我们所创建的每一个函数，解析器都会向函数中添加一个属性protoype</span><br><span class="line">         *      这个属性对应着一个对象，这个对象就是我们所谓的原型对象</span><br><span class="line">         *          如果函数作为普通函数调用，则prototype没有任何作用</span><br><span class="line">         *  当函数以构造函数的形式调用时，他所创建的对象中都会有一个隐含的属性，</span><br><span class="line">         *      指向该构造函数的原型对象</span><br><span class="line">         *      我们可以通过__proto__来访问该属性</span><br><span class="line">         * </span><br><span class="line">         * 原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个原型对象，</span><br><span class="line">         *  我们可以将对象中共有的内容，统一设置到原型对象中</span><br><span class="line">         * </span><br><span class="line">         * 当我们访问对象的一个属性或方法时，它会先在对象自身中寻找</span><br><span class="line">         *  如果有则直接使用，如果没有则在原型对象中查找</span><br><span class="line">        */</span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">MyClass</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(Person.prototype);<span class="comment">//Object</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(Person.prototype == MyClass.prototype);<span class="comment">//false</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> mc1 = <span class="keyword">new</span> Person();</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> mc2 = <span class="keyword">new</span> Person();</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(mc1.__proto__);<span class="comment">//Object</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(mc1.__proto__ == Person.prototype);<span class="comment">//true</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(mc2.__proto__ == Person.prototype);<span class="comment">//true</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="comment">//向Person的原型中添加一个属性</span></span></span><br><span class="line"><span class="javascript">        Person.prototype.name = <span class="string">&quot;我的名字&quot;</span>;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//向Person的原型中添加一个方法</span></span></span><br><span class="line"><span class="javascript">        Person.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">&quot;Hello!&quot;</span>);</span></span><br><span class="line">        &#125;</span><br><span class="line">        mc1.sayHello();</span><br><span class="line"></span><br><span class="line">        /*</span><br><span class="line">        |------------|              |----------|             </span><br><span class="line">        |            |    ------&gt;   |          |    </span><br><span class="line">        |------------|          --&gt; |----------|</span><br><span class="line">                               /</span><br><span class="line">                              /</span><br><span class="line">        |------------|       /</span><br><span class="line">        |            |   ---/</span><br><span class="line">        |------------|</span><br><span class="line">        */</span><br><span class="line"><span class="javascript">        <span class="comment">//使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会放回true，再没有则去原型的原型去找</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//可以使用对象的hasOwnProterty()来检查对象自身中是否含有该属性，而hasOwnProterty()是原型的原型里的</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;&#x27;name&#x27; in Person：&quot;</span> + (<span class="string">&quot;name&quot;</span> <span class="keyword">in</span> Person));<span class="comment">//true</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;mc1.hasOwnProperty(&#x27;name&#x27;))：&quot;</span> + (mc1.hasOwnProperty(<span class="string">&#x27;name&#x27;</span>)));<span class="comment">//false</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;mc1.hasOwnProperty(&#x27;hasOwnProperty&#x27;))：&quot;</span> + (mc1.hasOwnProperty(<span class="string">&#x27;hasOwnProperty&#x27;</span>)));<span class="comment">//false</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(mc1.__proto__.hasOwnProperty(<span class="string">&#x27;hasOwnProperty&#x27;</span>));<span class="comment">//false</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//因为原型对象也是对象，其也有原型</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;mc1.__proto__.__proto__.hasOwnProperty(&#x27;hasOwnProperty&#x27;)：&quot;</span> + (mc1.__proto__.__proto__.hasOwnProperty(<span class="string">&#x27;hasOwnProperty&#x27;</span>)));<span class="comment">//true</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(mc1.__proto__.__proto__.__proto__);<span class="comment">//null  到头了（一般两层，Object的原型对象是没有原型的）</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;sayHello&#x27;</span> <span class="keyword">in</span> Person);<span class="comment">//false</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;sayHello&#x27;</span> <span class="keyword">in</span> Person.prototype);<span class="comment">//true</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Javascript-1-4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%9A%84toString.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Javascript-1-4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%9A%84toString.html" class="post-title-link" itemprop="url">1-4 对象中的toString</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:28:27" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">        /** </span><br><span class="line">         * 但我们直接再页面中打印一个对象时，实际上是输出对象的toString()</span><br><span class="line">        */</span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, gender</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.name = name;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.age = age;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.gender = gender;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> per = <span class="keyword">new</span> Person(<span class="string">&quot;孙悟空&quot;</span>, <span class="number">18</span>, <span class="string">&quot;男&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;per：&quot;</span> + per);<span class="comment">//per：[object Object]</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(per.toString());<span class="comment">//[object Object]</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(per.__proto__.__proto__.hasOwnProperty(<span class="string">&quot;toString&quot;</span>));<span class="comment">//true   toString在其原型的原型</span></span></span><br><span class="line">        /** </span><br><span class="line"><span class="javascript">         * 如果我们希望在输出对象时不输出[object <span class="built_in">Object</span>]，可以为对象添加一个toString()方法</span></span><br><span class="line">        */</span><br><span class="line"><span class="javascript">        per.toString = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> <span class="string">&quot;已修改toString()&quot;</span>;</span></span><br><span class="line">        &#125;;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;per：&quot;</span> + per);<span class="comment">//per：已修改toString()</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//可修改Person.prototype.toString即可</span></span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/API-2postman.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/API-2postman.html" class="post-title-link" itemprop="url">2 postman</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:51:06" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/API/" itemprop="url" rel="index"><span itemprop="name">API</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://www.postman.com/downloads/">https://www.postman.com/downloads/</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/nodejs-2-http.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/nodejs-2-http.html" class="post-title-link" itemprop="url">2 http</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:53:36" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/nodejs/" itemprop="url" rel="index"><span itemprop="name">nodejs</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.加载 http核心模块</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="comment">//2.使用http.createServer()方法创建一个Web服务器</span></span><br><span class="line"><span class="comment">// 其返回一个Server实例</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer();</span><br><span class="line"><span class="comment">//3.服务器要干嘛？</span></span><br><span class="line"><span class="comment">// 提供数据的服务</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3.1接收请求</span></span><br><span class="line"><span class="comment">// 注册request请求事件</span></span><br><span class="line"><span class="comment">// 当客户端请求过来，就会自动触发服务器的request请求事件，然后执行回调函数</span></span><br><span class="line"><span class="comment">//   request请求事件处理函数，需要接收两个参数</span></span><br><span class="line"><span class="comment">//     Request 请求对象</span></span><br><span class="line"><span class="comment">//          请求对象可以用来获取客户端的一些请求信息，例如请求路径</span></span><br><span class="line"><span class="comment">//     Response 响应对象</span></span><br><span class="line"><span class="comment">//     响应对象可以用来给客户端发送响应信息</span></span><br><span class="line">server.on(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">request, response</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;收到客户端的请求了，其请求路径是：http://127.0.0.1:3000&quot;</span> + request.url);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * response 对象有一个方法:write可以用来给客户端发送响应数据</span></span><br><span class="line"><span class="comment">     *  write 可以使用多次，但是最后一定要使用end来结束响应，否则客户端会一直等待</span></span><br><span class="line"><span class="comment">     *      等待时不会呈递给用户</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    response.write(<span class="string">&#x27;hello&#x27;</span>);</span><br><span class="line">    response.write(<span class="string">&#x27; node js&#x27;</span>);</span><br><span class="line">    response.end();</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//4.绑定端口号，启动服务器</span></span><br><span class="line">server.listen(<span class="number">3000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;启动成功&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/mongodb-2%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%BA%93.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/mongodb-2%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%BA%93.html" class="post-title-link" itemprop="url">2 连接本地数据库</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:19:05" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/mongodb/" itemprop="url" rel="index"><span itemprop="name">mongodb</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在一个终端里开起mongodb时，再开另一个终端，连接本地数据库</span></span><br><span class="line">mongo </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 退出连接</span></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/hexo-2hexo.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/hexo-2hexo.html" class="post-title-link" itemprop="url">2 NexT主题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：17:37:08" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>使用<code>NexT</code>主题</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="comment"># 网站标题 html 中的title</span></span><br><span class="line"><span class="attr">subtitle:</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment"># 网站描述</span></span><br><span class="line"><span class="attr">keywords:</span>  <span class="comment"># 描述的关键词</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">John</span> <span class="string">Doe</span> <span class="comment"># 该博客的作者 写自己即可</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone:</span></span><br></pre></td></tr></table></figure>
-
-<p>修改成中文:在修改<code>hexo</code>目录下的<code>_config.yml</code>的文件，将里面的<code>language:</code>后添上<code>zh-CN</code>，执行<code>hexo s</code>查看本地效果</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://yoursite.com</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span> <span class="comment"># 打开自己写的文章是显示的url格式 推荐 :title.html</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
-
-<p><code>:year/:month/:day/:title/</code>会按年月日标题的形式，例如<code>http://127.0.0.1:4000/2021/08/14/hello-world/</code></p>
-<p>改成<code>:title.html</code>后，为：<code>http://127.0.0.1:4000/hello-world.html</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># File name of new posts   # Hexo默认以标题作为文件名称</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">highlight:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">auto_detect:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">tab_replace:</span></span><br></pre></td></tr></table></figure>
-
-<p><code>new_post_name</code>可设置的参数：<code>:title</code> <code>:year</code> <code>:month</code>(有前导零，即两位) <code>:i_month</code> (无前导零) <code>:day</code>(有前导零，即两位)  <code>:i_day</code> (无前导零)      可设置为：<code>:year-:month-:day_:title.md</code></p>
-<p>发布新文章：<code>hexo new &quot;文章名&quot;</code>，文章名里没有空格可不加引号，有空格则必须加引号。所有的文章都会放在<code>hexo\source\_posts</code>目录下</p>
-<p>启动服务器：<code>hexo s -p 端口号</code>，不写<code>-p 端口号</code>，默认监听<code>4000</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span>    <span class="comment"># 部署服务器用的</span></span><br><span class="line">  <span class="attr">type:</span>    <span class="comment"># </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>部署到服务器：<code>hexo d</code><br>部署到服务器前记得先执行<code>hexo g</code>生成静态文件</p>
-<p>清除缓存文件<code>db.json</code>和已生成的静态文件<code>public</code>：<code>hexo clean</code>。在某些情况下，对博客的修改的效果查看时，若无修改的效果，可执行该命令。之后再执行<code>hexo g</code>重新生成。</p>
-<p>显示<code>Hexo</code>版本：<code>hexo version</code></p>
-<p>对于已经生成的<code>md</code>文档：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">title: 123</span><br><span class="line">date: 2021-08-14 15:14:24</span><br><span class="line">updated: 2021-08-15 15:14:24</span><br><span class="line">tags:</span><br><span class="line">  - C</span><br><span class="line">  - C++</span><br><span class="line">categories:</span><br><span class="line">  - 一</span><br><span class="line">  - 1.</span><br></pre></td></tr></table></figure>
-
-<p><code>date</code>：创建时间<br><code>updated</code>：更新时间<br><code>tags</code>：标签 相当于关键词 可给爬虫用的<br><code>categories</code>：分类 注意上面为父子级分类</p>
-<p>本地图片统一放在<code>public/images</code>目录下，<code>images</code>文件夹是要自己新建的，图片过大建议用网络加载</p>
-<p>加载视频就用网络的了</p>
-<p>设置左侧栏</p>
-<p>更改主题配置文件：<code>scheme: Pisces</code>。这样标题与副标题就放到左侧栏上了。</p>
-<p>设置<code>Menu</code>，其用于对<code>hexo\source</code>目录下不同文件夹里<code>md</code>文档进行显示。例如<code>home</code>就默认为<code>\hexo\source\_posts</code></p>
-<p>菜单内容的设置格式是：<code>item name</code>:<code>link</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="comment">#home: / || fa fa-home</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="comment">#tags: /tags/ || fa fa-tags</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  <span class="comment">#archives: /archives/ || fa fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
-
-<p>去掉#，执行<code>hexo new page 名称 </code>，并在生成的目录下的<code>index.md</code>中修改：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 名称  </span><br><span class="line">type: 名称</span><br></pre></td></tr></table></figure>
-
-<p>设置返回顶部功能</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Table of Contents in the Sidebar</span></span><br><span class="line"><span class="comment"># Front-matter variable (unsupport wrap expand_all).</span></span><br><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Automatically add list number to toc.</span></span><br><span class="line">  <span class="attr">number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, all words will placed on next lines if header width longer then sidebar width.</span></span><br><span class="line">  <span class="attr">wrap:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># If true, all level of TOC in a post will be displayed, rather than the activated part of it.</span></span><br><span class="line">  <span class="attr">expand_all:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Maximum heading depth of generated toc.</span></span><br><span class="line">  <span class="attr">max_depth:</span> <span class="number">6</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p> <code>wrap:</code>与<code>expand_all</code>后改为<code>true</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">back2top:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Back to top in sidebar.</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Scroll percent label in b2t button.</span></span><br><span class="line">  <span class="attr">scrollpercent:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p><code>sidebar:</code>与<code>scrollpercent:</code>后改为<code>true</code></p>
-<p>设置排序：</p>
-<p>修改<code>hexo</code>目录下的<code>_config.yml</code>文件</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Home page setting</span></span><br><span class="line"><span class="comment"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span></span><br><span class="line"><span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line"><span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">order_by:</span> </span><br><span class="line">    <span class="attr">top:</span> <span class="number">1</span>  <span class="comment"># 先以top值排序 1 表示升序</span></span><br><span class="line">    <span class="attr">date:</span> <span class="number">-1</span> <span class="comment"># 若top值相同， 则以 更新时间排序 -1 表示降序</span></span><br></pre></td></tr></table></figure>
-
-<p>注意：每个页面的排序设置后才会在该页生效 设置后可能需要执行<code>hexo clean</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#标签页的分页设置 可能需要自己加上这段</span></span><br><span class="line"><span class="attr">tag_generator:</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">20</span> <span class="comment">#标签页每页博客数</span></span><br><span class="line">  <span class="attr">order_by:</span> </span><br><span class="line">    <span class="attr">top:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">date:</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-2%E5%B8%B8%E9%87%8F%E5%92%8Ciota.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-2%E5%B8%B8%E9%87%8F%E5%92%8Ciota.html" class="post-title-link" itemprop="url">2 常量和iota</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:36:34" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main <span class="comment">//入口文件</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//批量声明常量时，如果某一行声明后没有赋值，默认就和上一行一致</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	a1 = <span class="number">100</span></span><br><span class="line">	a2 <span class="comment">//n2=100</span></span><br><span class="line">	a3 <span class="comment">//n3=100</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//iota是go语言的常量计数器，只能在常量的表达式中使用。</span></span><br><span class="line"><span class="comment">//iota在const关键字出现时将被重置为0。</span></span><br><span class="line"><span class="comment">//const中每新增一行常量声明将使iota计数一次(iota可理解为const语句块中的行索引)。</span></span><br><span class="line"><span class="comment">//使用iota能简化定义，在定义枚举时很有用</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	b1 = <span class="literal">iota</span> <span class="comment">//0</span></span><br><span class="line">	b2        <span class="comment">//1</span></span><br><span class="line">	b3        <span class="comment">//2</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	c1 = <span class="literal">iota</span> <span class="comment">//0</span></span><br><span class="line">	c2 = <span class="number">100</span>  <span class="comment">//100</span></span><br><span class="line">	c3 = <span class="literal">iota</span> <span class="comment">//2</span></span><br><span class="line">	c4        <span class="comment">//3</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">const</span> c5 = <span class="literal">iota</span> <span class="comment">//0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//多个iota定义在一行</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	d1, d2 = <span class="literal">iota</span> + <span class="number">1</span>, <span class="literal">iota</span> + <span class="number">2</span> <span class="comment">//1,2</span></span><br><span class="line">	d3, d4                      <span class="comment">//2,3</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用_跳过某些值</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	e1 = <span class="literal">iota</span> <span class="comment">//0</span></span><br><span class="line">	e2        <span class="comment">//1</span></span><br><span class="line">	_</span><br><span class="line">	e4 <span class="comment">//3</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">定义数量级</span></span><br><span class="line"><span class="comment">这里的&lt;&lt;表示左移操作，1&lt;&lt;10表示将1的二进制表示向左移10位，也就是由1变成了10000000000，也就是十进制的1024。</span></span><br><span class="line"><span class="comment">同理2&lt;&lt;2表示将2的二进制表示向左移2位，也就是由10变成了1000，也就是十进制的8</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	_  = <span class="literal">iota</span></span><br><span class="line">	KB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>)</span><br><span class="line">	MB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>)</span><br><span class="line">	GB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>)</span><br><span class="line">	TB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>)</span><br><span class="line">	PB = <span class="number">1</span> &lt;&lt; (<span class="number">10</span> * <span class="literal">iota</span>)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//语句只能放在函数里</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">	fmt.Println(<span class="string">&quot;a1:&quot;</span>, a1)</span><br><span class="line">	fmt.Println(<span class="string">&quot;a2:&quot;</span>, a2)</span><br><span class="line">	fmt.Println(<span class="string">&quot;a3:&quot;</span>, a3)</span><br><span class="line">	fmt.Println(<span class="string">&quot;b1:&quot;</span>, b1)</span><br><span class="line">	fmt.Println(<span class="string">&quot;b2:&quot;</span>, b2)</span><br><span class="line">	fmt.Println(<span class="string">&quot;b3:&quot;</span>, b3)</span><br><span class="line">	fmt.Println(<span class="string">&quot;c1:&quot;</span>, c1)</span><br><span class="line">	fmt.Println(<span class="string">&quot;c2:&quot;</span>, c2)</span><br><span class="line">	fmt.Println(<span class="string">&quot;c3:&quot;</span>, c3)</span><br><span class="line">	fmt.Println(<span class="string">&quot;c4:&quot;</span>, c4)</span><br><span class="line">	fmt.Println(<span class="string">&quot;c5:&quot;</span>, c5)</span><br><span class="line">	fmt.Println(<span class="string">&quot;d1:&quot;</span>, d1)</span><br><span class="line">	fmt.Println(<span class="string">&quot;d2:&quot;</span>, d2)</span><br><span class="line">	fmt.Println(<span class="string">&quot;d4:&quot;</span>, d4)</span><br><span class="line">	fmt.Println(<span class="string">&quot;e1:&quot;</span>, e1)</span><br><span class="line">	fmt.Println(<span class="string">&quot;e2:&quot;</span>, e2)</span><br><span class="line">	fmt.Println(<span class="string">&quot;e4:&quot;</span>, e4)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-2%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-%E4%B8%8E-Git-%E5%91%BD%E4%BB%A4.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/git-2%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-%E4%B8%8E-Git-%E5%91%BD%E4%BB%A4.html" class="post-title-link" itemprop="url">2 配置用户信息 与 Git 命令</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-08-15 20:10:29" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-14 18:49:33" itemprop="dateModified" datetime="2021-08-14T18:49:33+08:00">2021-08-14</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4>配置用户信息</h4>
-
-<p>配置后每次Git提交都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被纳入历史记录中。Git首次安装必须设置一下用户签名，否则无法提交代码。<br>这里设置用户签名和登录 GitHub（或其他代码托管中心）的账号没有任何关系。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先输入命令查看是否配置了信息</span></span><br><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 出现user.name 与 user.email 说明已配置过。</span></span><br><span class="line"><span class="comment"># 重复配置会修改上一次所配置的内容</span></span><br><span class="line">user.name=name</span><br><span class="line">user.email=123456@qq.com</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 系统中对所有用户都普遍适用的配置</span></span><br><span class="line">$ git config --system user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config --system user.email 123456@qq.com</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用户目录下的配置文件只适用于该用户</span></span><br><span class="line">$ git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config --global user.email 123456@qq.com</span><br><span class="line"><span class="comment"># 生成的配置文件在 C:\Users\当前使用的用户\.gitconfig 里</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消配置</span></span><br><span class="line">$ git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">$ git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前项目的 Git 目录中的配置文件</span></span><br><span class="line">$ git config user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config user.email 123456@qq.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消配置</span></span><br><span class="line">$ git config --<span class="built_in">unset</span> user.name</span><br><span class="line">$ git config --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<p><code>系统</code>可以有多个<code>用户</code>，一个<code>用户</code>可以有多个<code>项目</code>，如果都配置了，则才用<code>项目</code>的</p>
-<h4>Git底层概念</h4>
-
-<p>它使用的是<code>linux</code>命令，而<code>cmd</code>是<code>dos</code>（也称<code>windows</code>）命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ clear  <span class="comment"># 清屏</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;hello&#x27;</span> <span class="comment"># 往控制台里输出信息</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;hello&#x27;</span> &gt;text.txt <span class="comment"># 创建文件，并把hello存入到该文件</span></span><br><span class="line">$ ll <span class="comment"># 将当前文件目录下的子文件和子目录(不包含隐藏的)平铺在控制台（会显示创建者、时间）</span></span><br><span class="line">$ ll -a  <span class="comment"># 将当前文件目录下的子文件和子目录(包含隐藏的)平铺在控制台（会显示创建者、时间）</span></span><br><span class="line">$ find 目录名 <span class="comment"># 将对应目录的子孙文件和子孙目录平铺在控制台</span></span><br><span class="line">$ find 目录名 -<span class="built_in">type</span> f <span class="comment"># 将对应目录下的的文件平铺在控制台</span></span><br><span class="line">$ rm 文件名 <span class="comment"># 删除文件</span></span><br><span class="line">$ mv 文件名 重命名后的文件名 <span class="comment"># 重命名</span></span><br><span class="line">$ cat 文件的url <span class="comment"># 查看对应文件的内容 文件的url 即bash命令下的相对路径</span></span><br><span class="line">$ vim 文件的url <span class="comment">#（在英文模式下，即右下角会有个中或英）</span></span><br><span class="line">	按 i 进入编辑</span><br><span class="line">	按 esc 建后，输入 : 进入命令的执行</span><br><span class="line">					wq 保存退出</span><br><span class="line">					q! 强制退出</span><br><span class="line">					<span class="built_in">set</span> nu 设置行号</span><br></pre></td></tr></table></figure>
+          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">brand, price</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.brand = brand;</span><br><span class="line">        <span class="built_in">this</span>.price = price;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">hello</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;hello!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SmartPhone</span> <span class="keyword">extends</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">brand, price, color, size</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(brand, price);</span><br><span class="line">        <span class="built_in">this</span>.color = color;</span><br><span class="line">        <span class="built_in">this</span>.size = size;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">hello</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;我可以拍照！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> xiaomi = <span class="keyword">new</span> SmartPhone(<span class="string">&#x27;小米&#x27;</span>, <span class="number">799</span>, <span class="string">&#x27;黑色&#x27;</span>, <span class="string">&#x27;4.7inch&#x27;</span>);</span><br><span class="line"><span class="comment">//重写父类方法</span></span><br><span class="line">xiaomi.hello();</span><br><span class="line"><span class="comment">//我可以拍照！</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -991,7 +273,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/237/">237</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -1017,9 +299,10 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
 
   
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 

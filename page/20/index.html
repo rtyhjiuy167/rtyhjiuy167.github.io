@@ -17,9 +17,8 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="笔记">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
@@ -49,7 +48,7 @@
   </noscript>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="headband"></div>
 
   <main class="main">
@@ -74,6 +73,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -86,11 +86,37 @@
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -179,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/ES6-16%E5%8F%AF%E9%80%89%E9%93%BE.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/ES6-5-2%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%BA%94%E7%94%A8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +218,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/ES6-16%E5%8F%AF%E9%80%89%E9%93%BE.html" class="post-title-link" itemprop="url">16 可选链</a>
+          <a href="/ES6-5-2%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%BA%94%E7%94%A8.html" class="post-title-link" itemprop="url">5-2 迭代器应用</a>
         </h2>
 
         <div class="post-meta-container">
@@ -204,7 +230,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:33:42" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:03:47" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -226,694 +252,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可选链操作符</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//const dbHost = congfig &amp;&amp; congfig.db &amp;&amp; config.db。host;</span></span><br><span class="line">    <span class="comment">//判断传了congfig没有，有congfig.db没有</span></span><br><span class="line">    <span class="keyword">const</span> dbHost = congfig?.db?.host;</span><br><span class="line">&#125;</span><br><span class="line">main(&#123;</span><br><span class="line">    db: &#123;</span><br><span class="line">        host: <span class="string">&#x27;192.168.1.100&#x27;</span>,</span><br><span class="line">        username: <span class="string">&#x27;root&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    cache: &#123;</span><br><span class="line">        host: <span class="string">&#x27;192.168.1.1200&#x27;</span>,</span><br><span class="line">        username: <span class="string">&#x27;admin&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-16%E5%8F%8D%E5%B0%841.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-16%E5%8F%8D%E5%B0%841.html" class="post-title-link" itemprop="url">16 反射1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:41:47" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;reflect&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//反射是指在程序运行期对程序本身进行访问和修改的能力。</span></span><br><span class="line"><span class="comment">//	程序在编译时，变量被转换为内存地址，变量名不会被编译器写入到可执行部分。</span></span><br><span class="line"><span class="comment">//		在运行程序时，程序无法获取自身的信息</span></span><br><span class="line"><span class="comment">//支持反射的语言可以在程序编译期将变量的反射信息，如字段名称、类型信息、结构体信息等整合到可执行文件中，</span></span><br><span class="line"><span class="comment">//	并给程序提供接口访问反射信息，这样就可以在程序运行期获取类型的反射信息，并且有能力修改它们</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reflectType</span><span class="params">(x <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	<span class="comment">//我是不知道别人调用我这个函数的时候会传进来什么类型的变量</span></span><br><span class="line">	<span class="comment">// 方式1：通过类型断言</span></span><br><span class="line">	<span class="comment">// 方式2：借助反射</span></span><br><span class="line">	obj := reflect.TypeOf(x)</span><br><span class="line">	fmt.Println(obj, obj.Name(), obj.Kind())</span><br><span class="line">	fmt.Printf(<span class="string">&quot;%T\n&quot;</span>, obj)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reflectValue</span><span class="params">(x <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	v := reflect.ValueOf(x)</span><br><span class="line">	fmt.Printf(<span class="string">&quot;%v,%T\n&quot;</span>, v, v)</span><br><span class="line">	k := v.Kind() <span class="comment">//拿到值对应的类型种类</span></span><br><span class="line">	<span class="keyword">switch</span> k &#123;</span><br><span class="line">	<span class="keyword">case</span> reflect.Float32:</span><br><span class="line">		ret := <span class="keyword">float32</span>(v.Float()) <span class="comment">//v.Float()将浮点类型转为Float64</span></span><br><span class="line">		fmt.Printf(<span class="string">&quot;%v %T\n&quot;</span>, ret, ret)</span><br><span class="line">	<span class="keyword">case</span> reflect.Int32:</span><br><span class="line">		ret := <span class="keyword">float32</span>(v.Int())</span><br><span class="line">		fmt.Printf(<span class="string">&quot;%v %T\n&quot;</span>, ret, ret)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reflectSetValue</span><span class="params">(x <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	v := reflect.ValueOf(x)</span><br><span class="line">	k := v.Elem().Kind() <span class="comment">//Elem()用来根据指针来取对应的值</span></span><br><span class="line">	<span class="keyword">switch</span> k &#123;</span><br><span class="line">	<span class="keyword">case</span> reflect.Int32:</span><br><span class="line">		v.Elem().SetInt(<span class="number">100</span>)</span><br><span class="line">	<span class="keyword">case</span> reflect.Float32:</span><br><span class="line">		v.Elem().SetFloat(<span class="number">1.2</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Dog <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> a <span class="keyword">float32</span> = <span class="number">1.234</span></span><br><span class="line">	reflectType(a) <span class="comment">// float32 float32 float32  	*reflect.rtype</span></span><br><span class="line">	<span class="keyword">var</span> b <span class="keyword">int8</span> = <span class="number">10</span></span><br><span class="line">	reflectType(b) <span class="comment">//int8 int8 int8   *reflect.rtype</span></span><br><span class="line">	<span class="keyword">var</span> c Dog</span><br><span class="line">	reflectType(c) <span class="comment">//main.Dog Dog struct   *reflect.rtype</span></span><br><span class="line">	<span class="keyword">var</span> d []<span class="keyword">int</span></span><br><span class="line">	reflectType(d) <span class="comment">//[]int  slice   *reflect.rtype</span></span><br><span class="line">	<span class="comment">//Go语言的反射中,像数组、切片、Map、指针等类型的变量，它们的.Name()都是返回空</span></span><br><span class="line">	<span class="keyword">var</span> e <span class="keyword">int32</span> = <span class="number">100</span></span><br><span class="line">	reflectValue(e) <span class="comment">//100,reflect.Value</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> h <span class="keyword">int32</span> = <span class="number">10</span></span><br><span class="line">	reflectSetValue(&amp;h) <span class="comment">//要修改值，需传指针</span></span><br><span class="line">	fmt.Println(h)      <span class="comment">//100</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//IsValid()返回v是否持有一个值。如果v是Value零值会返回假，此时v除了IsValid、String、Kind之外的方法都会导致panic</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-16%E5%8F%8D%E5%B0%842.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-16%E5%8F%8D%E5%B0%842.html" class="post-title-link" itemprop="url">16 反射2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:42:25" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;reflect&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//结构体反射</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> student <span class="keyword">struct</span> &#123;</span><br><span class="line">	Name  <span class="keyword">string</span> <span class="string">`json:&quot;name&quot; ini:&quot;s_name&quot;`</span></span><br><span class="line">	Score <span class="keyword">int</span>    <span class="string">`json:&quot;score&quot; ini:&quot;s_score&quot;`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	stu1 := student&#123;</span><br><span class="line">		Name:  <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">		Score: <span class="number">90</span>,</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//通过反射去获取结构体中的所有字段信息</span></span><br><span class="line">	t := reflect.TypeOf(stu1)</span><br><span class="line">	fmt.Printf(<span class="string">&quot;name:%v kind:%v\n&quot;</span>, t.Name(), t.Kind()) <span class="comment">//name:student kind:struct</span></span><br><span class="line">	<span class="comment">//遍历结构体遍历的所以字段 NumField()返回的是结构体里的字段数</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; t.NumField(); i++ &#123;</span><br><span class="line">		<span class="comment">//根据结构体字段的索引去取字段 Field(i) 返回的是结构体里的 索引为 i 的字段 从 0 开始</span></span><br><span class="line">		filedObj := t.Field(i)</span><br><span class="line">		fmt.Printf(<span class="string">&quot;name:%v type%v tag:%v\n&quot;</span>, filedObj.Name, filedObj.Type, filedObj.Tag)</span><br><span class="line">		<span class="comment">//Tag.Get()</span></span><br><span class="line">		fmt.Println(filedObj.Tag.Get(<span class="string">&quot;json&quot;</span>), filedObj.Tag.Get(<span class="string">&quot;ini&quot;</span>))</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">		name:Name typestring tag:json:&quot;name&quot; ini:&quot;s_name&quot;</span></span><br><span class="line"><span class="comment">		name s_name</span></span><br><span class="line"><span class="comment">		name:Score typeint tag:json:&quot;score&quot; ini:&quot;s_score&quot;</span></span><br><span class="line"><span class="comment">		score s_score</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="comment">//根据名字去取结构体中的字段</span></span><br><span class="line">	filedObj2, ok := t.FieldByName(<span class="string">&quot;Score&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> ok &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;name:%v type%v tag:%v\n&quot;</span>, filedObj2.Name, filedObj2.Type, filedObj2.Tag)</span><br><span class="line">		<span class="comment">//name:Score typeint tag:json:&quot;score&quot; ini:&quot;s_score&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	printMethod(stu1)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 给student添加两个方法 Study和Sleep(注意首字母大写)</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s student)</span> <span class="title">Study</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	msg := <span class="string">&quot;好好学习，天天向上。&quot;</span></span><br><span class="line">	fmt.Println(msg)</span><br><span class="line">	<span class="keyword">return</span> msg</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s student)</span> <span class="title">Sleep</span><span class="params">()</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	msg := <span class="string">&quot;好好睡觉，快快长大。&quot;</span></span><br><span class="line">	fmt.Println(msg)</span><br><span class="line">	<span class="keyword">return</span> msg</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printMethod</span><span class="params">(x <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	t := reflect.TypeOf(x)</span><br><span class="line">	v := reflect.ValueOf(x)</span><br><span class="line"></span><br><span class="line">	fmt.Println(t.NumMethod())</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; v.NumMethod(); i++ &#123;</span><br><span class="line">		methodType := v.Method(i).Type()</span><br><span class="line">		fmt.Printf(<span class="string">&quot;method name:%s\n&quot;</span>, t.Method(i).Name)</span><br><span class="line">		fmt.Printf(<span class="string">&quot;method:%s\n&quot;</span>, methodType)</span><br><span class="line">		<span class="comment">// 通过反射调用方法传递的参数必须是 []reflect.Value 类型</span></span><br><span class="line">		<span class="keyword">var</span> args = []reflect.Value&#123;&#125;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;args:%s %T\n&quot;</span>, args, args) <span class="comment">//args:[] []reflect.Value</span></span><br><span class="line">		v.Method(i).Call(args)</span><br><span class="line">		<span class="comment">//Study和Sleep本身是没有参数的，但仍需要传 []reflect.Value&#123;&#125;</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//通过方法名获取结构体的方法</span></span><br><span class="line">	methodObj := v.MethodByName(<span class="string">&quot;Sleep&quot;</span>)</span><br><span class="line">	fmt.Println(methodObj.Type()) <span class="comment">//func() string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//NumMethod()</span></span><br><span class="line"><span class="comment">// Method() 与 Field()相似</span></span><br><span class="line"><span class="comment">//v.Method(i).call(arg) 调用 结构体 v 中，索引为 i 的方法，传入的参数为 arg   call() 调用方法</span></span><br><span class="line"><span class="comment">// 通过反射调用方法传递的参数必须是 []reflect.Value 类型</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-17-1channel.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-17-1channel.html" class="post-title-link" itemprop="url">17-1 channel</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:42:48" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//channel是一种引用类型</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> ch <span class="keyword">chan</span> <span class="keyword">int</span></span><br><span class="line">	fmt.Println(ch) <span class="comment">// &lt;nil&gt;</span></span><br><span class="line">	<span class="comment">//声明的通道后需要使用make函数初始化之后才能使用</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// make(chan 元素类型, [缓冲大小])  缓冲大小指能存几个值</span></span><br><span class="line">	<span class="comment">//通道关闭后仍能取值</span></span><br><span class="line"></span><br><span class="line">	ch1 := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">1</span>) <span class="comment">//带缓冲区通道</span></span><br><span class="line">	ch1 &lt;- <span class="number">10</span>                <span class="comment">//发送值</span></span><br><span class="line">	x := &lt;-ch1</span><br><span class="line">	<span class="comment">// len(ch1)  取通道中元素的数量</span></span><br><span class="line">	<span class="comment">// cap(ch1)  拿到通道的容量</span></span><br><span class="line">	fmt.Println(x)</span><br><span class="line">	<span class="built_in">close</span>(ch1) <span class="comment">//关闭通道不是必须的 通道是可以被垃圾回收机制回收的</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//ch2 := make(chan int) //无缓冲区通道，又称为阻塞的通道</span></span><br><span class="line"></span><br><span class="line">	channal1 := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">100</span>)</span><br><span class="line">	channal2 := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">200</span>)</span><br><span class="line">	<span class="keyword">go</span> f1(channal1)</span><br><span class="line">	<span class="keyword">go</span> f2(channal1, channal2)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> ret := <span class="keyword">range</span> channal2 &#123; <span class="comment">//for range 会自己判断是否取完值</span></span><br><span class="line">		fmt.Println(ret)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f1</span><span class="params">(ch <span class="keyword">chan</span>&lt;- <span class="keyword">int</span>)</span></span> &#123; <span class="comment">//通过 chan 右边加 &lt;- 可以确保 ch 在函数里只能 接收值</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">		ch &lt;- i</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">close</span>(ch)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//从 ch1 中取出数据</span></span><br><span class="line"><span class="comment">//把结果发送到 ch2 中</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f2</span><span class="params">(ch1 &lt;-<span class="keyword">chan</span> <span class="keyword">int</span>, ch2 <span class="keyword">chan</span>&lt;- <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		temp, ok := &lt;-ch1</span><br><span class="line">		<span class="comment">//当能从 ch1 中取值时 ok 为 true，不能取值时为 false</span></span><br><span class="line">		<span class="keyword">if</span> !ok &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		ch2 &lt;- temp</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">close</span>(ch2)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-17-2work-pool.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-17-2work-pool.html" class="post-title-link" itemprop="url">17-2 work pool</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:43:04" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;time&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//work pool</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">worker</span><span class="params">(id <span class="keyword">int</span>, jobs &lt;-<span class="keyword">chan</span> <span class="keyword">int</span>, results <span class="keyword">chan</span>&lt;- <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> job := <span class="keyword">range</span> jobs &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;worker:%d start job%d\n&quot;</span>, id, job)</span><br><span class="line">		results &lt;- job * <span class="number">2</span> <span class="comment">//相对于取走了一个任务</span></span><br><span class="line">		time.Sleep(time.Millisecond * <span class="number">500</span>)</span><br><span class="line">		fmt.Printf(<span class="string">&quot;worker:%d stop job%d\n&quot;</span>, id, job)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	jobs := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">100</span>)</span><br><span class="line">	results := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>, <span class="number">100</span>)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//开启3个 goroutine</span></span><br><span class="line">	<span class="keyword">for</span> j := <span class="number">0</span>; j &lt; <span class="number">3</span>; j++ &#123;</span><br><span class="line">		<span class="keyword">go</span> worker(j, jobs, results)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//发送5个任务</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ &#123;</span><br><span class="line">		jobs &lt;- i</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">close</span>(jobs)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//输出结果  用 for range 自动判断必须是在 通道已关闭的情况下</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ &#123;</span><br><span class="line">		ret := &lt;-results</span><br><span class="line">		fmt.Println(ret)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-17-3%E9%94%81%E4%B8%8E%E5%B9%B6%E5%8F%91.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-17-3%E9%94%81%E4%B8%8E%E5%B9%B6%E5%8F%91.html" class="post-title-link" itemprop="url">17-3 锁与并发</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:43:21" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;sync&quot;</span></span><br><span class="line">	<span class="string">&quot;time&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 互斥锁 只能同一个 goroutine 读与写</span></span><br><span class="line"><span class="comment">//使用互斥锁能够保证同一时间有且只有一个goroutine进入临界区</span></span><br><span class="line"><span class="comment">//当互斥锁释放后，等待的goroutine才可以获取锁进入临界区，</span></span><br><span class="line"><span class="comment">//多个goroutine同时等待一个锁时，唤醒的策略是随机的</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">add1</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">500000</span>; i++ &#123;</span><br><span class="line">		lock.Lock()</span><br><span class="line">		x = i</span><br><span class="line">		lock.Unlock()</span><br><span class="line">	&#125;</span><br><span class="line">	wg.Done()</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">add2</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">499999</span>; i++ &#123;</span><br><span class="line">		lock.Lock()</span><br><span class="line">		x = i</span><br><span class="line">		lock.Unlock()</span><br><span class="line">	&#125;</span><br><span class="line">	wg.Done()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">	x    <span class="keyword">int</span></span><br><span class="line">	wg   sync.WaitGroup</span><br><span class="line">	lock sync.Mutex <span class="comment">//互斥锁</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	wg.Add(<span class="number">7</span>)</span><br><span class="line">	<span class="keyword">go</span> add1()</span><br><span class="line">	<span class="keyword">go</span> add2()</span><br><span class="line">	<span class="keyword">go</span> add1()</span><br><span class="line">	<span class="keyword">go</span> add2()</span><br><span class="line">	<span class="keyword">go</span> add1()</span><br><span class="line">	<span class="keyword">go</span> add2()</span><br><span class="line">	<span class="keyword">go</span> add1()</span><br><span class="line">	wg.Wait()</span><br><span class="line">	fmt.Println(x) <span class="comment">//可能是 499999,也可能是 499998</span></span><br><span class="line"></span><br><span class="line">	start := time.Now()</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++ &#123;</span><br><span class="line">		wg.Add(<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">go</span> read()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ &#123;</span><br><span class="line">		wg.Add(<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">go</span> write()</span><br><span class="line">	&#125;</span><br><span class="line">	wg.Wait()                      <span class="comment">//等待所有 goroutine 完成</span></span><br><span class="line">	fmt.Println(time.Since(start)) <span class="comment">//time. now (). sub (t)的简写</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//读写锁分为两种：读锁和写锁。</span></span><br><span class="line"><span class="comment">//当一个goroutine获取读锁之后，其他的goroutine如果是获取读锁会继续获得锁，如果是获取写锁就会等待；</span></span><br><span class="line"><span class="comment">//当一个goroutine获取写锁之后，其他的goroutine无论是获取读锁还是写锁都会等待</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">	y      <span class="keyword">int64</span>        = <span class="number">0</span></span><br><span class="line">	rwLock sync.RWMutex <span class="comment">//读写锁</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">read</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//lock.Lock()</span></span><br><span class="line">	rwLock.RLock() <span class="comment">//读锁</span></span><br><span class="line">	time.Sleep(time.Millisecond)</span><br><span class="line">	rwLock.RUnlock()</span><br><span class="line">	<span class="comment">//lock.Unlock()</span></span><br><span class="line">	wg.Done()</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">write</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//lock.Lock()</span></span><br><span class="line">	rwLock.Lock() <span class="comment">//读写锁 读也不行，写也不行</span></span><br><span class="line">	y = y + <span class="number">1</span></span><br><span class="line">	time.Sleep(time.Millisecond * <span class="number">10</span>)</span><br><span class="line">	rwLock.Unlock()</span><br><span class="line">	<span class="comment">//lock.Unlock()</span></span><br><span class="line">	wg.Done()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//15.6951328s</span></span><br><span class="line"><span class="comment">//179.2235ms</span></span><br><span class="line"><span class="comment">//其它可看文档</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-18%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-18%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA.html" class="post-title-link" itemprop="url">18 输入与输出</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:43:37" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//要求：可以从控制台接收用户信息， 姓名 年龄 薪水 是否通过考试</span></span><br><span class="line">	<span class="comment">//方式1. Scanln</span></span><br><span class="line">	<span class="keyword">var</span> name <span class="keyword">string</span></span><br><span class="line">	<span class="keyword">var</span> age <span class="keyword">byte</span> <span class="comment">// 可以不用 int</span></span><br><span class="line">	<span class="keyword">var</span> sal <span class="keyword">float32</span></span><br><span class="line">	<span class="keyword">var</span> isPass <span class="keyword">bool</span></span><br><span class="line">	fmt.Println(<span class="string">&quot;请输入姓名&quot;</span>)</span><br><span class="line">	fmt.Scanln(&amp;name) <span class="comment">//引用传递，可以影响外面的值</span></span><br><span class="line">	fmt.Println(<span class="string">&quot;请输入年龄&quot;</span>)</span><br><span class="line">	fmt.Scanln(&amp;age)</span><br><span class="line">	fmt.Println(<span class="string">&quot;请输入薪水&quot;</span>)</span><br><span class="line">	fmt.Scanln(&amp;sal)</span><br><span class="line">	fmt.Println(<span class="string">&quot;请输入是否通过考试(true/false)&quot;</span>)</span><br><span class="line">	fmt.Scanln(&amp;isPass)</span><br><span class="line">	fmt.Printf(<span class="string">&quot;名字是 %v \n年龄是 %v \n薪水是 %v \n是否通过考试 %v&quot;</span>, name, age, sal, isPass)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//要求：可以从控制台接收用户信息， 姓名 年龄 薪水 是否通过考试</span></span><br><span class="line">	<span class="comment">//方式1.fmt.Scanln</span></span><br><span class="line">	<span class="keyword">var</span> name <span class="keyword">string</span></span><br><span class="line">	<span class="keyword">var</span> age <span class="keyword">byte</span> <span class="comment">// 可以不用 int</span></span><br><span class="line">	<span class="keyword">var</span> sal <span class="keyword">float32</span></span><br><span class="line">	<span class="keyword">var</span> isPass <span class="keyword">bool</span></span><br><span class="line">	fmt.Println(<span class="string">&quot;请输入你的姓名，年龄，薪水，是否通过考试(true/false)，并以空格符隔开&quot;</span>)</span><br><span class="line">	fmt.Scanf(<span class="string">&quot;%s %d %f %t&quot;</span>, &amp;name, &amp;age, &amp;sal, &amp;isPass)</span><br><span class="line">	fmt.Printf(<span class="string">&quot;名字是 %v \n年龄是 %v \n薪水是 %v \n是否通过考试 %v&quot;</span>, name, age, sal, isPass)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-19%E8%BF%9B%E5%88%B6.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-19%E8%BF%9B%E5%88%B6.html" class="post-title-link" itemprop="url">19 进制</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:43:55" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//进制</span></span><br><span class="line"><span class="comment">// 二进制：0,1，满2进1</span></span><br><span class="line"><span class="comment">// 十进制：0~9，满10进1</span></span><br><span class="line"><span class="comment">// 八进制：0~7 满8进1，以数字0开头</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">十六进制：0~9及A~F，满16进1，以0x或0X开头表示，且A~F不区分大小写</span></span><br><span class="line"><span class="comment">	A表示10，B表示11，C表示12，D表示13，E表示14，F表示15</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//八进制</span></span><br><span class="line">	<span class="keyword">var</span> j <span class="keyword">int</span> = <span class="number">021</span>      <span class="comment">// 8^0*1 + 8^1*2 = 17</span></span><br><span class="line">	fmt.Println(<span class="string">&quot;j=&quot;</span>, j) <span class="comment">//输出为十进制 17</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//十六进制</span></span><br><span class="line">	<span class="keyword">var</span> k <span class="keyword">int</span> = <span class="number">0x34A</span>    <span class="comment">// 16^0*10 + 16^1*4 + 16^2*3 = 842</span></span><br><span class="line">	fmt.Println(<span class="string">&quot;k=&quot;</span>, k) <span class="comment">//输出为十进制 842</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//十进制转二进制</span></span><br><span class="line">	<span class="comment">//将该数不断除以2，直到商为0，然后将每步得到的余数倒过来，就是对应的二进制</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 56 / 2 = 28···0</span></span><br><span class="line"><span class="comment">	 28 / 2 = 14···0</span></span><br><span class="line"><span class="comment">	 14 / 2 = 7 ···0</span></span><br><span class="line"><span class="comment">	  7 / 2 = 3 ···1</span></span><br><span class="line"><span class="comment">	  3 / 2 = 1 ···1</span></span><br><span class="line"><span class="comment">	  1 / 2 = 0 ···1</span></span><br><span class="line"><span class="comment">	  结果即为 11000</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="keyword">var</span> i <span class="keyword">int</span> = <span class="number">56</span></span><br><span class="line">	<span class="comment">//二进制输出  %b</span></span><br><span class="line">	fmt.Printf(<span class="string">&quot;%b\n&quot;</span>, i) <span class="comment">//111000</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//十进制转八进制</span></span><br><span class="line">	<span class="comment">//将该数不断除以8，直到商为0，然后将每步得到的余数倒过来，就是对应的八进制</span></span><br><span class="line">	i = <span class="number">156</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 156 / 8 = 19···4</span></span><br><span class="line"><span class="comment">		  19 / 8 = 2 ···3</span></span><br><span class="line"><span class="comment">		   2 / 8 = 0 ···2</span></span><br><span class="line"><span class="comment">		结果即为 234</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="comment">//八进制输出  %o</span></span><br><span class="line">	fmt.Printf(<span class="string">&quot;%o\n&quot;</span>, i) <span class="comment">//234</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//十进制转十六进制</span></span><br><span class="line">	<span class="comment">//将该数不断除以16，直到商为0，然后将每步得到的余数倒过来，就是对应的十六进制</span></span><br><span class="line">	i = <span class="number">3564</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 3564 / 16 = 222···12</span></span><br><span class="line"><span class="comment">		  222 / 16 = 13 ···14</span></span><br><span class="line"><span class="comment">		   13 / 16 = 0 ···13</span></span><br><span class="line"><span class="comment">		结果即为 13 14 12 --&gt; dec</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="comment">//八进制输出  %x</span></span><br><span class="line">	fmt.Printf(<span class="string">&quot;%x\n&quot;</span>, i) <span class="comment">//dec</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4>二进制转八进制与十六进制</h4>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">二进制转成八进制</span><br><span class="line">将二进制每三位一组（从第一位（个位？！）开始组合），转成对应的八进制数即可</span><br><span class="line">例如：11010101</span><br><span class="line">    11                 010                    101</span><br><span class="line">2^0*1+2^1*1      2^0*0+2^1*1+2^2*0     2^0*1+2^1*0+2^2*1</span><br><span class="line">     3                  2                      5</span><br><span class="line">结果即为 0325</span><br><span class="line"></span><br><span class="line">二进制转成十六进制</span><br><span class="line">将二进制每四位一组（从第一位（个位？！）开始组合），转成对应的十六进制数即可</span><br><span class="line">例如：11010101</span><br><span class="line">        1101                         0101</span><br><span class="line">2^0*1+2^1*0+2^2*1+2^3*1     2^0*1+2^1*0+2^2*1+2^3*0</span><br><span class="line">	     13                           5</span><br><span class="line">          D                           5</span><br><span class="line">结果即为 0xD5</span><br></pre></td></tr></table></figure>
-
-<h4>八进制与十六进制转二进制</h4>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">八进制转二进制</span><br><span class="line">将八进制数的每一位，转成对应的一个3位的二进制数即可，最后一个能用一位就用一位，不行就二位，再不行就三位</span><br><span class="line">例如： 0237  &#x2F;&#x2F;0是八进制开头用的</span><br><span class="line"> 2   3   7</span><br><span class="line">10  011 111</span><br><span class="line">结果即为 10011111</span><br><span class="line"></span><br><span class="line">十六进制转二进制</span><br><span class="line">将十六进制数的每一位，转成对应的一个4位的二进制数即可，最后一个能用一位就用一位，不行就二位，再不行就三位，还不行就四位</span><br><span class="line">例如： 0x237  &#x2F;&#x2F;0x是十六进制开头用的</span><br><span class="line"> 2   3    7</span><br><span class="line">10  0011 0111</span><br><span class="line">结果即为 1000110111</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-20-1%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%9A%84%E4%BB%A3%E7%A0%81.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-20-1%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%9A%84%E4%BB%A3%E7%A0%81.html" class="post-title-link" itemprop="url">20-1 面向过程的代码1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:44:37" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//声明一个变量，保存接收用户输入的选项</span></span><br><span class="line">	<span class="keyword">var</span> key = <span class="string">&quot;&quot;</span></span><br><span class="line">	<span class="comment">//声明一个变量，控制是否退出循环</span></span><br><span class="line">	<span class="keyword">var</span> isloop = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//定义账户的余额</span></span><br><span class="line">	balance := <span class="number">10000.0</span></span><br><span class="line">	<span class="comment">//每次收支的金额</span></span><br><span class="line">	money := <span class="number">0.0</span></span><br><span class="line">	<span class="comment">//每次收支的金额的说明</span></span><br><span class="line">	note := <span class="string">&quot;&quot;</span></span><br><span class="line">	<span class="comment">//定义一个变量，记录收支</span></span><br><span class="line">	flag := <span class="literal">false</span></span><br><span class="line">	<span class="comment">//收支的详情 使用字符串记录</span></span><br><span class="line">	<span class="comment">//当有收支时，只需要对details 进行拼接处理即可</span></span><br><span class="line">	details := <span class="string">&quot;收 支\t账户金额\t收支金额\t说 明&quot;</span></span><br><span class="line">	<span class="comment">//显示这个主菜单</span></span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;\n---------------------家庭收支记账软件-----------------------&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;                     1.收支明细                            &quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;                     2.登记收入                            &quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;                     3.登记支出                            &quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;                     4.退出软件                            &quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;请选择(1~4)：&quot;</span>)</span><br><span class="line">		fmt.Scanln(&amp;key)</span><br><span class="line">		<span class="keyword">switch</span> key &#123; <span class="comment">//switch 的每个 case 自带 break</span></span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;1&quot;</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;---------------------当前收支明细记录-----------------------&quot;</span>)</span><br><span class="line">			<span class="keyword">if</span> flag &#123;</span><br><span class="line">				fmt.Println(details)</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				fmt.Println(<span class="string">&quot;当前没有收支&quot;</span>)</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;2&quot;</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;本次收入金额&quot;</span>)</span><br><span class="line">			fmt.Scanln(&amp;money)</span><br><span class="line">			balance += money <span class="comment">//修改账户余额</span></span><br><span class="line">			fmt.Println(<span class="string">&quot;本次收入说明：&quot;</span>)</span><br><span class="line">			fmt.Scanln(&amp;note)</span><br><span class="line">			<span class="comment">//将这个收入情况，拼接到 details变量</span></span><br><span class="line">			details += fmt.Sprintf(<span class="string">&quot;\n收入\t%v\t\t%v\t%v&quot;</span>, balance, money, note)</span><br><span class="line">			flag = <span class="literal">true</span></span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;3&quot;</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;--------------------------登记支出-------------------------&quot;</span>)</span><br><span class="line">			fmt.Println(<span class="string">&quot;本次支出金额&quot;</span>)</span><br><span class="line">			fmt.Scanln(&amp;money)</span><br><span class="line">			<span class="comment">//判读余额是否够支出</span></span><br><span class="line">			<span class="keyword">if</span> money &gt; balance &#123;</span><br><span class="line">				fmt.Println(<span class="string">&quot;余额不足&quot;</span>)</span><br><span class="line">				<span class="keyword">break</span> <span class="comment">//跳出switch</span></span><br><span class="line">			&#125;</span><br><span class="line">			balance -= money</span><br><span class="line">			fmt.Println(<span class="string">&quot;本次支出说明：&quot;</span>)</span><br><span class="line">			fmt.Scanln(&amp;note)</span><br><span class="line">			details += fmt.Sprintf(<span class="string">&quot;\n支出\t%v\t\t%v\t%v&quot;</span>, balance, money, note)</span><br><span class="line">			flag = <span class="literal">true</span></span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;4&quot;</span>:</span><br><span class="line">			choice := <span class="string">&quot;&quot;</span></span><br><span class="line">			fmt.Println(<span class="string">&quot;你确定退出吗(y/n)&quot;</span>)</span><br><span class="line">			<span class="keyword">for</span> &#123;</span><br><span class="line">				fmt.Scanln(&amp;choice)</span><br><span class="line">				<span class="keyword">if</span> choice == <span class="string">&quot;y&quot;</span> || choice == <span class="string">&quot;n&quot;</span> &#123;</span><br><span class="line">					<span class="keyword">break</span></span><br><span class="line">				&#125;</span><br><span class="line">				fmt.Println(<span class="string">&quot;你的输入有误，请重新输入 y/n&quot;</span>)</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> choice == <span class="string">&quot;y&quot;</span> &#123;</span><br><span class="line">				isloop = <span class="literal">false</span></span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;请输入正确的选项..&quot;</span>)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> !isloop &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(<span class="string">&quot;已退出..&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/go-20-2%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BB%A3%E7%A0%81.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XuAnrui">
-      <meta itemprop="description" content="笔记">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/go-20-2%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BB%A3%E7%A0%81.html" class="post-title-link" itemprop="url">20-2 面向过程的代码2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:44:30" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> www</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> FamilyAccount <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="comment">//声明一个字段，保存接收用户输入的选项</span></span><br><span class="line">	key <span class="keyword">string</span></span><br><span class="line">	<span class="comment">//声明一个字段，控制是否退出循环</span></span><br><span class="line">	isloop <span class="keyword">bool</span></span><br><span class="line">	<span class="comment">//定义账户的余额</span></span><br><span class="line">	balance <span class="keyword">float64</span></span><br><span class="line">	<span class="comment">//每次收支的金额</span></span><br><span class="line">	money <span class="keyword">float64</span></span><br><span class="line">	<span class="comment">//每次收支的金额的说明</span></span><br><span class="line">	note <span class="keyword">string</span></span><br><span class="line">	<span class="comment">//定义一个字段，记录收支</span></span><br><span class="line">	flag <span class="keyword">bool</span></span><br><span class="line">	<span class="comment">//收支的详情 使用字符串记录</span></span><br><span class="line">	<span class="comment">//当有收支时，只需要对details 进行拼接处理即可</span></span><br><span class="line">	details <span class="keyword">string</span></span><br><span class="line">	<span class="comment">//显示这个主菜单</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//编写一个工厂模式的构造方法，返回一个  *FamilyAccount 的实例</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewFamilyAccount</span><span class="params">()</span> *<span class="title">FamilyAccount</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> &amp;FamilyAccount&#123;</span><br><span class="line">		key:     <span class="string">&quot;&quot;</span>,</span><br><span class="line">		isloop:  <span class="literal">true</span>,</span><br><span class="line">		balance: <span class="number">10000.0</span>,</span><br><span class="line">		money:   <span class="number">0.0</span>,</span><br><span class="line">		note:    <span class="string">&quot;&quot;</span>,</span><br><span class="line">		flag:    <span class="literal">false</span>,</span><br><span class="line">		details: <span class="string">&quot;收 支\t账户金额\t收支金额\t说 明&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *FamilyAccount)</span> <span class="title">showDetails</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;---------------------当前收支明细记录-----------------------&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> a.flag &#123;</span><br><span class="line">		fmt.Println(a.details)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;当前没有收支&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *FamilyAccount)</span> <span class="title">income</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;本次收入金额&quot;</span>)</span><br><span class="line">	fmt.Scanln(&amp;a.money)</span><br><span class="line">	a.balance += a.money <span class="comment">//修改账户余额</span></span><br><span class="line">	fmt.Println(<span class="string">&quot;本次收入说明：&quot;</span>)</span><br><span class="line">	fmt.Scanln(&amp;a.note)</span><br><span class="line">	<span class="comment">//将这个收入情况，拼接到 details变量</span></span><br><span class="line">	a.details += fmt.Sprintf(<span class="string">&quot;\n收入\t%v\t\t%v\t%v&quot;</span>, a.balance, a.money, a.note)</span><br><span class="line">	a.flag = <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *FamilyAccount)</span> <span class="title">pay</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;--------------------------登记支出-------------------------&quot;</span>)</span><br><span class="line">	fmt.Println(<span class="string">&quot;本次支出金额&quot;</span>)</span><br><span class="line">	fmt.Scanln(&amp;a.money)</span><br><span class="line">	<span class="comment">//判读余额是否够支出</span></span><br><span class="line">	<span class="keyword">if</span> a.money &gt; a.balance &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;余额不足&quot;</span>)</span><br><span class="line">		<span class="comment">//break //跳出switch</span></span><br><span class="line">	&#125;</span><br><span class="line">	a.balance -= a.money</span><br><span class="line">	fmt.Println(<span class="string">&quot;本次支出说明：&quot;</span>)</span><br><span class="line">	fmt.Scanln(&amp;a.note)</span><br><span class="line">	a.details += fmt.Sprintf(<span class="string">&quot;\n支出\t%v\t\t%v\t%v&quot;</span>, a.balance, a.money, a.note)</span><br><span class="line">	a.flag = <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *FamilyAccount)</span> <span class="title">exit</span><span class="params">()</span></span> &#123;</span><br><span class="line">	choice := <span class="string">&quot;&quot;</span></span><br><span class="line">	fmt.Println(<span class="string">&quot;你确定退出吗(y/n)&quot;</span>)</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		fmt.Scanln(&amp;choice)</span><br><span class="line">		<span class="keyword">if</span> choice == <span class="string">&quot;y&quot;</span> || choice == <span class="string">&quot;n&quot;</span> &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		fmt.Println(<span class="string">&quot;你的输入有误，请重新输入 y/n&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> choice == <span class="string">&quot;y&quot;</span> &#123;</span><br><span class="line">		a.isloop = <span class="literal">false</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//给结构体绑定方法</span></span><br><span class="line"><span class="comment">//显示主菜单</span></span><br><span class="line"><span class="comment">//a 只是个参数名</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *FamilyAccount)</span> <span class="title">MainMenu</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;\n---------------------家庭收支记账软件-----------------------&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;                     1.收支明细                            &quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;                     2.登记收入                            &quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;                     3.登记支出                            &quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;                     4.退出软件                            &quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;请选择(1~4)：&quot;</span>)</span><br><span class="line">		fmt.Scanln(&amp;a.key)</span><br><span class="line">		<span class="keyword">switch</span> a.key &#123; <span class="comment">//switch 的每个 case 自带 break</span></span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;1&quot;</span>:</span><br><span class="line">			a.showDetails()</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;2&quot;</span>:</span><br><span class="line">			a.income()</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;3&quot;</span>:</span><br><span class="line">			a.pay()</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;4&quot;</span>:</span><br><span class="line">			a.exit()</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;请输入正确的选项..&quot;</span>)</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> !a.isloop &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	fmt.Println(<span class="string">&quot;已退出..&quot;</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	www <span class="string">&quot;1/familyAccount&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//先调用NewFamilyAccount()</span></span><br><span class="line">	www.NewFamilyAccount().MainMenu()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> banji = &#123;</span></span><br><span class="line"><span class="javascript">            name: <span class="string">&quot;终极一班&quot;</span>,</span></span><br><span class="line">            stus: [</span><br><span class="line"><span class="javascript">                <span class="string">&#x27;xiaoming&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;xiaoning&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;xiaotian&#x27;</span></span></span><br><span class="line">            ],</span><br><span class="line"><span class="javascript">            [<span class="built_in">Symbol</span>.iterator]: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">let</span> index = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">let</span> _this = <span class="built_in">this</span>;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">                    next: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line">                        if (index &lt; _this.stus.length) &#123;</span><br><span class="line"><span class="javascript">                            <span class="keyword">const</span> result = &#123; <span class="attr">value</span>: _this.stus[index], <span class="attr">done</span>: <span class="literal">false</span> &#125;;</span></span><br><span class="line"><span class="javascript">                            <span class="comment">//下标自增</span></span></span><br><span class="line">                            index++;</span><br><span class="line"><span class="javascript">                            <span class="comment">//返回结果</span></span></span><br><span class="line"><span class="javascript">                            <span class="keyword">return</span> result;</span></span><br><span class="line"><span class="javascript">                        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">                            <span class="keyword">return</span> &#123; <span class="attr">value</span>: <span class="literal">undefined</span>, <span class="attr">done</span>: <span class="literal">true</span> &#125;;</span></span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"><span class="javascript">        <span class="comment">// Symbol(Symbol.iterator): ƒ values()   这是数组的一个成员</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">let</span> v <span class="keyword">of</span> banji) &#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(v);</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -934,7 +273,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/237/">237</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -960,9 +299,10 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
 
   
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
