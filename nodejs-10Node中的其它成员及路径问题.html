@@ -22,7 +22,7 @@
 <meta name="description" content="在每个模块中，除了require、exports等模块相关的API之外，还有两个特殊的成员： __dirname可以用来动态获取当前文件模块所属目录的绝对路径 __filename可以用来动态获取当前文件的绝对路径 12console.log(__dirname);console.log(__filename);  在执行node命名时，模块中的.&#x2F;只是相对于执行node命名所处的终端路径.&#x2F;不是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="10 Node中的其它成员及路径问题">
-<meta property="og:url" content="https://www.rui123.xyz/blog/nodejs-10Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98%E5%8F%8A%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html">
+<meta property="og:url" content="https://www.rui123.xyz/nodejs-10Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98%E5%8F%8A%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html">
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="在每个模块中，除了require、exports等模块相关的API之外，还有两个特殊的成员： __dirname可以用来动态获取当前文件模块所属目录的绝对路径 __filename可以用来动态获取当前文件的绝对路径 12console.log(__dirname);console.log(__filename);  在执行node命名时，模块中的.&#x2F;只是相对于执行node命名所处的终端路径.&#x2F;不是">
 <meta property="og:locale" content="zh_CN">
@@ -33,11 +33,11 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.rui123.xyz/blog/nodejs-10Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98%E5%8F%8A%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html">
+<link rel="canonical" href="https://www.rui123.xyz/nodejs-10Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98%E5%8F%8A%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.rui123.xyz/blog/nodejs-10Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98%E5%8F%8A%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html","path":"nodejs-10Node中的其它成员及路径问题.html","title":"10 Node中的其它成员及路径问题"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.rui123.xyz/nodejs-10Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98%E5%8F%8A%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html","path":"nodejs-10Node中的其它成员及路径问题.html","title":"10 Node中的其它成员及路径问题"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>10 Node中的其它成员及路径问题 | blog</title>
@@ -214,7 +214,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/blog/nodejs-10Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98%E5%8F%8A%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/nodejs-10Node%E4%B8%AD%E7%9A%84%E5%85%B6%E5%AE%83%E6%88%90%E5%91%98%E5%8F%8A%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
