@@ -7,18 +7,18 @@
 <meta name="generator" content="Hexo 5.4.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/blog/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.rui123.xyz","root":"/blog/","images":"/blog/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/blog/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/blog/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.rui123.xyz","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="高级命令  git操作基本流程  一、创建工作目录，对工作目录进行修改二、git commit -a -m &quot;注释内容&quot;    1.git add .&#x2F;        1）git hash-objext -w 文件名修改了多少个工作目录中的文件 此命令就要被执行多少次        2）git update-index --add --cacheinfo 文件模式 键 文件名">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4 高级命令">
@@ -47,8 +47,9 @@
 
 
   <noscript>
-    <link rel="stylesheet" href="/blog/css/noscript.css">
+    <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+  <script src="/live2d-widget/autoload.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -67,7 +68,7 @@
 
   <div class="site-meta">
 
-    <a href="/blog/" class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
       <h1 class="site-title">blog</h1>
       <i class="logo-line"></i>
@@ -85,10 +86,11 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/blog/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-tags"><a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
-        <li class="menu-item menu-item-categories"><a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-        <li class="menu-item menu-item-archives"><a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-index"><a href="/index/" rel="section">主页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -145,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">高级命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">git操作基本流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">检查当前文件状态</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-number">1.2.1.</span> <span class="nav-text">查看已暂存和未暂存的更新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-number">1.2.2.</span> <span class="nav-text">文件改名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-number">1.2.3.</span> <span class="nav-text">查看历史记录</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">高级命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#git%E6%93%8D%E4%BD%9C%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">git操作基本流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E5%BD%93%E5%89%8D%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81"><span class="nav-number">1.2.</span> <span class="nav-text">检查当前文件状态</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%B7%B2%E6%9A%82%E5%AD%98%E5%92%8C%E6%9C%AA%E6%9A%82%E5%AD%98%E7%9A%84%E6%9B%B4%E6%96%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text">查看已暂存和未暂存的更新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%94%B9%E5%90%8D"><span class="nav-number">1.2.2.</span> <span class="nav-text">文件改名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="nav-number">1.2.3.</span> <span class="nav-text">查看历史记录</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -158,18 +160,18 @@
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        <a href="/blog/archives/">
+        <a href="/archives/">
           <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-          <a href="/blog/categories/">
+          <a href="/categories/">
         <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-          <a href="/blog/tags/">
+          <a href="/tags/">
         <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
@@ -218,7 +220,7 @@
     <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/git-4%E9%AB%98%E7%BA%A7%E5%91%BD%E4%BB%A4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="XuAnrui">
       <meta itemprop="description" content="简约 笔记">
     </span>
@@ -254,7 +256,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/blog/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
         </span>
     </span>
 
@@ -268,9 +270,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3>高级命令</h3>
+        <h3 id="高级命令">高级命令</h3>
 
-<h4>git操作基本流程</h4>
+<h4 id="git操作基本流程">git操作基本流程</h4>
 
 <p>一、创建工作目录，对工作目录进行修改<br>二、<code>git commit -a -m &quot;注释内容&quot;</code><br>    1.<code>git add ./</code><br>        1）<code>git hash-objext -w 文件名</code>修改了多少个工作目录中的文件 此命令就要被执行多少次<br>        2）<code>git update-index --add --cacheinfo 文件模式 键 文件名</code><br>    2.<code>git commit -m &quot;注释内容&quot;</code><br>        1）<code>git write-tree</code><br>        2）<code>echo &#39;注释内容&#39; | git commit-tree 树的哈希值 -p 父提交对象的哈希值</code><br>使用<code>git commit -a -m &quot;注释内容&quot;</code>来代替<code>git add ./</code>与<code>git commit -m &quot;注释内容&quot;</code>，可以跳过使用暂存区域的方式，git 会自动把所有<u>已经跟踪</u>过(曾经<code>add</code>过，不论是否修改过，是否删除)的文件暂存起来一并提交，从而跳过了<code>git add</code>这一步</p>
 <p>可以理解为<code>add</code>操作用工作区的内容覆盖了一遍暂存区</p>
@@ -278,21 +280,21 @@
 <p>克隆仓库时，在克隆完成后会生成一个项目文件夹，里面是有<code>.git</code>文件夹的</p>
 <p>已跟踪的文件是指本来就被纳入版本控制管理的文件，在上次快照中有它们的记录，工作一段时间后，他们的状态可能是已提交、已修改或者已暂存。<br>其它文件都属于为跟踪文件。它们既没有上次的更新时的快照，也不在暂存区。</p>
 <p>已<code>add</code>的文件，即处于已跟踪的状态。</p>
-<h4>检查当前文件状态</h4>
+<h4 id="检查当前文件状态">检查当前文件状态</h4>
 
 <p>命令：<code>git status</code><br>作用：确定文件当前处于什么状态</p>
 <p><code>untracked</code>：未跟踪<br><code>modified</code>：已跟踪但是已修改   <code>unmodified</code>：已跟踪且未修改   <code>staged</code>：已跟踪且已暂存</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git status 以后出现下面情况 则工作区的文件已提交</span></span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
 
 <p>一个文件可能会出现多个状态，例如对已经暂存过（<code>add</code>）但未提交（<code>commit</code>）的文件做修改，就会出现<code>modified</code>（绿色）和<code>not staged</code>(红色)两种状态</p>
-<h5>查看已暂存和未暂存的更新</h5>
+<h5 id="查看已暂存和未暂存的更新">查看已暂存和未暂存的更新</h5>
 
 <p>实际上<code>git init</code>的显示比较简单，<br>可以用<code>git diff</code>命名查看当前哪些已修改的文件还未暂存<br>也可以用<code>git diff --cached</code>或者<code>git diff --staged</code>命名查看当前哪些更新已经暂存等待提交</p>
-<h5>文件改名</h5>
+<h5 id="文件改名">文件改名</h5>
 
 <p><code>git mv file.from file.to</code>   <code>file.from</code>原文件名    <code>file.to</code>要使用的新的文件名</p>
 <p>运行该命令相当于运行了下面三条命令：<br>1.<code>mv file.from file.to</code>  <br>2.<code>git rm file.from</code><br>3.<code>git add file.to</code></p>
-<h5>查看历史记录</h5>
+<h5 id="查看历史记录">查看历史记录</h5>
 
 <p><code>git log</code> 详细输出历史记录</p>
 <p><code>git log --pretty=oneline</code></p>
@@ -306,19 +308,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/git/" rel="tag"># git</a>
+              <a href="/tags/git/" rel="tag"># git</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/blog/git-3%E6%A0%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%90%E4%BA%A4%E5%AF%B9%E8%B1%A1.html" rel="prev" title="3 树对象 与 提交对象">
+                <a href="/git-3%E6%A0%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%90%E4%BA%A4%E5%AF%B9%E8%B1%A1.html" rel="prev" title="3 树对象 与 提交对象">
                   <i class="fa fa-chevron-left"></i> 3 树对象 与 提交对象
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/blog/git-5%E5%88%86%E6%94%AF.html" rel="next" title="5 分支">
+                <a href="/git-5%E5%88%86%E6%94%AF.html" rel="next" title="5 分支">
                   5 分支 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -353,10 +355,10 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/blog/js/comments.js"></script><script src="/blog/js/utils.js"></script><script src="/blog/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
 
   
-<script src="/blog/js/third-party/search/local-search.js"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
@@ -367,5 +369,5 @@
 
 
 
-<script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
 </html>
