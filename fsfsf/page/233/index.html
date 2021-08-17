@@ -156,18 +156,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">281</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/vue-5%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/flutter-38%E5%BA%94%E7%94%A8%E5%8D%87%E7%BA%A7.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/vue-5%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93.html" class="post-title-link" itemprop="url">5 条件渲染</a>
+          <a href="/flutter-38%E5%BA%94%E7%94%A8%E5%8D%87%E7%BA%A7.html" class="post-title-link" itemprop="url">未命名</a>
         </h2>
 
         <div class="post-meta-container">
@@ -234,24 +234,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-07-11 18:53:33" itemprop="dateCreated datePublished" datetime="2021-07-11T18:53:33+08:00">2021-07-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-15 20:12:45" itemprop="dateModified" datetime="2021-08-15T20:12:45+08:00">2021-08-15</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
-        </span>
+      <time title="创建时间：2021-07-30 09:17:10 / 修改时间：09:56:33" itemprop="dateCreated datePublished" datetime="2021-07-30T09:17:10+08:00">2021-07-30</time>
     </span>
 
   
@@ -264,8 +249,31 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        条件渲染指令 标签的显示与隐藏</span></span><br><span class="line"><span class="comment">            v-if v-else 组合    </span></span><br><span class="line"><span class="comment">                v-if 为真  则 v-else则不执行 不显示，元素本身不存在了，移除了</span></span><br><span class="line"><span class="comment">            v-show</span></span><br><span class="line"><span class="comment">        比较 v-if 与 v-show</span></span><br><span class="line"><span class="comment">            如果需要频繁切换 v-show 较好 因为 其本质为 display:none 快一点...</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;demo&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;ok&quot;</span>&gt;</span>成功了<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>失败了<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--如果不写属性名，则为 true    右式即  v-else=&quot;ture&quot; 这样写啰嗦--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-show</span>=<span class="string">&quot;ok&quot;</span>&gt;</span>成功了啊<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-show</span>=<span class="string">&quot;!ok&quot;</span>&gt;</span>失败了啊<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;ok=!ok&quot;</span>&gt;</span>切换<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">&#x27;#demo&#x27;</span>,</span></span><br><span class="line">            data: &#123;</span><br><span class="line"><span class="javascript">                ok: <span class="literal">true</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  Android App 执行自动升级流程</span><br><span class="line">1、获取本地版本号</span><br><span class="line">2、请求服务器的 api 接口获取服务器保存版本号</span><br><span class="line">3、本地版本和服务器版本不一致提示升级，弹窗提示用户是否更新</span><br><span class="line">4、用户确定升级，调用文件传输方法下载 apk 文件</span><br><span class="line">5、监听下载进度</span><br><span class="line">6、下载完成打开 Apk 进行安装</span><br><span class="line">注意：在 Ios 中没法直接下载安装，如果版本不一致直接跳转到 Ios 应用对应的应用市场就</span><br><span class="line">可以了。</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">配置 AndroidMenifest.xml</span><br><span class="line">&lt;uses-permission android:name&#x3D;&quot;android.permission.INTERNET&quot;&#x2F;&gt;</span><br><span class="line">&lt;uses-permission android:name&#x3D;&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; &#x2F;&gt;</span><br><span class="line">&lt;uses-permission android:name&#x3D;&quot;android.permission.READ_EXTERNAL_STORAGE&quot; &#x2F;&gt;</span><br><span class="line">&lt;uses-permission android:name&#x3D;&quot;android.permission.REQUEST_INSTALL_PACKAGES&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>package_info：<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/package_info">https://pub.flutter-io.cn/packages/package_info</a>   用于检测版本号</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub add package_info</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:package_info/package_info.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line">PackageInfo packageInfo = <span class="keyword">await</span> PackageInfo.fromPlatform();</span><br><span class="line"><span class="built_in">String</span> appName = packageInfo.appName;<span class="comment">//app的名字</span></span><br><span class="line"><span class="built_in">String</span> packageName = packageInfo.packageName;</span><br><span class="line"><span class="built_in">String</span> version = packageInfo.version;<span class="comment">//版本号</span></span><br><span class="line"><span class="built_in">String</span> buildNumber = packageInfo.buildNumber;</span><br></pre></td></tr></table></figure>
+
+<p>path_provider：<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/path_provider">https://pub.flutter-io.cn/packages/path_provider</a>  用于获取文件存储路径</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub add path_provider</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:path_provider/path_provider.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line">Directory tempDir = <span class="keyword">await</span> getTemporaryDirectory();</span><br><span class="line"><span class="built_in">String</span> tempPath = tempDir.path;<span class="comment">//当前应用的临时目录</span></span><br><span class="line"></span><br><span class="line">Directory appDocDir = <span class="keyword">await</span> getApplicationDocumentsDirectory();</span><br><span class="line"><span class="built_in">String</span> appDocPath = appDocDir.path;<span class="comment">//当前应用的存储目录</span></span><br></pre></td></tr></table></figure>
+
+<p>dio：<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/dio">https://pub.flutter-io.cn/packages/dio</a>  用于下载文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dart pub add dio</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:dio/dio.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line">response = <span class="keyword">await</span> dio.download(<span class="string">&#x27;https://www.google.cn/&#x27;</span>, <span class="string">&#x27;./xx.html&#x27;</span>);<span class="comment">//第二个参数为本地路径</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/open_file/install">https://pub.flutter-io.cn/packages/open_file/install</a>   用于打开文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub add open_file</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:open_file/open_file.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line">OpenFile.open(<span class="string">&quot;/sdcard/example.txt&quot;</span>);<span class="comment">//可设置其它参数 type 打开类型</span></span><br><span class="line"><span class="comment">//OpenFile.open(&quot;/sdcard/example.txt&quot;, type: &quot;text/plain&quot;, uti: &quot;public.plain-text&quot;); </span></span><br></pre></td></tr></table></figure>
+
+<p>升级需版本号大于之前的（修改<code>pubspec.yaml</code>），且打包时包名和签名需和之前的一致</p>
 
       
     </div>
@@ -285,7 +293,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/232/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/232/">232</a><span class="page-number current">233</span><a class="page-number" href="/fsfsf/page/234/">234</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/237/">237</a><a class="extend next" rel="next" href="/fsfsf/page/234/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/232/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/232/">232</a><span class="page-number current">233</span><a class="page-number" href="/fsfsf/page/234/">234</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/234/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

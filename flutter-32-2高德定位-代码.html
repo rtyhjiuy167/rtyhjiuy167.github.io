@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.rui123.xyz","root":"/","images":"/images","scheme":"Pisces","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="pages  Location.dart  1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939">
+<meta property="og:type" content="article">
+<meta property="og:title" content="32-2 高德定位(代码)">
+<meta property="og:url" content="https://www.rui123.xyz/flutter-32-2%E9%AB%98%E5%BE%B7%E5%AE%9A%E4%BD%8D-%E4%BB%A3%E7%A0%81.html">
+<meta property="og:site_name" content="blog">
+<meta property="og:description" content="pages  Location.dart  1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-29T05:29:59.995Z">
+<meta property="article:modified_time" content="2021-08-17T09:54:34.933Z">
+<meta property="article:author" content="XuAnrui">
+<meta property="article:tag" content="flutter">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.rui123.xyz/flutter-32-2%E9%AB%98%E5%BE%B7%E5%AE%9A%E4%BD%8D-%E4%BB%A3%E7%A0%81.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.rui123.xyz/flutter-32-2%E9%AB%98%E5%BE%B7%E5%AE%9A%E4%BD%8D-%E4%BB%A3%E7%A0%81.html","path":"flutter-32-2高德定位-代码.html","title":"32-2 高德定位(代码)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>32-2 高德定位(代码) | blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a></li>
+        <li class="menu-item menu-item-index"><a href="/index/" rel="section"><i class="fa fa-book fa-fw"></i>博客</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#pages"><span class="nav-number">1.</span> <span class="nav-text">pages</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#locationdart"><span class="nav-number">1.1.</span> <span class="nav-text">Location.dart</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#devicedart"><span class="nav-number">1.2.</span> <span class="nav-text">&gt;Device.dart</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maindart"><span class="nav-number">1.3.</span> <span class="nav-text">main.dart</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flutter_appandroidappbuildgradle"><span class="nav-number">1.4.</span> <span class="nav-text">\flutter_app\android\app\build.gradle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#androidappsrcmainandroidmanifestxml"><span class="nav-number">1.5.</span> <span class="nav-text">\android\app\src\main\AndroidManifest.xml</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">XuAnrui</p>
+  <div class="site-description" itemprop="description">简约 笔记</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="mailto:454615146@qq.com" title="E-Mail → mailto:454615146@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/flutter-32-2%E9%AB%98%E5%BE%B7%E5%AE%9A%E4%BD%8D-%E4%BB%A3%E7%A0%81.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuAnrui">
+      <meta itemprop="description" content="简约 笔记">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          32-2 高德定位(代码)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-29 13:29:59" itemprop="dateCreated datePublished" datetime="2021-07-29T13:29:59+08:00">2021-07-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-17 17:54:34" itemprop="dateModified" datetime="2021-08-17T17:54:34+08:00">2021-08-17</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/flutter/" itemprop="url" rel="index"><span itemprop="name">flutter</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="pages">pages</h3>
+
+<h4 id="locationdart">Location.dart</h4>
+
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter/material.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:amap_flutter_location/amap_flutter_location.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:amap_flutter_location/amap_location_option.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:permission_handler/permission_handler.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;dart:async&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;dart:io&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LocationPage</span> <span class="keyword">extends</span> <span class="title">StatefulWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> LocationPage(&#123;Key? key&#125;) : <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  _LocationPageState createState() =&gt; _LocationPageState();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_LocationPageState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">LocationPage</span>&gt; </span>&#123;</span><br><span class="line">  <span class="comment">//获取数据</span></span><br><span class="line">  <span class="keyword">late</span> <span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">Object</span>&gt; _locationResult;</span><br><span class="line"><span class="comment">//监听定位</span></span><br><span class="line">  <span class="keyword">late</span> StreamSubscription&lt;<span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">Object</span>&gt;&gt; _locationListener;</span><br><span class="line"></span><br><span class="line">  AMapFlutterLocation _locationPlugin = <span class="keyword">new</span> AMapFlutterLocation();</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> initState() &#123;</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> implement initState</span></span><br><span class="line">    <span class="keyword">super</span>.initState();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/// <span class="markdown">动态申请定位权限</span></span></span><br><span class="line">    requestPermission();</span><br><span class="line">    AMapFlutterLocation.setApiKey(</span><br><span class="line">        <span class="string">&quot;aa0d2b5f1a74a34fb56082709b95e1ee&quot;</span>, <span class="string">&quot;ios ApiKey&quot;</span>);</span><br><span class="line">      <span class="comment">//第一个密钥是在高德那个网站里得到的 android</span></span><br><span class="line">      <span class="comment">//第二个参数是 IOS 的</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">///<span class="markdown">iOS 获取native精度类型</span></span></span><br><span class="line">    <span class="keyword">if</span> (Platform.isIOS) &#123;</span><br><span class="line">      requestAccuracyAuthorization();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">///<span class="markdown">注册定位结果监听</span></span></span><br><span class="line">    _locationListener = _locationPlugin</span><br><span class="line">        .onLocationChanged()</span><br><span class="line">        .listen((<span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">Object</span>&gt; result) &#123;</span><br><span class="line">      setState(() &#123;</span><br><span class="line">        <span class="built_in">print</span>(result);</span><br><span class="line">        _locationResult = result;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  _getLocation() <span class="keyword">async</span> &#123;&#125;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      appBar: AppBar(),</span><br><span class="line">      body: Column(</span><br><span class="line">        children: [</span><br><span class="line">          ElevatedButton(</span><br><span class="line">              onPressed: () &#123;</span><br><span class="line">                <span class="keyword">this</span>._startLocation();</span><br><span class="line">              &#125;,</span><br><span class="line">              child: Text(<span class="string">&quot;获取定位&quot;</span>))</span><br><span class="line">        ],</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">void</span> requestPermission() <span class="keyword">async</span> &#123;</span><br><span class="line">    <span class="comment">// 申请权限</span></span><br><span class="line">    <span class="built_in">bool</span> hasLocationPermission = <span class="keyword">await</span> requestLocationPermission();</span><br><span class="line">    <span class="keyword">if</span> (hasLocationPermission) &#123;</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;定位权限申请通过&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;定位权限申请不通过&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//即弹窗告知用户是否同意该权限</span></span><br><span class="line">  <span class="comment">/// <span class="markdown">申请定位权限</span></span></span><br><span class="line">  <span class="comment">/// <span class="markdown">授予定位权限返回true， 否则返回false</span></span></span><br><span class="line">  Future&lt;<span class="built_in">bool</span>&gt; requestLocationPermission() <span class="keyword">async</span> &#123;</span><br><span class="line">    <span class="comment">//获取当前的权限</span></span><br><span class="line">    <span class="keyword">var</span> status = <span class="keyword">await</span> Permission.location.status;</span><br><span class="line">    <span class="keyword">if</span> (status == PermissionStatus.granted) &#123;</span><br><span class="line">      <span class="comment">//已经授权</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">//未授权则发起一次申请</span></span><br><span class="line">      status = <span class="keyword">await</span> Permission.location.request();</span><br><span class="line">      <span class="keyword">if</span> (status == PermissionStatus.granted) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">///<span class="markdown">获取iOS native的accuracyAuthorization类型</span></span></span><br><span class="line">  <span class="keyword">void</span> requestAccuracyAuthorization() <span class="keyword">async</span> &#123;</span><br><span class="line">    AMapAccuracyAuthorization currentAccuracyAuthorization =</span><br><span class="line">        <span class="keyword">await</span> _locationPlugin.getSystemAccuracyAuthorization();</span><br><span class="line">    <span class="keyword">if</span> (currentAccuracyAuthorization ==</span><br><span class="line">        AMapAccuracyAuthorization.AMapAccuracyAuthorizationFullAccuracy) &#123;</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;精确定位类型&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentAccuracyAuthorization ==</span><br><span class="line">        AMapAccuracyAuthorization.AMapAccuracyAuthorizationReducedAccuracy) &#123;</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;模糊定位类型&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">print</span>(<span class="string">&quot;未知定位类型&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">///<span class="markdown">设置定位参数</span></span></span><br><span class="line">  <span class="keyword">void</span> _setLocationOption() &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">null</span> != _locationPlugin) &#123;</span><br><span class="line">      AMapLocationOption locationOption = <span class="keyword">new</span> AMapLocationOption();</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">是否单次定位</span></span></span><br><span class="line">      locationOption.onceLocation = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">是否需要返回逆地理信息</span></span></span><br><span class="line">      locationOption.needAddress = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">逆地理信息的语言类型</span></span></span><br><span class="line">      locationOption.geoLanguage = GeoLanguage.DEFAULT;</span><br><span class="line"></span><br><span class="line">      locationOption.desiredLocationAccuracyAuthorizationMode =</span><br><span class="line">          AMapLocationAccuracyAuthorizationMode.ReduceAccuracy;</span><br><span class="line"></span><br><span class="line">      locationOption.fullAccuracyPurposeKey = <span class="string">&quot;AMapLocationScene&quot;</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">设置Android端连续定位的定位间隔</span></span></span><br><span class="line">      locationOption.locationInterval = <span class="number">2000</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">设置Android端的定位模式<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span></span></span><br><span class="line">      <span class="comment">///<span class="markdown">可选值：<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span></span></span><br><span class="line">      <span class="comment">///<span class="markdown"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>[AMapLocationMode.Battery<span class="emphasis">_Saving]<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></span></span></span><br><span class="line">      <span class="comment">///<span class="markdown"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>[AMapLocationMode.Device<span class="emphasis">_Sensors]<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></span></span></span><br><span class="line">      <span class="comment">///<span class="markdown"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>[AMapLocationMode.Hight<span class="emphasis">_Accuracy]<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></span></span></span><br><span class="line">      locationOption.locationMode = AMapLocationMode.Hight_Accuracy;</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">设置iOS端的定位最小更新距离<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span></span></span><br><span class="line">      locationOption.distanceFilter = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">设置iOS端期望的定位精度</span></span></span><br><span class="line">      <span class="comment">/// <span class="markdown">可选值：<span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span></span></span><br><span class="line">      <span class="comment">/// <span class="markdown"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>[DesiredAccuracy.Best] 最高精度<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></span></span><br><span class="line">      <span class="comment">/// <span class="markdown"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>[DesiredAccuracy.BestForNavigation] 适用于导航场景的高精度 <span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></span></span><br><span class="line">      <span class="comment">/// <span class="markdown"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>[DesiredAccuracy.NearestTenMeters] 10米 <span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></span></span><br><span class="line">      <span class="comment">/// <span class="markdown"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>[DesiredAccuracy.Kilometer] 1000米<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></span></span><br><span class="line">      <span class="comment">/// <span class="markdown"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>[DesiredAccuracy.ThreeKilometers] 3000米<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span></span></span><br><span class="line">      locationOption.desiredAccuracy = DesiredAccuracy.Best;</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">设置iOS端是否允许系统暂停定位</span></span></span><br><span class="line">      locationOption.pausesLocationUpdatesAutomatically = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">      <span class="comment">///<span class="markdown">将定位参数设置给定位插件</span></span></span><br><span class="line">      _locationPlugin.setLocationOption(locationOption);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">///<span class="markdown">开始定位</span></span></span><br><span class="line">  <span class="keyword">void</span> _startLocation() &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">null</span> != _locationPlugin) &#123;</span><br><span class="line">      <span class="comment">///<span class="markdown">开始定位之前设置定位参数</span></span></span><br><span class="line">      _setLocationOption();</span><br><span class="line">      _locationPlugin.startLocation();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="devicedart">>Device.dart</h4>
+
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter/material.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:device_info/device_info.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter_app/pages/Location.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DevicePage</span> <span class="keyword">extends</span> <span class="title">StatefulWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> DevicePage(&#123;Key? key&#125;) : <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  _DevicePageState createState() =&gt; _DevicePageState();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_DevicePageState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">DevicePage</span>&gt; </span>&#123;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> initState() &#123;</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> implement initState</span></span><br><span class="line">    <span class="keyword">super</span>.initState();</span><br><span class="line">    <span class="keyword">this</span>._getDevice();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  _getDevice() <span class="keyword">async</span> &#123;</span><br><span class="line">    DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();</span><br><span class="line">    AndroidDeviceInfo androidInfo = <span class="keyword">await</span> deviceInfo.androidInfo;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Running on <span class="subst">$&#123;androidInfo.androidId&#125;</span>&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      appBar: AppBar(),</span><br><span class="line">      body: Column(</span><br><span class="line">        children: [</span><br><span class="line">          ElevatedButton(</span><br><span class="line">              onPressed: () <span class="keyword">async</span> &#123;</span><br><span class="line">                <span class="keyword">var</span> result = <span class="keyword">await</span> Navigator.push(</span><br><span class="line">                    <span class="comment">//等待其取得返回值后再执行 print</span></span><br><span class="line">                    <span class="comment">//Navigator.push 将给定的路由入栈（即打开新的页面），返回值是一个Future对象，用以接收新路由出栈（即关闭）时的返回数据</span></span><br><span class="line">                    context, MaterialPageRoute(</span><br><span class="line">                  builder: (context) &#123;</span><br><span class="line">                    <span class="keyword">return</span> LocationPage(); <span class="comment">//当然 跳转到新页面时 可通过 widget 传参</span></span><br><span class="line">                  &#125;,</span><br><span class="line">                ));</span><br><span class="line">              &#125;,</span><br><span class="line">              child: Text(<span class="string">&quot;跳转&quot;</span>))</span><br><span class="line">        ],</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="maindart">main.dart</h4>
+
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter/material.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter_app/pages/Device.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> main() =&gt; runApp(MyApp());</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> MyApp(&#123;Key? key&#125;) : <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> MaterialApp(</span><br><span class="line">      home: DevicePage(),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="flutter_appandroidappbuildgradle">\flutter_app\android\app\build.gradle</h4>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">def localProperties &#x3D; new Properties()</span><br><span class="line">def localPropertiesFile &#x3D; rootProject.file(&#39;local.properties&#39;)</span><br><span class="line">if (localPropertiesFile.exists()) &#123;</span><br><span class="line">    localPropertiesFile.withReader(&#39;UTF-8&#39;) &#123; reader -&gt;</span><br><span class="line">        localProperties.load(reader)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">def flutterRoot &#x3D; localProperties.getProperty(&#39;flutter.sdk&#39;)</span><br><span class="line">if (flutterRoot &#x3D;&#x3D; null) &#123;</span><br><span class="line">    throw new GradleException(&quot;Flutter SDK not found. Define location with flutter.sdk in the local.properties file.&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">def flutterVersionCode &#x3D; localProperties.getProperty(&#39;flutter.versionCode&#39;)</span><br><span class="line">if (flutterVersionCode &#x3D;&#x3D; null) &#123;</span><br><span class="line">    flutterVersionCode &#x3D; &#39;1&#39;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">def flutterVersionName &#x3D; localProperties.getProperty(&#39;flutter.versionName&#39;)</span><br><span class="line">if (flutterVersionName &#x3D;&#x3D; null) &#123;</span><br><span class="line">    flutterVersionName &#x3D; &#39;1.0&#39;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">apply plugin: &#39;com.android.application&#39;</span><br><span class="line">apply plugin: &#39;kotlin-android&#39;</span><br><span class="line">apply from: &quot;$flutterRoot&#x2F;packages&#x2F;flutter_tools&#x2F;gradle&#x2F;flutter.gradle&quot;</span><br><span class="line"></span><br><span class="line">def keystorePropertiesFile &#x3D; rootProject.file(&quot;key.properties&quot;)</span><br><span class="line">def keystoreProperties &#x3D; new Properties()</span><br><span class="line">keystoreProperties.load(new FileInputStream(keystorePropertiesFile))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">android &#123;</span><br><span class="line">    compileSdkVersion 30</span><br><span class="line"></span><br><span class="line">    sourceSets &#123;</span><br><span class="line">        main.java.srcDirs +&#x3D; &#39;src&#x2F;main&#x2F;kotlin&#39;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        &#x2F;&#x2F; TODO: Specify your own unique Application ID (https:&#x2F;&#x2F;developer.android.com&#x2F;studio&#x2F;build&#x2F;application-id.html).</span><br><span class="line">        applicationId &quot;com.example.flutter_app&quot;</span><br><span class="line">        minSdkVersion 16</span><br><span class="line">        targetSdkVersion 30</span><br><span class="line">        versionCode flutterVersionCode.toInteger()</span><br><span class="line">        versionName flutterVersionName</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    signingConfigs &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            keyAlias &#39;sign&#39;</span><br><span class="line">            keyPassword &#39;123456&#39;</span><br><span class="line">            storeFile file(&#39;key&#x2F;sign.jks&#39;)</span><br><span class="line">            storePassword &#39;123456&#39;</span><br><span class="line">        &#125;</span><br><span class="line">        debug &#123;</span><br><span class="line">            &#x2F;&#x2F;keystore中key的别名</span><br><span class="line">            keyAlias &#39;sign&#39;</span><br><span class="line">            &#x2F;&#x2F;keystore中key的密码</span><br><span class="line">            keyPassword &#39;123456&#39;</span><br><span class="line">            &#x2F;&#x2F;keystore的文件路径，可以是绝对路径也可以是相对路径</span><br><span class="line">            storeFile file(&#39;key&#x2F;sign.jks&#39;)</span><br><span class="line">            &#x2F;&#x2F;keystore的密码</span><br><span class="line">            storePassword &#39;123456&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            &#x2F;&#x2F; TODO: Add your own signing config for the release build. </span><br><span class="line">            &#x2F;&#x2F; Signing with the debug keys for now, so &#96;flutter run --release&#96; works.</span><br><span class="line">            signingConfig signingConfigs.release</span><br><span class="line">        &#125;</span><br><span class="line">        debug &#123;</span><br><span class="line">            &#x2F;&#x2F; TODO: Add your own signing config for the release build. </span><br><span class="line">            &#x2F;&#x2F; Signing with the debug keys for now, so &#96;flutter run --release&#96; works. </span><br><span class="line">            signingConfig signingConfigs.debug</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">flutter &#123;</span><br><span class="line">    source &#39;..&#x2F;..&#39;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    implementation(&#39;com.amap.api:location:5.2.0&#39;)</span><br><span class="line">    implementation &quot;org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="androidappsrcmainandroidmanifestxml">\android\app\src\main\AndroidManifest.xml</h4>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span> <span class="attr">package</span>=<span class="string">&quot;com.example.flutter_app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--访问网络--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.INTERNET&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--粗略定位--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--精确定位--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--申请调用 A-GPS 模块--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--用于获取运营商信息，用于支持提供运营商信息相关的接口--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--用于访问 wifi 网络信息，wifi 信息会用于进行网络定位--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--用于获取 wifi 的获取权限，wifi 信息会用来进行网络定位--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.CHANGE_WIFI_STATE&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--用于读取手机当前的状态--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.READ_PHONE_STATE&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--用于写入缓存数据到扩展存储卡--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span> <span class="attr">android:label</span>=<span class="string">&quot;flutter_app&quot;</span> <span class="attr">android:icon</span>=<span class="string">&quot;@mipmap/ic_launcher&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">&quot;.MainActivity&quot;</span> <span class="attr">android:launchMode</span>=<span class="string">&quot;singleTop&quot;</span> <span class="attr">android:theme</span>=<span class="string">&quot;@style/LaunchTheme&quot;</span> <span class="attr">android:configChanges</span>=<span class="string">&quot;orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode&quot;</span> <span class="attr">android:hardwareAccelerated</span>=<span class="string">&quot;true&quot;</span> <span class="attr">android:windowSoftInputMode</span>=<span class="string">&quot;adjustResize&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- Specifies an Android theme to apply to this Activity as soon as</span></span><br><span class="line"><span class="comment">                 the Android process has started. This theme is visible to the user</span></span><br><span class="line"><span class="comment">                 while the Flutter UI initializes. After that, this theme continues</span></span><br><span class="line"><span class="comment">                 to determine the Window background behind the Flutter UI. --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:name</span>=<span class="string">&quot;io.flutter.embedding.android.NormalTheme&quot;</span> <span class="attr">android:resource</span>=<span class="string">&quot;@style/NormalTheme&quot;</span> /&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- Displays an Android View that continues showing the launch screen</span></span><br><span class="line"><span class="comment">                 Drawable until Flutter paints its first frame, then this splash</span></span><br><span class="line"><span class="comment">                 screen fades out. A splash screen is useful to avoid any visual</span></span><br><span class="line"><span class="comment">                 gap between the end of Android&#x27;s launch screen and the painting of</span></span><br><span class="line"><span class="comment">                 Flutter&#x27;s first frame. --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:name</span>=<span class="string">&quot;io.flutter.embedding.android.SplashScreenDrawable&quot;</span> <span class="attr">android:resource</span>=<span class="string">&quot;@drawable/launch_background&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.action.MAIN&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.category.LAUNCHER&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- Don&#x27;t delete the meta-data below.</span></span><br><span class="line"><span class="comment">             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta-data</span> <span class="attr">android:name</span>=<span class="string">&quot;flutterEmbedding&quot;</span> <span class="attr">android:value</span>=<span class="string">&quot;2&quot;</span> /&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 配置定位 Service --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">service</span> <span class="attr">android:name</span>=<span class="string">&quot;com.amap.api.location.APSService&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>//更多功能直接从官网下个demo粘过来用就行了</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/flutter/" rel="tag"># flutter</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/flutter-32-1%E9%AB%98%E5%BE%B7%E5%AE%9A%E4%BD%8D-%E9%85%8D%E7%BD%AE.html" rel="prev" title="32-1 高德定位(配置)">
+                  <i class="fa fa-chevron-left"></i> 32-1 高德定位(配置)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/flutter-33%E6%8B%8D%E7%85%A7%E5%B9%B6%E4%B8%8A%E4%BC%A0.html" rel="next" title="33 拍照并上传">
+                  33 拍照并上传 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fas fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">XuAnrui</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

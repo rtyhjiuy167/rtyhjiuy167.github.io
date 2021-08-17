@@ -156,18 +156,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">237</span>
+          <span class="site-state-item-count">281</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -242,7 +242,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-16 22:32:11" itemprop="dateModified" datetime="2021-08-16T22:32:11+08:00">2021-08-16</time>
+        <time title="修改时间：2021-08-17 18:01:45" itemprop="dateModified" datetime="2021-08-17T18:01:45+08:00">2021-08-17</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -387,9 +387,15 @@
 <p>在<code>next</code>目录下的<code>language/zh-CN.yml</code>文件中，找到<code>menu</code>字段，添加<code>自定义菜单项:中文名</code><br>在<code>next</code>目录下的<code>_config.yml</code>文件中找到<code>menu</code>添加即可</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Usage: `Key: /link/ || icon`</span></span><br><span class="line"><span class="comment"># Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-senstive.</span></span><br><span class="line"><span class="comment"># Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.</span></span><br><span class="line"><span class="comment"># External url should start with http:// or https://</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">index:</span> <span class="string">/index/</span>        <span class="comment"># 自定义的</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="文章加密">文章加密</h2>
+
+<p>进入<code>hexo</code>根目录，执行<code>npm install hexo-blog-encrypt</code>下载插件<br><code>hexo/_config.yml</code>自己添加代码：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">encrypt:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>在需要加密的<code>md</code>的<code>YAML Front Matter</code>里加上 <code>password: 文章的密码</code></p>
 <h2 id="解决文章目录不能正常跳转与显示的问题">解决文章目录不能正常跳转与显示的问题</h2>
 
-<p>打开控制台查看元素，发现是a标签里没有href<br></p>
+<p>打开控制台查看元素，发现是a标签里没有<code>href</code><br></p>
 <p>解决方法：</p>
 <p>在项目根目录的 <code>node_modules\hexo-toc\lib\filter.js</code> 中，把 28 行～31 行修改为：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$title.attr(<span class="string">&#x27;id&#x27;</span>, id);</span><br><span class="line"><span class="comment">// $title.children(&#x27;a&#x27;).remove();</span></span><br><span class="line"><span class="comment">// $title.html( &#x27;&lt;span id=&quot;&#x27; + id + &#x27;&quot;&gt;&#x27; + $title.html() + &#x27;&lt;/span&gt;&#x27; );</span></span><br><span class="line"><span class="comment">// $title.removeAttr(&#x27;id&#x27;);</span></span><br></pre></td></tr></table></figure>
@@ -414,7 +420,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/153/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/153/">153</a><span class="page-number current">154</span><a class="page-number" href="/fsfsf/page/155/">155</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/237/">237</a><a class="extend next" rel="next" href="/fsfsf/page/155/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/153/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/153/">153</a><span class="page-number current">154</span><a class="page-number" href="/fsfsf/page/155/">155</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/155/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
