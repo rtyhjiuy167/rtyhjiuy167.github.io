@@ -45,6 +45,9 @@ function loadWidget(config) {
 		messageArray = ["好久不见，日子过得好快呢……", "大坏蛋！你都多久没理人家了呀，嘤嘤嘤～", "嗨～快来逗我玩吧！", "拿小拳拳锤你胸口！", "记得把小家加入 Adblock 白名单哦！"];
 	window.addEventListener("mousemove", () => userAction = true);
 	window.addEventListener("keydown", () => userAction = true);
+	document.getElementById("toMyBlog").addEventListener("mouseover", () =>
+	showMessage("这是XuAnrui的博客哟~", 6000, 9)
+        );
 	setInterval(() => {
 		if (userAction) {
 			userAction = false;
