@@ -2,31 +2,36 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css"
-      integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  
-  
+        integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+
+
     <link rel="canonical" href="https://www.rui123.xyz/">
+
     <script class="next-config" data-name="page" type="application/json">
-      {
-        "sidebar": "",
-        "isHome": false,
-        "isPost": false,
-        "lang": "zh-CN",
-        "comments": true,
-        "permalink": "https://www.rui123.xyz/index.html",
-        "path": "index.html",
-        "title": ""
-      }
+        {
+            "sidebar": "",
+            "isHome": false,
+            "isPost": false,
+            "lang": "zh-CN",
+            "comments": true,
+            "permalink": "https://www.rui123.xyz/index.html",
+            "path": "index.html",
+            "title": ""
+        }
     </script>
     <script class="next-config" data-name="calendar" type="application/json">
     </script>
     <script src="/live2d-widget/autoload.js"></script>
+    <!--     <link rel="stylesheet" href="snow.css"> -->
+
+    <title>Document</title>
     <style>
         body {
             background-color: #9dc0ca;
@@ -39,10 +44,8 @@
             height: 100vh;
             overflow: hidden;
             pointer-events: none;
-            background-image: url("https://waveciou.github.io/FrontEndDesign/snow-fall/img/mountains.svg");
-            background-size: cover;
-            background-position: center bottom;
-            background-repeat: repeat no-repeat;
+            background-color: rgb(148, 145, 145);
+
         }
 
         #snowbanner .snow {
@@ -152,32 +155,46 @@
             border-radius: 100%;
             background-color: #fff;
         }
-        a {
-      font-size: 50px;
-      display: block;
-      text-decoration: none;
-      position: fixed;
-      color: aqua;
-      height: 50px;
-      left: 47.5%;
-      top: 49%;
-      z-index: 1;
-    }
+
+
+        #toMyBlog {
+
+
+            font-size: 50px;
+            display: inline-block;
+            /*  background-color: aqua; */
+            position: fixed;
+
+            height: 50px;
+            left: 47.5%;
+            top: 49%;
+            z-index: 1;
+
+
+            font-size: 40px;
+            text-shadow: 0 0 4px white;
+            color: rgb(148, 145, 145);
+            /*  cursor: default; */
+            cursor: pointer;
+        }
     </style>
-    <title>Document</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-    <section id="snowbanner">
-        <div class="snow snow-1"></div>
-        <div class="snow snow-2"></div>
-    </section>
-    <div class="snow-speed-wrapper">
-        <div class="snow-speed-range">
-            <input id="range-slider" type="range">
+    <div id="toMyBlog">blog</div>
+    <div>
+        <section id="snowbanner">
+            <div class="snow snow-1"></div>
+            <div class="snow snow-2"></div>
+        </section>
+        <div class="snow-speed-wrapper">
+            <div class="snow-speed-range">
+                <input id="range-slider" type="range">
+            </div>
         </div>
     </div>
-    <a href="">blog</a>
+
+    <!-- <script src="snow.js"></script> -->
     <script>
         (function () {
             let speedSlider = document.querySelector("#range-slider");
@@ -215,6 +232,11 @@
             }
             setSeconds();
         })();
+    </script>
+    <script language="javascript" type="text/javascript">
+        document.getElementById("toMyBlog").addEventListener("click", () =>
+            window.location.href = "https://www.rui123.xyz/index/"
+        );
     </script>
     <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script>
 </body>
