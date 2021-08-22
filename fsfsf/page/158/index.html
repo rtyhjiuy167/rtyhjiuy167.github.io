@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-7%E6%8C%87%E9%92%88.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/Javascript-1-1%E5%B7%A5%E5%8E%82%E5%87%BD%E6%95%B0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/go-7%E6%8C%87%E9%92%88.html" class="post-title-link" itemprop="url">7 指针</a>
+          <a href="/Javascript-1-1%E5%B7%A5%E5%8E%82%E5%87%BD%E6%95%B0.html" class="post-title-link" itemprop="url">1-1 工厂函数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:38:20" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:27:40" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -244,7 +244,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
         </span>
     </span>
 
@@ -258,7 +258,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//var a *int //此时 a为 nil 为空指针 使用 *a = 1 会报错</span></span><br><span class="line">	<span class="comment">//可以使用 new</span></span><br><span class="line">	<span class="keyword">var</span> a = <span class="built_in">new</span>(<span class="keyword">int</span>)</span><br><span class="line">	*a = <span class="number">1</span></span><br><span class="line">	fmt.Println(*a)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//new用来分配内存，主要用来分配值类型，比如int、struct，返回的是指针</span></span><br><span class="line">	<span class="comment">//make用来分配内存，主要用来分配引用类型，比如slice、map、chan申请内存的</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//使用工厂方法创建对象，使用的构造函数都是Object</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//所以创建的对象都是Object这个类型</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//就导致我们无法区分多种不同类型的对象，一般都是采用构造函数来创建对象</span></span></span><br><span class="line">        </span><br><span class="line"><span class="javascript">        <span class="comment">//使用工厂方法创建对象</span></span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">creationPerson</span>(<span class="params">name, age, gender</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//创建一个新的对象</span></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();<span class="comment">//都是Object</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//向对象中添加属性</span></span></span><br><span class="line">            obj.name = name;</span><br><span class="line">            obj.age = age;</span><br><span class="line">            obj.gender = gender;</span><br><span class="line"><span class="javascript">            obj.sayNme = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="built_in">this</span>.name);</span></span><br><span class="line">            &#125;;</span><br><span class="line"><span class="javascript">            <span class="comment">//将新的对象返回</span></span></span><br><span class="line"><span class="javascript">            <span class="keyword">return</span> obj;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> obj1 = creationPerson(<span class="string">&quot;孙悟空&quot;</span>, <span class="number">18</span>, <span class="string">&quot;男&quot;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> obj2 = creationPerson(<span class="string">&quot;猪八戒&quot;</span>, <span class="number">28</span>, <span class="string">&quot;男&quot;</span>);</span></span><br><span class="line">        obj1.sayNme();</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -279,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/157/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/157/">157</a><span class="page-number current">158</span><a class="page-number" href="/fsfsf/page/159/">159</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/159/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/157/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/157/">157</a><span class="page-number current">158</span><a class="page-number" href="/fsfsf/page/159/">159</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/159/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

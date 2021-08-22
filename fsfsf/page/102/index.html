@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/mongodb-2%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%BA%93.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/mongodb-8-1%E6%9D%83%E9%99%90%E6%9C%BA%E5%88%B6.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/mongodb-2%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%BA%93.html" class="post-title-link" itemprop="url">2 连接本地数据库</a>
+          <a href="/mongodb-8-1%E6%9D%83%E9%99%90%E6%9C%BA%E5%88%B6.html" class="post-title-link" itemprop="url">8-1 权限机制</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:19:05" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:21:37" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,9 +258,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在一个终端里开起mongodb时，再开另一个终端，连接本地数据库</span></span><br><span class="line">mongo </span><br></pre></td></tr></table></figure>
+          <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建账号</span></span><br><span class="line">db.createUser(&#123;</span><br><span class="line">	&quot;user&quot;:&quot;账号&quot;,</span><br><span class="line">	&quot;pwd&quot;:&quot;密码&quot;,</span><br><span class="line">	&quot;roles&quot;:[&#123;</span><br><span class="line">		role:&quot;角色&quot;,</span><br><span class="line">		db:&quot;所属数据库&quot;</span><br><span class="line">	&#125;]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 退出连接</span></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 角色种类</span></span><br><span class="line">超级用户角色：root</span><br><span class="line">数据库用户角色：read、readwrite</span><br><span class="line">其它</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启验证模式"><a href="#开启验证模式" class="headerlink" title="开启验证模式"></a>开启验证模式</h3><p>指用户需要输入账号密码才能登陆使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1. 进入 mongo</span></span><br><span class="line">mongo</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2. 连接 admin</span></span><br><span class="line">use admin</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3. 添加账户</span></span><br><span class="line">db.createUser(&#123;</span><br><span class="line">	&quot;user&quot;:&quot;admin&quot;,  </span><br><span class="line">	&quot;pwd&quot;:&quot;admin888&quot;,</span><br><span class="line">	&quot;roles&quot;:[&#123;</span><br><span class="line">		role:&quot;root&quot;,</span><br><span class="line">		db:&quot;admin&quot;</span><br><span class="line">	&#125;]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 4. 查看创建的用户</span></span><br><span class="line">db.system.users.find().pretty()</span><br></pre></td></tr></table></figure>
+
+<h4 id="退出卸载服务"><a href="#退出卸载服务" class="headerlink" title="退出卸载服务"></a>退出卸载服务</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入mongobdb的bin目录 用管理员身份 打开命令行提示符，执行下面语句</span></span><br><span class="line">mongod --remove</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装需要验证身份的服务">安装需要验证身份的服务</h4>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入mongobdb的bin目录 用管理员身份 打开命令行提示符</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> mongod --install -dbpath mongodbl里的data目录 --logpath D:\mongodb\<span class="built_in">log</span>\新的日志名.<span class="built_in">log</span> --auth</span></span><br><span class="line">mongod --install -dbpath D:\mongodb\data --logpath D:\mongodb\log\mongodb2.log --auth</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动服务">启动服务</h4>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入mongobdb的bin目录 用管理员身份 打开命令行提示符</span></span><br><span class="line">net start mongodb</span><br></pre></td></tr></table></figure>
+
+<p>此时<code>mongo</code>进入后不再后警告，<code>show dbs</code>也不会显示</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 语法1：mongo 服务器IP地址:端口/数据库 -u 用户名 -p 密码 一次性输入 这样进入有警告</span></span><br><span class="line">mongo 127.0.0.1:27017/admin -u admin -p admin888</span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者 mongo localhost:27017/admin -u admin -p admin888</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 语法2：先mongo进入，再选择数据库，最后登录</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1.</span></span><br><span class="line">mongo </span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.</span></span><br><span class="line">use admin</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3. 输入命令后出现 1 表示成功</span></span><br><span class="line">db.auth(&#x27;admin&#x27;,&#x27;admin888&#x27;)</span><br></pre></td></tr></table></figure>
 
 
       
@@ -281,7 +297,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/101/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/101/">101</a><span class="page-number current">102</span><a class="page-number" href="/fsfsf/page/103/">103</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/103/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/101/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/101/">101</a><span class="page-number current">102</span><a class="page-number" href="/fsfsf/page/103/">103</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/103/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

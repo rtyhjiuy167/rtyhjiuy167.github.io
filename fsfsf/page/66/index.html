@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/Ajax-2express.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/API-1%E6%8E%A5%E5%8F%A3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/Ajax-2express.html" class="post-title-link" itemprop="url">2 express</a>
+          <a href="/API-1%E6%8E%A5%E5%8F%A3.html" class="post-title-link" itemprop="url">1 接口</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：22:04:28" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:51:11" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -244,7 +244,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
+          <a href="/categories/API/" itemprop="url" rel="index"><span itemprop="name">API</span></a>
         </span>
     </span>
 
@@ -258,15 +258,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="http"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><p>HTTP （hypertext transport protocol）协议[超文本传输协议]，协议详细规定了浏览器和万维网服务器之间互相通信的规则</p>
-<h2 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">行   </span><br><span class="line">头</span><br><span class="line">空行</span><br><span class="line">体</span><br></pre></td></tr></table></figure>
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Restful 开发思想&#x2F;架构</span><br><span class="line">订单模块</span><br><span class="line">&#x2F;order get</span><br><span class="line">&#x2F;order post</span><br><span class="line">&#x2F;order&#x2F;编号 put</span><br><span class="line">&#x2F;order&#x2F;编号 delete</span><br></pre></td></tr></table></figure>
 
-<h2 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a>响应报文</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">行</span><br><span class="line">头</span><br><span class="line">空行</span><br><span class="line">体</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm init --yes&#x2F;&#x2F;在最外层文件夹中打开终端输入</span><br><span class="line"></span><br><span class="line">npm i express&#x2F;&#x2F;之后安装express框架  </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.引入express</span></span><br><span class="line"><span class="comment">//express是第三方web开发框架</span></span><br><span class="line"><span class="comment">// 其高度封装了http模块 更加专注于业务，而非底层细节</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="comment">//先从该文件所在目录找node_modules文件夹，之后在该文件夹中找express文件夹，之后在该文件夹中找package.json文件，package.json中的main之后的文件名即为真正加载的代码，如果main的是错的，则找index.js</span></span><br><span class="line"><span class="comment">// 找不到node_modules,则往上一级查找，直至根目录</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.创建应用对象</span></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.创建路由规则</span></span><br><span class="line"><span class="comment">//request 是对请求报文的封装</span></span><br><span class="line"><span class="comment">//response 是对响应报文的封装</span></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//设置响应</span></span><br><span class="line">    response.send(<span class="string">&#x27;HELLO EXPRESS&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//4.监听端口启动服务</span></span><br><span class="line">app.listen(<span class="number">8000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;服务器已经启动，8000端口监听中...&quot;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<p>项目所有模块有统一的标准</p>
+<p>看Url就知道要操作的资源是什么（也就是哪个模块）</p>
+<p>看Http Method就知道操作的动作是什么，是添加（post）还是删除（delete）</p>
+<p>看Http Status Code就知道操作的结果如何，是成功（200）还是内部错误（500）</p>
 
       
     </div>
@@ -286,7 +283,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/65/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/65/">65</a><span class="page-number current">66</span><a class="page-number" href="/fsfsf/page/67/">67</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/67/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/65/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/65/">65</a><span class="page-number current">66</span><a class="page-number" href="/fsfsf/page/67/">67</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/67/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

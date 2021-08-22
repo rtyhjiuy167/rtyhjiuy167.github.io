@@ -50,12 +50,36 @@ function loadWidget(config) {
     messageArray = ["好久不见，日子过得好快呢……", "大坏蛋！你都多久没理人家了呀，嘤嘤嘤～", "嗨～快来逗我玩吧！", "拿小拳拳锤你胸口！", "记得把小家加入 Adblock 白名单哦！"];
   window.addEventListener("mousemove", () => userAction = true);
   window.addEventListener("keydown", () => userAction = true);
+  
   document.getElementById("toMyBlog").addEventListener("mouseover", () =>
     showMessage("这是XuAnrui的博客哟~", 6000, 11)
   );
-  document.getElementById("toMyBlog").addEventListener("mouseout", () =>
-    showMessage("可以看看的嘛~", 1000, 11)
+  let speedSlider = document.querySelector("#range-slider");
+  let speedValue = speedSlider.value;
+  speedSlider.addEventListener("input", () =>{
+    let laterSpeedValue = speedSlider.value;
+    if( laterSpeedValue  < speedValue){
+      showMessage("哇，雪下大了", 2000, 12);
+    }else{
+      showMessage("嗯？雪下小了", 2000, 12);
+    }
+    if ( laterSpeedValue >= 95){
+      showMessage("啊！这雪下得也太大了吧~", 2000, 12);
+    }else if(laterSpeedValue <= 5){
+      showMessage("这..这雪是快停了么~", 2000, 12);
+    }
+    if(speedValue <= 5 &&laterSpeedValue >speedValue ){
+      showMessage("好耶，雪又下大了", 2000, 13);
+    }
+    if(speedValue >= 95 &&laterSpeedValue <speedValue ){
+      showMessage("还是雪小点，舒服~", 2000, 12);
+    }
+    speedValue= speedSlider.value;
+  }
   );
+  document.getElementById("toMyBlog").addEventListener("mouseout", () =>
+  showMessage("可以看看的嘛~", 2000, 11)
+);
   setInterval(() => {
     if (userAction) {
       userAction = false;

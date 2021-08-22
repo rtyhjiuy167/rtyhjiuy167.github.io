@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-10-5%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95%E6%89%A9%E5%B1%95.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-13-2await.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/ES6-10-5%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95%E6%89%A9%E5%B1%95.html" class="post-title-link" itemprop="url">10-5 数组方法扩展</a>
+          <a href="/ES6-13-2await.html" class="post-title-link" itemprop="url">13-2 await</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:22:36" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:28:03" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,7 +258,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将多维数组转化为低位数组 flat</span></span><br><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, [<span class="number">2</span>, <span class="number">3</span>]];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, [<span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>]]];</span><br><span class="line"><span class="built_in">console</span>.log(arr1.flat());</span><br><span class="line"><span class="comment">//[ 1, 2, 3, 4, 2, 3 ]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2.flat());</span><br><span class="line"><span class="comment">//[ 1, 2, 3, 4, 2, 3, 4, [ 3, 5, 6 ] ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//参数为深度 是一个数字 默认为一</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2.flat(<span class="number">2</span>));</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    [</span></span><br><span class="line"><span class="comment">        1, 2, 3, 4, 2,</span></span><br><span class="line"><span class="comment">        3, 4, 3, 5, 6</span></span><br><span class="line"><span class="comment">    ]</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// map 循环遍历</span></span><br><span class="line"><span class="keyword">const</span> arr3 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> result = arr3.map(<span class="function"><span class="params">item</span> =&gt;</span> item * <span class="number">10</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
+          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// async 函数里必须有 await</span></span><br><span class="line"><span class="comment">// 函数里有 await，可不必有 async</span></span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reason</span>) =&gt;</span> &#123;</span><br><span class="line">    resolve(<span class="string">&quot;成功的值！&quot;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">//await 返回的是 Promsie 成功的值</span></span><br><span class="line">        <span class="keyword">let</span> result = <span class="keyword">await</span> p;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(e)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">main();</span><br></pre></td></tr></table></figure>
 
 
       
@@ -279,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/48/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/48/">48</a><span class="page-number current">49</span><a class="page-number" href="/fsfsf/page/50/">50</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/50/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/48/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/48/">48</a><span class="page-number current">49</span><a class="page-number" href="/fsfsf/page/50/">50</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/50/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

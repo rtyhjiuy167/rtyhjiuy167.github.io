@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/git-1.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-0Go.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/git-1.html" class="post-title-link" itemprop="url">1 .git文件夹 与 git 对象</a>
+          <a href="/go-0Go.html" class="post-title-link" itemprop="url">go</a>
         </h2>
 
         <div class="post-meta-container">
@@ -234,23 +234,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-08-15 20:10:29" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:36:09" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-14 19:06:59" itemprop="dateModified" datetime="2021-08-14T19:06:59+08:00">2021-08-14</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
         </span>
     </span>
 
@@ -264,28 +258,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>执行<code>git init</code>初始化仓库，进入<code>.git</code>文件夹后</p>
-<p><code>hooks</code>：钩子<br><code>info</code>：包含一个全局性排除文件。即哪些文件是Git不用管理的，就放在该文件夹下<br><code>objects</code>：目录存储所有数据内容。即数据库<br><code>res</code>：目录存储指向数据（分支）的提交对象</p>
-<p><code>config</code>：文件包含项目所持有的配置选项 若在配置用户信息时没有加<code>--global</code>与<code>--system</code>，该文件里会有配置的用户信息<br><code>description</code>：用来显示对仓库的描述信息<br><code>HEAD</code>：文件指示目前被检出的分支</p>
-<p><code>logs</code>：保存日志<br><code>index</code>：文件保存暂存区</p>
-<h4 id="git-对象">git 对象</h4>
+          <p>Go官方镜像站（推荐）：<a target="_blank" rel="noopener" href="https://golang.google.cn/dl/%E4%B8%8B%E8%BD%BD%60.msi%60">https://golang.google.cn/dl/下载`.msi`</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装完成后在命令提示符执行 为了之后安装依赖成功</span></span><br><span class="line">go env -w GOPROXY=https://goproxy.cn,direct</span><br></pre></td></tr></table></figure>
 
-<p>Git 的核心部分时一个简单的键值对数据库。我们可以向该数据库插入任意类型的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
-<h5 id="向数据库写入内容-并返回对应键值">向数据库写入内容 并返回对应键值</h5>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 项目创建时在根目录执行</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> go mod init 项目名 （可加域名）</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 例如 go mod init github.com/用户名/项目名</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;test content&#x27;</span> | git hash-object -w --stdin</span><br><span class="line"><span class="comment"># -w 该项指示 hash-object 命令存储数据对象;若不指定此选项，则该命令仅返回对应的键值</span></span><br><span class="line"><span class="comment"># --stdin (standard input) 该选项指示该命令从标准输入流中读取内容（即得到 &#x27;test content&#x27;）；</span></span><br><span class="line"><span class="comment">#  若不指定该选项，则须在命令尾部给出待存储文件的路径</span></span><br></pre></td></tr></table></figure>
+<p><code>go env</code>可查看详细配置信息</p>
+<p>在根目录下创建<code>main.go</code>文件，在弹出的窗口点击<code>install all</code>，等待安装成功即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 敲完代码，在项目根目录下编译 执行下面代码即可生成以根目录命名的可执行文件</span></span><br><span class="line">go build</span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者自命名</span></span><br><span class="line">go build -o 自定义名字</span><br><span class="line"><span class="meta">#</span><span class="bash">执行后在终端执行该文件即可 用 Tab 键补全</span></span><br></pre></td></tr></table></figure>
 
-<p>上述命令会返回对应的键值：<code>d670460b4b4aece5915caf5c68d12f560a9fe3e4</code>，并将其存储入到了<code>.git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4</code></p>
-<p>执行<code>cat ./.git/objects/d6/70460b4b4aece5915caf5c68d12f560a9fe3e4</code>命令后会给出乱码，因为是压缩存储的。</p>
-<h5 id="查看内容">查看内容</h5>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 如果只有一个文件，可执行下面代码执行程序</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> cmd</span></span><br><span class="line">go run 文件名</span><br><span class="line"><span class="meta">#</span><span class="bash"> powershell</span></span><br><span class="line">go run 文件夹名</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># $ git cat-file -p 键值 (不是bash下的相对路径)</span></span><br><span class="line">$ git cat-file -p d670460b4b4aece5915caf5c68d12f560a9fe3e4</span><br><span class="line"><span class="comment"># -p 该选项可指示该命令自动判断内容的类型，并未我们显示格式友好的内容</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="查看类型">查看类型</h5>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># $ git cat-file -t 键值 (不是bash下的相对路径) 会返回 blob</span></span><br><span class="line">$ git cat-file -t d670460b4b4aece5915caf5c68d12f560a9fe3e4</span><br></pre></td></tr></table></figure>
-
-<p>git对象为  blob</p>
+<p>学习go推荐：<a target="_blank" rel="noopener" href="https://www.liwenzhou.com/posts/Go/go_menu/">https://www.liwenzhou.com/posts/Go/go_menu/</a> //适合有基础的</p>
 
       
     </div>
@@ -305,7 +289,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/227/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/227/">227</a><span class="page-number current">228</span><a class="page-number" href="/fsfsf/page/229/">229</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/229/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/227/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/227/">227</a><span class="page-number current">228</span><a class="page-number" href="/fsfsf/page/229/">229</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/229/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

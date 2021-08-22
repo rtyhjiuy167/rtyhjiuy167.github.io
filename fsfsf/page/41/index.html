@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-13-2await.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-16%E5%8F%AF%E9%80%89%E9%93%BE.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/ES6-13-2await.html" class="post-title-link" itemprop="url">13-2 await</a>
+          <a href="/ES6-16%E5%8F%AF%E9%80%89%E9%93%BE.html" class="post-title-link" itemprop="url">16 可选链</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:28:03" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:33:42" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,7 +258,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// async 函数里必须有 await</span></span><br><span class="line"><span class="comment">// 函数里有 await，可不必有 async</span></span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reason</span>) =&gt;</span> &#123;</span><br><span class="line">    resolve(<span class="string">&quot;成功的值！&quot;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">//await 返回的是 Promsie 成功的值</span></span><br><span class="line">        <span class="keyword">let</span> result = <span class="keyword">await</span> p;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(e)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">main();</span><br></pre></td></tr></table></figure>
+          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可选链操作符</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//const dbHost = congfig &amp;&amp; congfig.db &amp;&amp; config.db。host;</span></span><br><span class="line">    <span class="comment">//判断传了congfig没有，有congfig.db没有</span></span><br><span class="line">    <span class="keyword">const</span> dbHost = congfig?.db?.host;</span><br><span class="line">&#125;</span><br><span class="line">main(&#123;</span><br><span class="line">    db: &#123;</span><br><span class="line">        host: <span class="string">&#x27;192.168.1.100&#x27;</span>,</span><br><span class="line">        username: <span class="string">&#x27;root&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    cache: &#123;</span><br><span class="line">        host: <span class="string">&#x27;192.168.1.1200&#x27;</span>,</span><br><span class="line">        username: <span class="string">&#x27;admin&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
       
@@ -279,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/40/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/40/">40</a><span class="page-number current">41</span><a class="page-number" href="/fsfsf/page/42/">42</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/42/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/40/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/40/">40</a><span class="page-number current">41</span><a class="page-number" href="/fsfsf/page/42/">42</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/42/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

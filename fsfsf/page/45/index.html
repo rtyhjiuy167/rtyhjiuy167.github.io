@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-11-4babel%E4%B8%8E%E5%85%BC%E5%AE%B9%E7%89%88%E6%9C%AC.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-15-1%E6%AD%A3%E5%88%99%E6%89%A9%E5%B1%95%E5%91%BD%E5%90%8D%E6%8D%95%E8%8E%B7.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/ES6-11-4babel%E4%B8%8E%E5%85%BC%E5%AE%B9%E7%89%88%E6%9C%AC.html" class="post-title-link" itemprop="url">11-4 babel与兼容版本</a>
+          <a href="/ES6-15-1%E6%AD%A3%E5%88%99%E6%89%A9%E5%B1%95%E5%91%BD%E5%90%8D%E6%8D%95%E8%8E%B7.html" class="post-title-link" itemprop="url">15-1 正则扩展命名捕获</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:25:56" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:32:28" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,17 +258,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>1.<code>npm i core-cli babel-preset-env browserify </code></p>
-<p><code>2.npx babel 文件夹名 -d 要转换的文件 --presets=babel-preset-env</code></p>
-<p>3.打包<code>npx browserify 已转换的文件 -o 打包后的文件名</code></p>
-<p>4.引入<code>src=</code></p>
-<p>5.修改则重复2~4步</p>
-<p>当使用<code> npm install</code> 安装 <code>npm</code> 软件包时，是将其安装为依赖项。</p>
-<p>该软件包会被自动地列出在 <code>package.json</code> 文件中的 <code>dependencies</code> 列表下（在 <code>npm</code> 5 之前：必须手动指定 –save）。</p>
-<p>当添加了 <code>-D</code> 或 <code>--save-dev</code> 标志时，则会将其安装为开发依赖项（会被添加到 <code>devDependencies</code> 列表）。</p>
-<p>开发依赖是仅用于开发的程序包，在生产环境中并不需要。 例如测试的软件包、<code>webpack</code> 或 <code>Babel</code>。</p>
-<p>当投入生产环境时，如果输入 <code>npm install</code> 且该文件夹包含 <code>package.json</code>文件时，则会安装它们，因为<code>npm</code> 会假定这是开发部署。</p>
-<p>需要设置 <code>--production</code> 标志（<code>npm install --production</code>），以避免安装这些开发依赖项</p>
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//reg.exec 返回整个匹配结果 与 小括号 (.*) 里匹配的结果</span></span></span><br><span class="line"><span class="handlebars"><span class="xml">        let str = &#x27;<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span> = <span class="string">&quot;https://www.tianqiapi.com/api/?version=v1&amp;city=广西&amp;appid=23941491&amp;appsecret=TXoD5e8p&quot;</span>&gt;</span>天气情况<span class="tag">&lt;/<span class="name">a</span>&gt;</span>&#x27;;</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> reg = <span class="regexp">/&lt;a href = &quot;(.*)&quot;&gt;(.*)&lt;\/a&gt;/</span>;   <span class="comment">//正则表达式里的 / 需在前加 \</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> result = reg.exec(str);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(result);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(result[<span class="number">1</span>]);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="comment">//命名捕获分组 (.*) 换成  (?&lt; 自定义 &gt;.*)</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//比上面多了一个 group</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> reg1 = <span class="regexp">/&lt;a href = &quot;(?&lt;url&gt;.*)&quot;&gt;(?&lt;text&gt;.*)&lt;\/a&gt;/</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> result1 = reg1.exec(str);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(result1);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(result1.group.url);</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(result1.group.text);</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -288,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/44/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/44/">44</a><span class="page-number current">45</span><a class="page-number" href="/fsfsf/page/46/">46</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/46/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/44/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/44/">44</a><span class="page-number current">45</span><a class="page-number" href="/fsfsf/page/46/">46</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/46/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

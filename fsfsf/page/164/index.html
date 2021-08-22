@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-31beego.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-9defer.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/go-31beego.html" class="post-title-link" itemprop="url">31 beego</a>
+          <a href="/go-9defer.html" class="post-title-link" itemprop="url">9 defer</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:14:42" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:38:56" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,13 +258,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>下载安装 bee 工具：<code>go get github.com/beego/bee</code>。被墙，可尝试用手机热点</p>
-<p>下载完成后，会在<code>GOPATH</code>目录下新增<code>bin</code>文件夹，进入<code>bin</code>文件夹，将此路径添加到<code>PATH</code>中</p>
-<p>在<code>cmd</code>中执行<code>bee</code>，若出现详细的命令信息，则安装成功<br></p>
-<p>在当前文件夹创建新项目<code>bee new 项目名称</code>，其会自动生成<code>go.mod</code></p>
-<p>在项目根目录下执行<code>bee run</code>运行项目 <br>可能会报错提示你下载：<code>go get github.com/shiena/ansicolor</code>，执行下载，重新运行即可</p>
-<p>可对<code>./views/index.tql</code>作修改，将右下角的<code>纯文本</code>改成<code>html</code>可方便修改</p>
-<p>GO升级，通过该方式，用户可以升级<code>beego</code>框架：<code>go get -u github.com/astaxie/beego</code></p>
+          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	a := deferDemo()</span><br><span class="line">	fmt.Println(a)    <span class="comment">//2</span></span><br><span class="line">	fmt.Println(f1()) <span class="comment">//6</span></span><br><span class="line">	fmt.Println(f2()) <span class="comment">//5</span></span><br><span class="line">	fmt.Println(f3()) <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line">	q1 := <span class="number">1</span></span><br><span class="line">	q2 := <span class="number">2</span></span><br><span class="line">	<span class="comment">//defer 只会剩下一层来后执行 函数里的参数 赋值的右边 全部都已经确定了</span></span><br><span class="line">	<span class="keyword">defer</span> calc(<span class="string">&quot;1&quot;</span>, q1, calc(<span class="string">&quot;10&quot;</span>, q1, q2)) <span class="comment">//按顺序执行到这一行时，会 执行成 calc(&quot;1&quot;, 1, 3) 该句则到后面再执行</span></span><br><span class="line">	q1 = <span class="number">0</span></span><br><span class="line">	<span class="keyword">defer</span> calc(<span class="string">&quot;2&quot;</span>, q1, calc(<span class="string">&quot;20&quot;</span>, q1, q2))</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">		10 1 2 3</span></span><br><span class="line"><span class="comment">		20 0 2 2</span></span><br><span class="line"><span class="comment">		2 0 2 2</span></span><br><span class="line"><span class="comment">		1 1 3 4</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">deferDemo</span><span class="params">()</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;start&quot;</span>)</span><br><span class="line">	<span class="keyword">defer</span> fmt.Println(<span class="string">&quot;loading&quot;</span>)</span><br><span class="line">	<span class="comment">//defer把他后面的语句延迟到函数即将返回的时候再执行（此时返回值已经确定了）</span></span><br><span class="line">	<span class="comment">// return a 分成两步</span></span><br><span class="line">	<span class="comment">//  1. 返回值 = a  2. return 返回值 真正的RET返回</span></span><br><span class="line">	<span class="comment">// defer 是在1、2部之间的</span></span><br><span class="line">	<span class="comment">//多个 defer 按照顺序依次执行</span></span><br><span class="line">	fmt.Println(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">	a := <span class="number">2</span></span><br><span class="line">	<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		a++</span><br><span class="line">	&#125;()</span><br><span class="line">	<span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f1</span><span class="params">()</span> <span class="params">(x <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		x++</span><br><span class="line">	&#125;()</span><br><span class="line">	<span class="keyword">return</span> <span class="number">5</span> <span class="comment">//返回值赋值 返回值++ RET返回  最终结果：6</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f2</span><span class="params">()</span> <span class="params">(y <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	x := <span class="number">5</span></span><br><span class="line">	<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		x++</span><br><span class="line">	&#125;()</span><br><span class="line">	<span class="keyword">return</span> x <span class="comment">//最终结果：5</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f3</span><span class="params">()</span> <span class="params">(x <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">(x <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">		x++ <span class="comment">// 改变的是函数中的副本</span></span><br><span class="line">	&#125;(x)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">5</span> <span class="comment">//最终结果：5</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">calc</span><span class="params">(index <span class="keyword">string</span>, a, b <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">	ret := a + b</span><br><span class="line">	fmt.Println(index, a, b, ret)</span><br><span class="line">	<span class="keyword">return</span> ret</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -284,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/163/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/163/">163</a><span class="page-number current">164</span><a class="page-number" href="/fsfsf/page/165/">165</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/165/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/163/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/163/">163</a><span class="page-number current">164</span><a class="page-number" href="/fsfsf/page/165/">165</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/165/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

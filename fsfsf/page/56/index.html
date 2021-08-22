@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/API-3%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-11-1%E6%A8%A1%E5%9D%97%E6%9A%B4%E9%9C%B2%E6%95%B0%E6%8D%AE%E8%AF%AD%E6%B3%95.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/API-3%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.html" class="post-title-link" itemprop="url">3 接口文档</a>
+          <a href="/ES6-11-1%E6%A8%A1%E5%9D%97%E6%9A%B4%E9%9C%B2%E6%95%B0%E6%8D%AE%E8%AF%AD%E6%B3%95.html" class="post-title-link" itemprop="url">11-1 模块暴露数据语法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:51:24" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:23:56" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -244,7 +244,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/API/" itemprop="url" rel="index"><span itemprop="name">API</span></a>
+          <a href="/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a>
         </span>
     </span>
 
@@ -258,40 +258,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>实战开发中后端会开发很多接口</p>
-<p>每个接口都有大量的参数</p>
-<p>思考：前端如果想知道有哪些接口并且每个接口有几个参数？</p>
-<p>回答：通过接口文档</p>
-<p>思考：接口文档自己写还是怎样？</p>
-<p>回答：有很多方法，可通过apiDoc来生成</p>
-<h4 id="apidoc是什么">apiDoc是什么？</h4>
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//不能直接 src 去引入 而是 type 后再引</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//把 ./1.js 的保留数据存到 m1 中</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">import</span> * <span class="keyword">as</span> m1 <span class="keyword">from</span> <span class="string">&quot;./1.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(m1);</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>就是nodejs中的一个模块</p>
-<h4 id="去哪下">去哪下</h4>
+<h5 id="1js">1.js</h5>
 
-<p><a target="_blank" rel="noopener" href="https://apidocjs.com/">https://apidocjs.com/</a></p>
-<h4 id="如何用">如何用</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分别暴露</span></span><br><span class="line"><span class="comment">//对于要暴露的数据，则在前加 export</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> name1 = <span class="string">&quot;小明&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;hello!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>步骤1：先下载模块，后期通过命令基于于注释生成文档（下载到全局，一次即可）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install apidoc -g</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//统一暴露</span></span><br><span class="line"><span class="keyword">let</span> name1 = <span class="string">&quot;小明&quot;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;hello!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123; name1, hello &#125;;</span><br></pre></td></tr></table></figure>
 
-<p>步骤2：在项目根目录创建 <code>apidoc.json</code> 文件</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;example&quot;</span>, <span class="comment">//项目名</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.1.0&quot;</span>, <span class="comment">//版本号</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;apiDoc basic example&quot;</span>,  <span class="comment">//描述</span></span><br><span class="line">  <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;Custom apiDoc browser title&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;url&quot;</span> : <span class="string">&quot;https://api.github.com/v1&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//默认暴露 export default&#123;&#125; 相当于是把default对象暴露了</span></span><br><span class="line"><span class="comment">// 大括号里的数据可以是任意数据类型</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    name1: <span class="string">&quot;小明&quot;</span>,</span><br><span class="line">    hello: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;hello!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例：</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;教学管理系统接口文档&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;一个非常NB的接口文档&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;Custom apiDoc browser title&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://localhost:3000&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>步骤3：去写接口注释</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@api <span class="type">&#123;get&#125;</span> </span>/user/:id Request User information   </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiName <span class="variable">GetUser</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiGroup <span class="variable">User</span></span></span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiParam <span class="type">&#123;Number&#125;</span> </span>id Users unique ID.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiSuccess <span class="type">&#123;String&#125;</span> </span>firstname Firstname of the User.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiSuccess <span class="type">&#123;String&#125;</span> </span>lastname  Lastname of the User.</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@api <span class="type">&#123;get&#125;</span> </span>请求地址 描述   </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiName </span>接口名字</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiGroup </span>接口组类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiParam <span class="type">&#123;参数类型&#125;</span> </span>字段 描述</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiSuccess <span class="type">&#123;请求成功后返回的数据类型&#125;</span> </span>字段 描述</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例：</span></span><br><span class="line"><span class="comment">//学生列表</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@api <span class="type">&#123;get&#125;</span> </span>/stu 学生模块列表</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiName <span class="variable">Add</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiGroup <span class="variable">Stu</span></span></span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiParam <span class="type">&#123;Number&#125;</span> </span>pageno 当前页数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiParam <span class="type">&#123;Number&#125;</span> </span>pagesize 每页显示条数</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiSuccess <span class="type">&#123;String&#125;</span> </span>meta 状态码&amp;提示信息</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@apiSuccess <span class="type">&#123;String&#125;</span> </span>data 数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> index = <span class="keyword">async</span> (req,res)=&gt;&#123;</span><br><span class="line">   <span class="comment">//1.接收数据</span></span><br><span class="line">   <span class="keyword">let</span> getData = req.query;</span><br><span class="line">   <span class="comment">//过滤 pageno第几页  pagesize每页数据条数</span></span><br><span class="line">   <span class="keyword">let</span> skip = (<span class="built_in">parseInt</span>(getData.pageno) - <span class="number">1</span>) *<span class="built_in">parseInt</span>(getData.pagesize)</span><br><span class="line">   <span class="keyword">let</span> data = <span class="keyword">await</span> listModel(skip,<span class="built_in">parseInt</span>(getData.pagesize));</span><br><span class="line">   res.send(&#123;</span><br><span class="line">       meta:&#123;</span><br><span class="line">           state:<span class="number">200</span>,</span><br><span class="line">           msg:<span class="string">&quot;查询成功&quot;</span></span><br><span class="line">       &#125;,</span><br><span class="line">       data:data</span><br><span class="line">   &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>步骤4：生成接口文档</p>
-<p><code>apidoc -i 接口注释目录 -o 接口文档存放目录</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 例：在项目根目录下执行</span></span><br><span class="line">apidoc -i ./controller -o ./doc</span><br></pre></td></tr></table></figure>
-
-<p>步骤5：查看doc文件下的index.html</p>
 
       
     </div>
@@ -311,7 +287,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/55/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/55/">55</a><span class="page-number current">56</span><a class="page-number" href="/fsfsf/page/57/">57</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/57/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/55/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/55/">55</a><span class="page-number current">56</span><a class="page-number" href="/fsfsf/page/57/">57</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/57/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

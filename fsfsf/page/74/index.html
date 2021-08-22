@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/nodejs-7-2express-art-template.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/Ajax-2express.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/nodejs-7-2express-art-template.html" class="post-title-link" itemprop="url">7-2 express-art-template</a>
+          <a href="/Ajax-2express.html" class="post-title-link" itemprop="url">2 express</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:56:58" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：22:04:28" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -244,7 +244,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/nodejs/" itemprop="url" rel="index"><span itemprop="name">nodejs</span></a>
+          <a href="/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
         </span>
     </span>
 
@@ -258,13 +258,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i art-template --save </span><br><span class="line">npm i express-art-template --save</span><br></pre></td></tr></table></figure>
+          <h1 id="http"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><p>HTTP （hypertext transport protocol）协议[超文本传输协议]，协议详细规定了浏览器和万维网服务器之间互相通信的规则</p>
+<h2 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">行   </span><br><span class="line">头</span><br><span class="line">空行</span><br><span class="line">体</span><br></pre></td></tr></table></figure>
 
-<p>app.js</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">//配置使用art-temple模板引擎</span></span><br><span class="line"><span class="comment">//第一个参数 当渲染以 .html 结尾的文件的时喉，使用art-temple模板引擎</span></span><br><span class="line"><span class="comment">//express-art-template是专门用来在Express中把art-template整合到Express</span></span><br><span class="line">app.engine(<span class="string">&#x27;html&#x27;</span>,<span class="built_in">require</span>(<span class="string">&#x27;express-art-template&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">//Express为Response相应的对象提供了一个方法：render</span></span><br><span class="line"><span class="comment">//render方法默认是不可以使用的，但是如果配置了模板引擎就可以使用了</span></span><br><span class="line"><span class="comment">//res.render(&#x27;html模板名&#x27;,&#123;模板数据&#125;)</span></span><br><span class="line"><span class="comment">//  第一个参数不写路径，其是会去该文件所在目录中找views文件夹，进入该目录中查找该模板文件</span></span><br><span class="line">app.use(<span class="string">&#x27;/pubilc/&#x27;</span>, express.static(<span class="string">&#x27;./public/&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果想要修改默认的views目录，则可以</span></span><br><span class="line"><span class="comment">// app.set(&#x27;views&#x27;,render函数的默认路径)</span></span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.render(<span class="string">&#x27;404.html&#x27;</span>,&#123;</span><br><span class="line">        message:<span class="string">&#x27;失联了QAQ&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;3000端口监听中&quot;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a>响应报文</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">行</span><br><span class="line">头</span><br><span class="line">空行</span><br><span class="line">体</span><br></pre></td></tr></table></figure>
 
-<p>./views/404.html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><span class="comment">&lt;!--服务端就可以不用写content-type--&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm init --yes&#x2F;&#x2F;在最外层文件夹中打开终端输入</span><br><span class="line"></span><br><span class="line">npm i express&#x2F;&#x2F;之后安装express框架  </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.引入express</span></span><br><span class="line"><span class="comment">//express是第三方web开发框架</span></span><br><span class="line"><span class="comment">// 其高度封装了http模块 更加专注于业务，而非底层细节</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="comment">//先从该文件所在目录找node_modules文件夹，之后在该文件夹中找express文件夹，之后在该文件夹中找package.json文件，package.json中的main之后的文件名即为真正加载的代码，如果main的是错的，则找index.js</span></span><br><span class="line"><span class="comment">// 找不到node_modules,则往上一级查找，直至根目录</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.创建应用对象</span></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.创建路由规则</span></span><br><span class="line"><span class="comment">//request 是对请求报文的封装</span></span><br><span class="line"><span class="comment">//response 是对响应报文的封装</span></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//设置响应</span></span><br><span class="line">    response.send(<span class="string">&#x27;HELLO EXPRESS&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//4.监听端口启动服务</span></span><br><span class="line">app.listen(<span class="number">8000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;服务器已经启动，8000端口监听中...&quot;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
       
@@ -285,7 +286,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/73/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/73/">73</a><span class="page-number current">74</span><a class="page-number" href="/fsfsf/page/75/">75</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/75/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/73/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/73/">73</a><span class="page-number current">74</span><a class="page-number" href="/fsfsf/page/75/">75</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/75/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

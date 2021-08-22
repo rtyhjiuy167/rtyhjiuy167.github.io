@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/git-6%E5%AD%98%E5%82%A8.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-13%E5%8C%85.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/git-6%E5%AD%98%E5%82%A8.html" class="post-title-link" itemprop="url">6 存储</a>
+          <a href="/go-13%E5%8C%85.html" class="post-title-link" itemprop="url">13 包</a>
         </h2>
 
         <div class="post-meta-container">
@@ -234,23 +234,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-08-15 20:10:29" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:40:41" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-14 18:58:35" itemprop="dateModified" datetime="2021-08-14T18:58:35+08:00">2021-08-14</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
         </span>
     </span>
 
@@ -264,8 +258,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><code>git stash</code>：该命令会将未完成的修改保存到一个栈上<br><code>git stash list</code>：查看存储<br><code>git stash apply</code>：应用栈顶的存储（但不会删除）<br><code>git stash apply stash@&#123;索引值&#125;</code> ：应用指定的存储（但不会删除）<br><code>git stash pop stash@&#123;索引值&#125;</code> ：应用指定的存储并删除<br><code>git stash drop stash@&#123;索引值&#125;：</code>删除存储</p>
-<p>实际上每次存储，git都会做一次提交，在<code>git log --oneline --decorate --graph --all</code>显示完整的项目分叉历史下仍能看见，但在<code>git log --oneline</code>是看不见的</p>
+          <h4 id="gopathmainmaingo">%GOPATH%/main/main.go</h4>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="comment">//导入的包的路径 %GOPATH%的src后写起</span></span><br><span class="line"><span class="comment">// 项目名/包所属文件夹   //项目名为 go mod init 自己定义的，如果没有 mod 则为项目根文件夹名</span></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	cll <span class="string">&quot;1/calc&quot;</span> <span class="comment">//包的别名 包所属文件夹即为包</span></span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//一个包可以简单理解为一个存放.go文件的文件夹</span></span><br><span class="line"><span class="comment">//如果只希望导入包，而不使用包内部的数据时，可以使用匿名导入包</span></span><br><span class="line"><span class="comment">//  适用于只执行包的init函数</span></span><br><span class="line"><span class="comment">//执行时间  全局声明 -&gt; 执行init() -&gt;main()</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;hello&quot;</span>)</span><br><span class="line">	fmt.Println(cll.Name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="gopathcalc">%GOPATH%/calc</h4>
+
+<h5 id="gopathcalccalc1go">%GOPATH%/calc/calc1.go</h5>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> calc <span class="comment">//声明所属包</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">HHi</span><span class="params">()</span></span> &#123;</span><br><span class="line">	Hi() <span class="comment">//同一个包可使用不同文件里的数据</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="gopathcalccalc2go">%GOPATH%/calc/calc2.go</h5>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一个文件夹下面直接包含的文件只能归属一个package，同样一个package的文件不能在多个文件夹下。</span></span><br><span class="line"><span class="comment">// 包名可以不和文件夹的名字一样，包名不能包含 - 符号</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> calc <span class="comment">//声明所属包</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Name = <span class="string">&quot;张三&quot;</span> <span class="comment">//首字母大写，则导出后仍可使用，小写则只能在该包里用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//init函数在包导入的时候将自动执行</span></span><br><span class="line"><span class="comment">//init函数没有变量也没有返回值</span></span><br><span class="line"><span class="comment">//init函数自定义</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;Hello&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Hi</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;Hi&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -285,7 +291,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/222/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/222/">222</a><span class="page-number current">223</span><a class="page-number" href="/fsfsf/page/224/">224</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/224/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/222/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/222/">222</a><span class="page-number current">223</span><a class="page-number" href="/fsfsf/page/224/">224</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/224/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

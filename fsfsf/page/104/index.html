@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/mongodb-0MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/mongodb-6%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AE%E4%B8%8E%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/mongodb-0MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html" class="post-title-link" itemprop="url">0 MongoDB数据库的基本概念</a>
+          <a href="/mongodb-6%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AE%E4%B8%8E%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE.html" class="post-title-link" itemprop="url">6 新增数据与查询数据</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：22:07:20" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:20:45" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,9 +258,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="mongodb数据库的基本概念"><a href="#MongoDB数据库的基本概念" class="headerlink" title="MongoDB数据库的基本概念"></a>MongoDB数据库的基本概念</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    qq:&#123;</span><br><span class="line">        users:[</span><br><span class="line">            &#123;<span class="attr">name</span>:<span class="string">&quot;张三&quot;</span>,<span class="attr">age</span>:<span class="number">15</span>&#125;,</span><br><span class="line">            &#123;<span class="attr">name</span>:<span class="string">&quot;李四&quot;</span>,<span class="attr">age</span>:<span class="number">15</span>&#125;</span><br><span class="line">        ],</span><br><span class="line">        products:[</span><br><span class="line">            &#123;&#125;,</span><br><span class="line">            &#123;&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    taobao:&#123;</span><br><span class="line">        users:[</span><br><span class="line">            &#123;&#125;,</span><br><span class="line">            &#123;&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//MongoDB数据库中有qq与taobao数据库，其中qq数据库中有users与products的集合（表），users集合中又有多个文档（表记录）</span></span><br></pre></td></tr></table></figure>
+          <h3 id="存数据"><a href="#存数据" class="headerlink" title="存数据"></a>存数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">admin1.save().then(<span class="function">(<span class="params">ret</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(ret)</span><br><span class="line">&#125;)</span><br><span class="line">admin2.save().then(<span class="function">(<span class="params">ret</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(ret)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//连接MongoDB数据库，使用test数据库</span></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost/test&#x27;</span>, &#123; <span class="attr">useNewUrlParser</span>: <span class="literal">true</span>, <span class="attr">useUnifiedTopology</span>: <span class="literal">true</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个模型</span></span><br><span class="line"><span class="comment">//就是在设计数据库</span></span><br><span class="line"><span class="comment">//Mongo是动态的，非常灵活，只需要在代码中设计数据库</span></span><br><span class="line"><span class="comment">//表名为 cats,转换成了小写并加了s  存储的为key为name,value要求为字符串型</span></span><br><span class="line"><span class="keyword">const</span> Cat = mongoose.model(<span class="string">&#x27;Cat&#x27;</span>, &#123; <span class="attr">name</span>: <span class="built_in">String</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//持久化，保存kitty实例</span></span><br><span class="line"><span class="keyword">const</span> kitty = <span class="keyword">new</span> Cat(&#123; <span class="attr">name</span>: <span class="string">&#x27;Zildjian&#x27;</span> &#125;);</span><br><span class="line">kitty.save().then(<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&#x27;meow&#x27;</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">User.remove(&#123;</span><br><span class="line">    password: <span class="string">&#x27;12345667&#x27;</span></span><br><span class="line">&#125;).then(<span class="function">(<span class="params">ret</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(ret)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">User.findByIdAndUpdate(<span class="string">&quot;60e06e35682c9c1e6036f3d9&quot;</span>,&#123;</span><br><span class="line">    password:<span class="string">&#x27;123&#x27;</span></span><br><span class="line">&#125;).then(<span class="function">(<span class="params">ret</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(ret)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 
       
@@ -281,7 +283,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/103/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/103/">103</a><span class="page-number current">104</span><a class="page-number" href="/fsfsf/page/105/">105</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/105/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/103/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/103/">103</a><span class="page-number current">104</span><a class="page-number" href="/fsfsf/page/105/">105</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/105/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-8-2set%E4%BD%BF%E7%94%A8.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/ES6-9-6%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/ES6-8-2set%E4%BD%BF%E7%94%A8.html" class="post-title-link" itemprop="url">8-2 set的使用</a>
+          <a href="/ES6-9-6%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7.html" class="post-title-link" itemprop="url">9-6 私有属性</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:10:55" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:30 / 修改时间：18:19:57" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:30+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,7 +258,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数组去重</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</span><br><span class="line"><span class="keyword">let</span> result1 = [...new <span class="built_in">Set</span>(arr)];</span><br><span class="line"><span class="built_in">console</span>.log(result1); <span class="comment">//[1, 2, 3, 4, 5]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//求交集</span></span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>];</span><br><span class="line"><span class="comment">//先去重，这样再比对效率高</span></span><br><span class="line"><span class="keyword">let</span> result2 = [...new <span class="built_in">Set</span>(arr2)].filter(<span class="function"><span class="params">item</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Set</span>(arr2).has(item));</span><br><span class="line"><span class="built_in">console</span>.log(result2); <span class="comment">//[3, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//求并集</span></span><br><span class="line"><span class="keyword">let</span> union = [...new <span class="built_in">Set</span>([...arr, ...arr2])];</span><br><span class="line"><span class="built_in">console</span>.log(union); <span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//求差集</span></span><br><span class="line"><span class="keyword">let</span> diff = [...new <span class="built_in">Set</span>(arr)].filter(<span class="function"><span class="params">item</span> =&gt;</span> !(<span class="keyword">new</span> <span class="built_in">Set</span>(arr2).has(item)));</span><br><span class="line"><span class="built_in">console</span>.log(diff); <span class="comment">//[1, 2]</span></span><br></pre></td></tr></table></figure>
+          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="comment">//共有属性</span></span><br><span class="line">    name;</span><br><span class="line">    <span class="comment">//私有属性</span></span><br><span class="line">    #age;</span><br><span class="line">    #weight;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">name, age, weight</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">        <span class="built_in">this</span>.weight = weight;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getAge</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> girl = <span class="keyword">new</span> Person(<span class="string">&#x27;小红&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;45kg&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(girl);</span><br><span class="line"><span class="comment">// Person &#123; name: &#x27;小红&#x27;, age: 18, weight: &#x27;45kg&#x27; &#125;</span></span><br><span class="line"><span class="comment">// console.log(girl.#age)  //会报错</span></span><br><span class="line"><span class="comment">// 只能通过类里方法得到</span></span><br><span class="line">girl.getAge(); <span class="comment">//18</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -279,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/fsfsf/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/fsfsf/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

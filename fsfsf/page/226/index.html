@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/git-3%E6%A0%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%90%E4%BA%A4%E5%AF%B9%E8%B1%A1.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-11%E9%97%AD%E5%8C%85.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/git-3%E6%A0%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E6%8F%90%E4%BA%A4%E5%AF%B9%E8%B1%A1.html" class="post-title-link" itemprop="url">3 树对象 与 提交对象</a>
+          <a href="/go-11%E9%97%AD%E5%8C%85.html" class="post-title-link" itemprop="url">11 闭包</a>
         </h2>
 
         <div class="post-meta-container">
@@ -234,23 +234,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-08-15 20:10:29" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:39:33" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-14 18:58:59" itemprop="dateModified" datetime="2021-08-14T18:58:59+08:00">2021-08-14</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
         </span>
     </span>
 
@@ -264,25 +258,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="构造树对象">构造树对象</h4>
+          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;strings&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	a := f1(<span class="string">&quot;x&quot;</span>)</span><br><span class="line">	fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, a(<span class="string">&quot;y&quot;</span>)) <span class="comment">//xy</span></span><br><span class="line"></span><br><span class="line">	jpgFunc := makeSuffixFunc(<span class="string">&quot;.jpg&quot;</span>) <span class="comment">//创建一个用来补全后缀名应为.jpg的函数</span></span><br><span class="line">	fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, jpgFunc(<span class="string">&quot;text&quot;</span>))</span><br><span class="line"></span><br><span class="line">	fun1, fun2 := calac(<span class="number">10</span>)       <span class="comment">//fun1与fun2 里的base是公用的</span></span><br><span class="line">	fmt.Println(fun1(<span class="number">1</span>), fun2(<span class="number">2</span>)) <span class="comment">//11 9</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//闭包</span></span><br><span class="line"><span class="comment">// 即一个函数可以引用其外部的变量</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f1</span><span class="params">(x <span class="keyword">string</span>)</span> <span class="title">func</span><span class="params">(<span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">func</span><span class="params">(y <span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">		z := x + y <span class="comment">//在这个函数中得到了外部函数的 x</span></span><br><span class="line">		<span class="keyword">return</span> z</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//闭包进阶1</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">makeSuffixFunc</span><span class="params">(suffix <span class="keyword">string</span>)</span> <span class="title">func</span><span class="params">(<span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">func</span><span class="params">(name <span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">		<span class="keyword">if</span> !strings.HasSuffix(name, suffix) &#123;</span><br><span class="line">			<span class="keyword">return</span> name + suffix</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> name</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//闭包进阶2</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">calac</span><span class="params">(base <span class="keyword">int</span>)</span> <span class="params">(<span class="keyword">func</span>(<span class="keyword">int</span>)</span> <span class="title">int</span>, <span class="title">func</span><span class="params">(<span class="keyword">int</span>)</span> <span class="title">int</span>)</span> &#123;</span><br><span class="line">	add := <span class="function"><span class="keyword">func</span><span class="params">(i <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">		base += i</span><br><span class="line">		<span class="keyword">return</span> base</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//fun1与fun2 里的base是公用的</span></span><br><span class="line">	sub := <span class="function"><span class="keyword">func</span><span class="params">(i <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">		base -= i</span><br><span class="line">		<span class="keyword">return</span> base</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> add, sub</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>我们可以通过<code>update-index</code>、<code>write-tree</code>、<code>read-tree</code>等命令来构建树对象并塞入到暂存区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看暂存区</span></span><br><span class="line">$ git ls-files -s</span><br><span class="line"><span class="comment"># 查看objects(即数据库)里的对象</span></span><br><span class="line">$ find ./.git/objects/ -<span class="built_in">type</span> f</span><br><span class="line"><span class="comment"># 查看指定的对象内容</span></span><br><span class="line">$ git cat-file -p 哈希值</span><br><span class="line"><span class="comment"># 查看指定的对象类型</span></span><br><span class="line">$ git cat-file -t 哈希值</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git update-index --add --cacheinfo 文件模式 键 文件名</span><br><span class="line"><span class="comment"># -add 文件不在暂存区，首此需要 -add 来将其添加到暂存区</span></span><br><span class="line"><span class="comment"># -cacheinfo 若将要添加的文件位于 Git 数据库中，而不是位于当前 .git所处目录 需要 --cacheinfo</span></span><br><span class="line"><span class="comment"># 文件模式  100644 普通文件  100755 可执行文件  120000 符号连接</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.1.生成一个有 test v1 内容 的名为 test的文本 并将其存储 生成 git 对象</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;test v1&#x27;</span> &gt; test.txt | git hash-object -w test.txt  </span><br><span class="line"><span class="comment"># 1.2.用其返回的键将刚存储的 git 对象添加到暂存区，并命名为 test.txt</span></span><br><span class="line">$ git update-index --add --cacheinfo 100644 915c628f360b2d8c3edbe1ac65cf575b69029b61 test.txt</span><br><span class="line"><span class="comment"># 1.3.将现在暂存区里的内容当做项目的一个版本，生成树对象</span></span><br><span class="line">$ git write-tree  <span class="comment"># 这时数据库里有一个 git 对象和一个 树对象  此时的树对象即为一个项目的版本</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意 $ git add ./ 将工作区的文件全部生成 git 对象（不管是否已经生成过了，只要内容变了，就是新的），再放到缓存区 </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.1.生成一个有 new v1 内容 的名为 new的文本 并将其存储 生成 git 对象</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;new v1&#x27;</span> &gt; new.txt | git hash-object -w new.txt  </span><br><span class="line"><span class="comment"># 2.2.用其返回的键将刚存储的 git 对象添加到暂存区，并命名为 new.txt</span></span><br><span class="line">$ git update-index --add --cacheinfo 100644 eae614245cc5faa121ed130b4eba7f9afbcc7cd9 new.txt</span><br><span class="line"><span class="comment"># 2.3 修改工作区的test.txt文件</span></span><br><span class="line">$ vim test.txt</span><br><span class="line">  按 i 键 并写入新的一行 <span class="built_in">test</span> v2 按 : 键 输入命令 wq 保存退出</span><br><span class="line"><span class="comment"># 2.4 将修改的test.txt文件存储 生成 git 对象</span></span><br><span class="line">$ git hash-object -w test.txt  </span><br><span class="line"><span class="comment"># 2.5 用其返回的键将刚存储的 git 对象添加到暂存区，覆盖掉原有的test.txt</span></span><br><span class="line">$ git update-index --cacheinfo 100644 91d9ba5a1a5456b454e77321eabb130051929546 test.txt</span><br><span class="line"><span class="comment"># 2.6.将现在暂存区里的内容当做项目的一个版本，生成树对象</span></span><br><span class="line">$ git write-tree <span class="comment"># 这时数据库里有三个 git 对象和两个 树对象</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="提交对象">提交对象</h4>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定一个树对象，创建提交对象</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;first commit&#x27;</span> | git commit-tree 72203871fa4668ad777833634034dcd3426879db</span><br></pre></td></tr></table></figure>
-
-<p>执行<code>$ git cat-file -p 74245b5b24ca3a29bb6a534d62c38600f6664056</code>，查看返回的哈希值的内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tree 72203871fa4668ad777833634034dcd3426879db</span><br><span class="line">author <span class="string">&#x27;name&#x27;</span> &lt;email&gt; 1628515408 +0800</span><br><span class="line">committer <span class="string">&#x27;name&#x27;</span> &lt;email&gt; 1628515408 +0800</span><br><span class="line"></span><br><span class="line">first commit</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不是第一次创建提交对象，则要指定父提交对象</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;second commit&#x27;</span> | git commit-tree 树的哈希值（新项目版本） -p 父提交对象的哈希值</span><br></pre></td></tr></table></figure>
-
-<p>一个树对象(tree)本质上就是一个项目的版本，而提交对象(commit)指示对树对象进行了封装，提交对象是链式的（虽然提交对象之间是链式的，但只有知道某个提交对象的哈希值，就可直接用哈希值回退到该的提交对象），且存储了注释与作者等</p>
 
       
     </div>
@@ -302,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/225/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/225/">225</a><span class="page-number current">226</span><a class="page-number" href="/fsfsf/page/227/">227</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/227/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/225/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/225/">225</a><span class="page-number current">226</span><a class="page-number" href="/fsfsf/page/227/">227</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/227/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

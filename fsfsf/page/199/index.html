@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-22-1%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E5%85%A5-%E6%96%B0%E5%BB%BA%E6%88%96%E8%A6%86%E7%9B%96.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-24-1%E8%8E%B7%E5%8F%96%E5%91%BD%E5%90%8D%E8%A1%8C%E5%8F%82%E6%95%B0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/go-22-1%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E5%85%A5-%E6%96%B0%E5%BB%BA%E6%88%96%E8%A6%86%E7%9B%96.html" class="post-title-link" itemprop="url">22-1 文件的写入(新建或覆盖)</a>
+          <a href="/go-24-1%E8%8E%B7%E5%8F%96%E5%91%BD%E5%90%8D%E8%A1%8C%E5%8F%82%E6%95%B0.html" class="post-title-link" itemprop="url">24-1 获取命名行参数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:47:52" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:56:17" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,7 +258,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;bufio&quot;</span></span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// func OpenFile(name string,flag int,perm FileMode)(file *File,err error)</span></span><br><span class="line"><span class="comment">//第二个参数：文件打开模式</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	O_RDONLY // 只读模式打开文件</span></span><br><span class="line"><span class="comment">	O_WRONLY  // 只写模式打开文件</span></span><br><span class="line"><span class="comment">	O_RDWR   // 读写模式打开文件</span></span><br><span class="line"><span class="comment">	O_APPEND // 写操作时将数据附加到文件尾部</span></span><br><span class="line"><span class="comment">	O_CREATE // 如果不存在将创建一个新文件</span></span><br><span class="line"><span class="comment">	O_EXCL  // 和O_CREATE配合使用，文件必须不存在</span></span><br><span class="line"><span class="comment">	O_SYNC // 打开文件用于同步I/O</span></span><br><span class="line"><span class="comment">	O_TRUNC   // 如果可能，打开时清空文件</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//第三个参数：权限控制（只针对于linux）</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//打开文件</span></span><br><span class="line">	filePath := <span class="string">&quot;d:/a.txt&quot;</span></span><br><span class="line">	file, err := os.OpenFile(filePath, os.O_WRONLY|os.O_CREATE, <span class="number">0666</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;open file err=%v\n&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> file.Close()</span><br><span class="line">	<span class="comment">//待写入的字符串</span></span><br><span class="line">	str := <span class="string">&quot;hello World!\r\n&quot;</span> <span class="comment">//有些编辑器认 \r 为换行符</span></span><br><span class="line">	<span class="comment">//写入时，使用带缓存的 func bufio.NewWriter(w io.Writer) *bufio.Writer</span></span><br><span class="line">	writer := bufio.NewWriter(file)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ &#123;</span><br><span class="line">		writer.WriteString(str)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//因为 writer 是带缓存的，所以在调用 WriteString 时，是先写入其结构体里的 buf []byte中的</span></span><br><span class="line">	<span class="comment">//所以我们需要调用 Flush 将缓存的数据真正写入到文件中</span></span><br><span class="line">	writer.Flush()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// os.Args 是一个 string 的切片，用来存储所有的命令行参数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;命令行的参数有：&quot;</span>, <span class="built_in">len</span>(os.Args))</span><br><span class="line">	<span class="keyword">for</span> i, v := <span class="keyword">range</span> os.Args &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;args[%v]：%v\n&quot;</span>, i, v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> powershell</span> </span><br><span class="line">go run 文件所在的文件夹目录路径 参数一 参数二 参数三 ...</span><br><span class="line"><span class="meta">#</span><span class="bash"> cmd</span></span><br><span class="line">go run 文件目录 参数一 参数二 参数三 ...</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输出：</span><br><span class="line">命令行的参数有： 5</span><br><span class="line">args[0]：文件目录</span><br><span class="line">args[1]：参数一</span><br><span class="line">args[2]：参数二</span><br><span class="line">args[3]：参数三</span><br><span class="line">args[4]：...</span><br></pre></td></tr></table></figure>
 
 
       
@@ -279,7 +283,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/198/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/198/">198</a><span class="page-number current">199</span><a class="page-number" href="/fsfsf/page/200/">200</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/200/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/198/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/198/">198</a><span class="page-number current">199</span><a class="page-number" href="/fsfsf/page/200/">200</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/200/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

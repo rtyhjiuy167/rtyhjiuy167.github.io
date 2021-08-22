@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-25-1%E7%AB%AF%E5%8F%A3.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-26-6redis%E5%8F%96%E5%A4%9A%E4%B8%AAkey-val.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/go-25-1%E7%AB%AF%E5%8F%A3.html" class="post-title-link" itemprop="url">25-1端口</a>
+          <a href="/go-26-6redis%E5%8F%96%E5%A4%9A%E4%B8%AAkey-val.html" class="post-title-link" itemprop="url">26-6 取多个key-val</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:57:24" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:07:04" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,7 +258,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">尽量少开</span></span><br><span class="line"><span class="comment">0号是保留端口</span></span><br><span class="line"><span class="comment">1~1024是固定端口，又叫有名端口，即被某些程序固定使用，一般程序员不使用</span></span><br><span class="line"><span class="comment">	22:SSH远程登录协议 23:telnet使用 21:ftp使用</span></span><br><span class="line"><span class="comment">	25:smtp服务使用 80:ils使用 7:echo服务</span></span><br><span class="line"><span class="comment">1025~65535是动态端口</span></span><br><span class="line"><span class="comment">这些端口，程序员可以使用</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//可以使用 netstat -an 来查看本机有哪些端口在监听</span></span><br></pre></td></tr></table></figure>
+          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line">	<span class="string">&quot;github.com/gomodule/redigo/redis&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//func Dial(network, address string, options ...DialOption) (Conn, error)</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Do(commandName string, args ...interface&#123;&#125;) (reply interface&#123;&#125;, err error)</span></span><br><span class="line"><span class="comment">Do( )括号里的写法就跟在cmd里的操作一样，只不过都加了引号</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//连接redis</span></span><br><span class="line">	conn, err := redis.Dial(<span class="string">&quot;tcp&quot;</span>, <span class="string">&quot;127.0.0.1:6379&quot;</span>) <span class="comment">//redis数据库当时设置的是6379端口</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;redis.Dial err=&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//关闭redis</span></span><br><span class="line">	<span class="keyword">defer</span> conn.Close()</span><br><span class="line">	fmt.Println(<span class="string">&quot;conn succ...&quot;</span>, conn)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//对redis操作Hash数据类型</span></span><br><span class="line">	<span class="comment">//写入数据</span></span><br><span class="line">	_, err = conn.Do(<span class="string">&quot;HMSet&quot;</span>, <span class="string">&quot;user02&quot;</span>, <span class="string">&quot;name&quot;</span>, <span class="string">&quot;Tom汤姆&quot;</span>, <span class="string">&quot;age&quot;</span>, <span class="number">18</span>) <span class="comment">// 第一个参数为 命令</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;Set err&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//从redis中读出数据</span></span><br><span class="line">	r, err := redis.Strings(conn.Do(<span class="string">&quot;HMGet&quot;</span>, <span class="string">&quot;user02&quot;</span>, <span class="string">&quot;name&quot;</span>, <span class="string">&quot;age&quot;</span>)) <span class="comment">//取多个用 Strings</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;get err：&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(<span class="string">&quot;操作OK&quot;</span>, r)</span><br><span class="line">	<span class="keyword">for</span> i, v := <span class="keyword">range</span> r &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;r[%d]：%s\n&quot;</span>, i, v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -279,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/188/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/188/">188</a><span class="page-number current">189</span><a class="page-number" href="/fsfsf/page/190/">190</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/190/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/188/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/188/">188</a><span class="page-number current">189</span><a class="page-number" href="/fsfsf/page/190/">190</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/190/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

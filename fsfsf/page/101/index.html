@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/mongodb-3%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/mongodb-8-2%E5%A2%9E%E5%8A%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E5%BA%94%E7%94%A8%E6%88%B7.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/mongodb-3%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4.html" class="post-title-link" itemprop="url">3 基本命令</a>
+          <a href="/mongodb-8-2%E5%A2%9E%E5%8A%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E5%BA%94%E7%94%A8%E6%88%B7.html" class="post-title-link" itemprop="url">8-2 增加数据库对应用户</a>
         </h2>
 
         <div class="post-meta-container">
@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:19:01" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：19:21:55" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,26 +258,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><code>db</code>查看当前操作的数据库</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test</span><br><span class="line"><span class="meta">#</span><span class="bash"> 该数据库没有数据所以还没有创建，当其有数据时才创建</span></span><br></pre></td></tr></table></figure>
+          <p>添加 shop数据库，设置用户 shop1 权限为只读，设置用户 shop2 权限为读写，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 准备工作</span></span><br><span class="line">use shop</span><br><span class="line">db.goods.drop()</span><br><span class="line">for(let i = 1; i &lt;= 10; i++)&#123;</span><br><span class="line">	db.goods.insert( &#123;&quot;name&quot;:&quot;goodsName&quot;+i,&quot;age&quot;:i&#125; );</span><br><span class="line">&#125;</span><br><span class="line">db.goods.find()</span><br></pre></td></tr></table></figure>
 
-<p><code>show dbs</code>或<code>show databases</code>显示所有数据库</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">admin   0.000GB</span><br><span class="line">config  0.000GB</span><br><span class="line">local   0.000GB</span><br></pre></td></tr></table></figure>
+<h5 id="添加用户并设置权限">添加用户并设置权限</h5>
 
-<p><code>use 数据库名称</code>切换到指定的数据库（如果没有，则会隐式创建）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">例如</span> </span><br><span class="line">use itcast</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1. 打开命令提示符 以root身份进入mongo后 连接 shop</span></span><br><span class="line">use shop</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2. 添加账户</span></span><br><span class="line">db.createUser(&#123;</span><br><span class="line">	&quot;user&quot;:&quot;shop1&quot;,  </span><br><span class="line">	&quot;pwd&quot;:&quot;admin888&quot;,</span><br><span class="line">	&quot;roles&quot;:[&#123;</span><br><span class="line">		role:&quot;read&quot;,</span><br><span class="line">		db:&quot;shop&quot;</span><br><span class="line">	&#125;]</span><br><span class="line">&#125;)</span><br><span class="line">db.createUser(&#123;</span><br><span class="line">	&quot;user&quot;:&quot;shop2&quot;,  </span><br><span class="line">	&quot;pwd&quot;:&quot;admin888&quot;,</span><br><span class="line">	&quot;roles&quot;:[&#123;</span><br><span class="line">		role:&quot;readWrite&quot;,</span><br><span class="line">		db:&quot;shop&quot;</span><br><span class="line">	&#125;]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3. 查看创建的用户</span></span><br><span class="line">use admin</span><br><span class="line">db.system.users.find().pretty()</span><br></pre></td></tr></table></figure>
 
-<p><code>db.createCollection(&#39;集合名（数据库名）&#39;)</code>创建此时操作的数据库下的一个集合</p>
-<p><code>db.集合名.drop()</code>删除此时操作的数据库下的一个集合</p>
-<p><code>db.dropDatabase()</code>切换到要删除的数据库，执行该命令即可删除该数据库</p>
-<p><code>db.集合.insertOne(key:value)</code>插入数据（集合没有，则隐式创建）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 插入数据 key value</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 例如</span></span><br><span class="line">db.students.insertOne(&#123;&quot;name&quot;:&quot;Jack&quot;&#125;)</span><br></pre></td></tr></table></figure>
+<h5 id="进入与操作">进入与操作</h5>
 
-<p><code>show collections</code>显示当前数据库的全部集合</p>
-<p><code>db.集合.find()</code>查看集合的所有数据</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 例如</span></span><br><span class="line">db.students.find()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 只显示username列</span></span><br><span class="line">db.students.find(&#123;&#125;,&#123;username:1&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1. 重新打开命令提示符或 <span class="built_in">exit</span> 或 Ctrl C后</span></span><br><span class="line">mongo</span><br><span class="line">use shop</span><br><span class="line">db.auth(&#x27;shop1&#x27;,&#x27;admin888&#x27;)</span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者 mongo 127.0.0.1:27017/shop -u shop1 -p admin888</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -298,7 +288,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/100/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/100/">100</a><span class="page-number current">101</span><a class="page-number" href="/fsfsf/page/102/">102</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/102/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/100/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/100/">100</a><span class="page-number current">101</span><a class="page-number" href="/fsfsf/page/102/">102</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/102/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/git-2%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-%E4%B8%8E-Git-%E5%91%BD%E4%BB%A4.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/go-10%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/git-2%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-%E4%B8%8E-Git-%E5%91%BD%E4%BB%A4.html" class="post-title-link" itemprop="url">2 配置用户信息 与 Git 命令</a>
+          <a href="/go-10%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0.html" class="post-title-link" itemprop="url">10 函数参数</a>
         </h2>
 
         <div class="post-meta-container">
@@ -234,23 +234,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-08-15 20:10:29" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
+      <time title="创建时间：2021-08-15 20:10:29 / 修改时间：18:39:17" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-14 18:49:33" itemprop="dateModified" datetime="2021-08-14T18:49:33+08:00">2021-08-14</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+          <a href="/categories/go/" itemprop="url" rel="index"><span itemprop="name">go</span></a>
         </span>
     </span>
 
@@ -264,24 +258,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="配置用户信息">配置用户信息</h4>
-
-<p>配置后每次Git提交都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被纳入历史记录中。Git首次安装必须设置一下用户签名，否则无法提交代码。<br>这里设置用户签名和登录 GitHub（或其他代码托管中心）的账号没有任何关系。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先输入命令查看是否配置了信息</span></span><br><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 出现user.name 与 user.email 说明已配置过。</span></span><br><span class="line"><span class="comment"># 重复配置会修改上一次所配置的内容</span></span><br><span class="line">user.name=name</span><br><span class="line">user.email=123456@qq.com</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 系统中对所有用户都普遍适用的配置</span></span><br><span class="line">$ git config --system user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config --system user.email 123456@qq.com</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用户目录下的配置文件只适用于该用户</span></span><br><span class="line">$ git config --global user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config --global user.email 123456@qq.com</span><br><span class="line"><span class="comment"># 生成的配置文件在 C:\Users\当前使用的用户\.gitconfig 里</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消配置</span></span><br><span class="line">$ git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">$ git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前项目的 Git 目录中的配置文件</span></span><br><span class="line">$ git config user.name <span class="string">&quot;name&quot;</span></span><br><span class="line">$ git config user.email 123456@qq.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消配置</span></span><br><span class="line">$ git config --<span class="built_in">unset</span> user.name</span><br><span class="line">$ git config --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
-
-<p><code>系统</code>可以有多个<code>用户</code>，一个<code>用户</code>可以有多个<code>项目</code>，如果都配置了，则才用<code>项目</code>的</p>
-<h4 id="git底层概念">Git底层概念</h4>
-
-<p>它使用的是<code>linux</code>命令，而<code>cmd</code>是<code>dos</code>（也称<code>windows</code>）命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ clear  <span class="comment"># 清屏</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;hello&#x27;</span> <span class="comment"># 往控制台里输出信息</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;hello&#x27;</span> &gt;text.txt <span class="comment"># 创建文件，并把hello存入到该文件</span></span><br><span class="line">$ ll <span class="comment"># 将当前文件目录下的子文件和子目录(不包含隐藏的)平铺在控制台（会显示创建者、时间）</span></span><br><span class="line">$ ll -a  <span class="comment"># 将当前文件目录下的子文件和子目录(包含隐藏的)平铺在控制台（会显示创建者、时间）</span></span><br><span class="line">$ find 目录名 <span class="comment"># 将对应目录的子孙文件和子孙目录平铺在控制台</span></span><br><span class="line">$ find 目录名 -<span class="built_in">type</span> f <span class="comment"># 将对应目录下的的文件平铺在控制台</span></span><br><span class="line">$ rm 文件名 <span class="comment"># 删除文件</span></span><br><span class="line">$ mv 文件名 重命名后的文件名 <span class="comment"># 重命名</span></span><br><span class="line">$ cat 文件的url <span class="comment"># 查看对应文件的内容 文件的url 即bash命令下的相对路径</span></span><br><span class="line">$ vim 文件的url <span class="comment">#（在英文模式下，即右下角会有个中或英）</span></span><br><span class="line">	按 i 进入编辑</span><br><span class="line">	按 esc 建后，输入 : 进入命令的执行</span><br><span class="line">					wq 保存退出</span><br><span class="line">					q! 强制退出</span><br><span class="line">					<span class="built_in">set</span> nu 设置行号</span><br></pre></td></tr></table></figure>
+          <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">	fmt.Printf(<span class="string">&quot;%T\n&quot;</span>, f1) <span class="comment">//func()</span></span><br><span class="line">	fmt.Printf(<span class="string">&quot;%T\n&quot;</span>, f2) <span class="comment">//func() int</span></span><br><span class="line">	fmt.Printf(<span class="string">&quot;%T\n&quot;</span>, f3) <span class="comment">//func(int) int</span></span><br><span class="line">	fmt.Printf(<span class="string">&quot;%T\n&quot;</span>, f4) <span class="comment">//func(func(int) int)</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f1</span><span class="params">()</span></span>              &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f2</span><span class="params">()</span> <span class="title">int</span></span>          &#123; <span class="keyword">return</span> <span class="number">1</span> &#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f3</span><span class="params">(<span class="keyword">int</span>)</span> <span class="title">int</span></span>       &#123; <span class="keyword">return</span> <span class="number">1</span> &#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">f4</span><span class="params">(<span class="keyword">func</span>(<span class="keyword">int</span>)</span> <span class="title">int</span>)</span> &#123;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
       
@@ -302,7 +279,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/226/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/226/">226</a><span class="page-number current">227</span><a class="page-number" href="/fsfsf/page/228/">228</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/228/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/226/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/226/">226</a><span class="page-number current">227</span><a class="page-number" href="/fsfsf/page/228/">228</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/228/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

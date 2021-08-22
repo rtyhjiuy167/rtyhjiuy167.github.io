@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">281</span>
+          <span class="site-state-item-count">298</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -211,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/flutter-17-%E5%8A%A0%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87.html">
+    <link itemprop="mainEntityOfPage" href="https://www.rui123.xyz/git-6%E5%AD%98%E5%82%A8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -224,7 +224,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/flutter-17-%E5%8A%A0%E8%BD%BD%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87.html" class="post-title-link" itemprop="url">17 加载本地图片</a>
+          <a href="/git-6%E5%AD%98%E5%82%A8.html" class="post-title-link" itemprop="url">6 存储</a>
         </h2>
 
         <div class="post-meta-container">
@@ -235,14 +235,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-08-04 21:49:29" itemprop="dateCreated datePublished" datetime="2021-08-04T21:49:29+08:00">2021-08-04</time>
+      <time title="创建时间：2021-08-15 20:10:29" itemprop="dateCreated datePublished" datetime="2021-08-15T20:10:29+08:00">2021-08-15</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-17 17:56:53" itemprop="dateModified" datetime="2021-08-17T17:56:53+08:00">2021-08-17</time>
+        <time title="修改时间：2021-08-14 18:58:35" itemprop="dateModified" datetime="2021-08-14T18:58:35+08:00">2021-08-14</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -250,7 +250,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/flutter/" itemprop="url" rel="index"><span itemprop="name">flutter</span></a>
+          <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
         </span>
     </span>
 
@@ -264,18 +264,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>1.在<code>&lt;flutter 项目&gt;根目录</code>创建<code>images</code>文件夹，将要使用的本地文件放到<code>images</code>文件夹</p>
-<p>2.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">flutter:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># The following line ensures that the Material Icons font is</span></span><br><span class="line">  <span class="comment"># included with your application, so that you can use the icons in</span></span><br><span class="line">  <span class="comment"># the material Icons class.</span></span><br><span class="line">  <span class="attr">uses-material-design:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># To add assets to your application, add an assets section, like this:</span></span><br><span class="line">  <span class="comment"># assets:</span></span><br><span class="line">  <span class="comment">#   - images/a_dot_burr.jpeg</span></span><br><span class="line">  <span class="comment">#   - images/a_dot_ham.jpeg</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># An image asset can refer to one or more resolution-specific &quot;variants&quot;, see</span></span><br><span class="line">  <span class="comment"># https://flutter.dev/assets-and-images/#resolution-aware.</span></span><br></pre></td></tr></table></figure>
-
-<p>将实例代码去掉，美观点</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># To add assets to your application, add an assets section, like this:</span></span><br><span class="line"> <span class="comment"># assets:</span></span><br><span class="line"> <span class="comment">#   - images/a_dot_burr.jpeg</span></span><br><span class="line"> <span class="comment">#   - images/a_dot_ham.jpeg</span></span><br></pre></td></tr></table></figure>
-
-<p>配置要加载的图片</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">flutter:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># The following line ensures that the Material Icons font is</span></span><br><span class="line">  <span class="comment"># included with your application, so that you can use the icons in</span></span><br><span class="line">  <span class="comment"># the material Icons class.</span></span><br><span class="line">  <span class="attr">uses-material-design:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">assets:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">images/1.jpg</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># An image asset can refer to one or more resolution-specific &quot;variants&quot;, see</span></span><br><span class="line">  <span class="comment"># https://flutter.dev/assets-and-images/#resolution-aware.</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">child: Image.asset(</span><br><span class="line">    <span class="string">&quot;images/1.jpg&quot;</span>,</span><br><span class="line">    fit: BoxFit.fill,</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
-
+          <p><code>git stash</code>：该命令会将未完成的修改保存到一个栈上<br><code>git stash list</code>：查看存储<br><code>git stash apply</code>：应用栈顶的存储（但不会删除）<br><code>git stash apply stash@&#123;索引值&#125;</code> ：应用指定的存储（但不会删除）<br><code>git stash pop stash@&#123;索引值&#125;</code> ：应用指定的存储并删除<br><code>git stash drop stash@&#123;索引值&#125;：</code>删除存储</p>
+<p>实际上每次存储，git都会做一次提交，在<code>git log --oneline --decorate --graph --all</code>显示完整的项目分叉历史下仍能看见，但在<code>git log --oneline</code>是看不见的</p>
 
       
     </div>
@@ -295,7 +285,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/fsfsf/page/230/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/230/">230</a><span class="page-number current">231</span><a class="page-number" href="/fsfsf/page/232/">232</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/281/">281</a><a class="extend next" rel="next" href="/fsfsf/page/232/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/fsfsf/page/230/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/fsfsf/">1</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/230/">230</a><span class="page-number current">231</span><a class="page-number" href="/fsfsf/page/232/">232</a><span class="space">&hellip;</span><a class="page-number" href="/fsfsf/page/298/">298</a><a class="extend next" rel="next" href="/fsfsf/page/232/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
