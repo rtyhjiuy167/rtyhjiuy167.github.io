@@ -55,31 +55,8 @@ function loadWidget(config) {
     showMessage("这是XuAnrui的博客哟~", 6000, 11)
   );
   let speedSlider = document.querySelector("#range-slider");
-  let speedValue = speedSlider.value;
   speedSlider.addEventListener("input", () =>{
-    let laterSpeedValue = speedSlider.value;
-    if( laterSpeedValue  < speedValue){
-      speedValue= speedSlider.value;
-      showMessage("哇，雪下大了", 2000, 12);
-    }else{
-      speedValue= speedSlider.value;
-      showMessage("嗯？雪下小了", 2000, 12);
-    }
-    if ( laterSpeedValue >= 95){
-      speedValue= speedSlider.value;
-      showMessage("啊！这雪下得也太大了吧~", 2000, 12);
-    }else if(laterSpeedValue <= 5){
-      speedValue= speedSlider.value;
-      showMessage("这..这雪是快停了么~", 2000, 12);
-    }
-    if(speedValue <= 5 && laterSpeedValue >speedValue+10 ){
-      speedValue= speedSlider.value;
-      showMessage("好耶，雪又下大了", 2000, 13);
-    }
-    if(speedValue >= 95 &&laterSpeedValue <speedValue-10 ){
-      speedValue= speedSlider.value;
-      showMessage("还是雪小点，舒服~", 2000, 12);
-    }
+      showMessage("嗯？？", 2000, 12);
   }
   );
   document.getElementById("toMyBlog").addEventListener("mouseout", () =>
